@@ -42,7 +42,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 alias lg="lazygit"
 
 # neoVim
-alias vim="nvim"
 alias vi="nvim"
 
 # Timezone

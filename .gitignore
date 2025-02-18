@@ -26,3 +26,4 @@ lazy-lock.json
 zig-0.14.0
 raycast
 neofetch
+flake.lock

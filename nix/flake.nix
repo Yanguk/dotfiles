@@ -6,8 +6,8 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # home-manager.url = "github:nix-community/home-manager";
+    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -16,7 +16,7 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
-      home-manager,
+    # home-manager,
     }:
     let
       username = "yanguk";
