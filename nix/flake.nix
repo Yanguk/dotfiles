@@ -111,10 +111,6 @@
             };
 
             defaults = {
-              finder = {
-                _FXShowPosixPathInTitle = false;
-              };
-
               trackpad = {
                 Clicking = true;
                 TrackpadThreeFingerDrag = true;
