@@ -94,17 +94,50 @@
           # Enable alternative shell support in nix-darwin.
           # programs.fish.enable = true;
 
-          # Set Git commit hash for darwin-version.
-          system.configurationRevision = self.rev or self.dirtyRev or null;
-
-          # Used for backwards compatibility, please read the changelog before changing.
-          # $ darwin-rebuild changelog
-          system.stateVersion = 6;
-
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
 
-          system.defaults = {
+          system = {
+            # Set Git commit hash for darwin-version.
+            configurationRevision = self.rev or self.dirtyRev or null;
+
+            # Used for backwards compatibility, please read the changelog before changing.
+            # $ darwin-rebuild changelog
+            stateVersion = 6;
+
+            keyboard = {
+              enableKeyMapping = true;
+              remapCapsLockToControl = true;
+            };
+
+            defaults = {
+              finder = {
+                _FXShowPosixPathInTitle = false;
+              };
+
+              trackpad = {
+                Clicking = true;
+                TrackpadThreeFingerDrag = true;
+              };
+
+              controlcenter = {
+                BatteryShowPercentage = true;
+              };
+
+              NSGlobalDomain = {
+                # 120, 90, 60, 30, 12, 6, 2
+                KeyRepeat = 2;
+
+                # 120, 94, 68, 35, 25, 15
+                InitialKeyRepeat = 15;
+                "com.apple.mouse.tapBehavior" = 1;
+                "com.apple.sound.beep.volume" = 0.0;
+                "com.apple.sound.beep.feedback" = 0;
+
+                NSAutomaticQuoteSubstitutionEnabled = false;
+                NSAutomaticDashSubstitutionEnabled = false;
+              };
+            };
           };
         };
     in
