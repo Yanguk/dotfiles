@@ -79,6 +79,7 @@
             casks = [
               "duckduckgo"
               "orbStack"
+              "figma"
             ];
             masApps = {
               "kakaotalk" = 869223134;
