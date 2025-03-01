@@ -59,7 +59,6 @@
 
             # casks
             google-chrome
-            alacritty
             obsidian
             slack
             raycast
@@ -80,6 +79,7 @@
             casks = [
               "duckduckgo"
               "orbStack"
+              "ghostty"
               "figma"
             ];
             masApps = {
