@@ -34,6 +34,7 @@
             neovim
             tmux
 
+            # zsh
             zsh-fast-syntax-highlighting
             zsh-autosuggestions
             oh-my-zsh
@@ -56,14 +57,6 @@
 
             deno
             rustup
-
-            # casks
-            google-chrome
-            obsidian
-            slack
-            raycast
-            rectangle
-            vscode
           ];
 
           fonts.packages = with pkgs; [
@@ -81,6 +74,12 @@
               "orbStack"
               "ghostty"
               "figma"
+              "google-chrome"
+              "obsidian"
+              "slack"
+              "raycast"
+              "rectangle"
+              "visual-studio-code"
             ];
             masApps = {
               "kakaotalk" = 869223134;
