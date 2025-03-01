@@ -52,6 +52,7 @@
             wget
             gnupg
             gh
+            ddgr
 
             deno
             rustup
