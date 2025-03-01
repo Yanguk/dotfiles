@@ -4,7 +4,7 @@ font-family = Hack Nerd Font
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-# font-size = 16
+font-size = 15
 macos-option-as-alt = true
 title = " "
 
