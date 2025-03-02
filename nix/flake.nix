@@ -58,6 +58,7 @@
             gnupg
             gh
             ddgr
+            bottom
 
             deno
             rustup
