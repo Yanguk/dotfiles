@@ -23,7 +23,7 @@ return {
   config = function()
     require("mason-lspconfig").setup({
       automatic_installation = true,
-      ensure_installed = { "ts_ls" },
+      ensure_installed = { "ts_ls", "rust_analyzer" },
     })
 
     local lspconfig = require("lspconfig")
@@ -129,7 +129,11 @@ return {
     end
 
     vim.g.rustaceanvim = {
-      server = default_config,
+      server = {
+        on_init = default_config.on_init,
+        on_attach = default_config.on_attach,
+        capabilities = default_config.capabilities,
+      },
     }
 
     require("typescript-tools").setup({

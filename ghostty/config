@@ -10,3 +10,6 @@ title = " "
 
 macos-titlebar-style = tabs
 mouse-hide-while-typing
+
+# background-opacity = 0.8
+# background-blur-radius = 10
