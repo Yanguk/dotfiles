@@ -84,6 +84,7 @@
               "raycast"
               "rectangle"
               "visual-studio-code"
+              "hammerspoon"
             ];
             masApps = {
               "kakaotalk" = 869223134;
@@ -128,6 +129,12 @@
 
                 NSAutomaticQuoteSubstitutionEnabled = false;
                 NSAutomaticDashSubstitutionEnabled = false;
+              };
+
+              CustomUserPreferences = {
+                "org.hammerspoon.Hammerspoon" = {
+                  MJConfigFile = "~/.config/hammerspoon/init.lua";
+                };
               };
             };
           };
