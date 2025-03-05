@@ -13,6 +13,7 @@ return {
       end,
     },
     "moyiz/blink-emoji.nvim",
+    "Kaiser-Yang/blink-cmp-avante",
   },
 
   -- use a release tag to download pre-built binaries
@@ -43,7 +44,7 @@ return {
       preset = "luasnip",
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "copilot", "emoji" },
+      default = { "avante", "lsp", "path", "snippets", "buffer", "copilot", "emoji" },
       providers = {
         copilot = {
           name = "copilot",
@@ -56,6 +57,10 @@ return {
           name = "Emoji",
           score_offset = 15, -- Tune by preference
           opts = { insert = true }, -- Insert emoji (default) or complete its name
+        },
+        avante = {
+          module = "blink-cmp-avante",
+          name = "Avante",
         },
       },
     },

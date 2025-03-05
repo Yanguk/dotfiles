@@ -7,13 +7,4 @@ return {
       vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
     end,
   },
-  keys = {
-    {
-      "<leader>a",
-      function()
-        require("aerial").toggle()
-      end,
-      desc = "Toggle Aerial",
-    },
-  },
 }
