@@ -2,21 +2,23 @@ return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
   dependencies = { "nvim-lua/plenary.nvim" },
+  cmd = { "HarpoonAdd", "HarpoonMenu" },
+  config = function(_, opts)
+    require("harpoon").setup(opts)
+
+    vim.api.nvim_create_user_command("HarpoonAdd", function()
+      require("harpoon"):list():add()
+    end, {
+      desc = "Add current file to harpoon",
+    })
+
+    vim.api.nvim_create_user_command("HarpoonMenu", function()
+      require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+    end, {
+      desc = "Toggle harpoon menu",
+    })
+  end,
   keys = {
-    {
-      "<leader>ha",
-      function()
-        require("harpoon"):list():add()
-      end,
-      desc = "[h]arpoon [a]dd",
-    },
-    {
-      "<C-e>",
-      function()
-        require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
-      end,
-      desc = "[h]arpoon m[e]nu",
-    },
     {
       "<A-1>",
       function()
