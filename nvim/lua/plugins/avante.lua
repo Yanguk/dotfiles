@@ -4,7 +4,7 @@ return {
   lazy = false,
   opts = {
     provider = "copilot",
-    hints = { enabled = false },
+    -- hints = { enabled = false },
   },
   build = "make",
   dependencies = {

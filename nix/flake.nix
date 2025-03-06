@@ -86,6 +86,7 @@
               "rectangle"
               "visual-studio-code"
               "hammerspoon"
+              "font-noto-sans-cjk-kr"
             ];
             masApps = {
               "kakaotalk" = 869223134;
