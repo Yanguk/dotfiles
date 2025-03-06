@@ -4,12 +4,13 @@ font-family = Hack Nerd Font
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-font-size = 15
+font-size = 16
 macos-option-as-alt = true
 title = " "
 
 macos-titlebar-style = tabs
 mouse-hide-while-typing
 
+window-save-state = always
 # background-opacity = 0.8
 # background-blur-radius = 10
