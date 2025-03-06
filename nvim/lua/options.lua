@@ -58,10 +58,17 @@ vim.filetype.add({
   },
 })
 
--- Auto resize panes when resizing nvim window
+local leetcode_config = require("configs.leetcode")
+-- Auto resize panes when resizing nvim window, except for leetcode and avante plugins
 autocmd("VimResized", {
   pattern = "*",
-  command = "tabdo wincmd =",
+  callback = function()
+    local ft = vim.bo.filetype
+
+    if not string.find(ft, "Avante") and leetcode_config.is_not_leetcode() then
+      vim.cmd("tabdo wincmd =")
+    end
+  end,
 })
 
 vim.cmd([[ inoremap <C-c> <Esc>\`^ ]])

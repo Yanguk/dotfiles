@@ -1,4 +1,4 @@
-local leet_arg = "leetcode.nvim"
+local leetcode_config = require("configs.leetcode")
 
 return {
   "kawre/leetcode.nvim",
@@ -8,9 +8,9 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
   },
-  lazy = leet_arg ~= vim.fn.argv(0, -1),
+  lazy = leetcode_config.is_not_leetcode(),
   opts = {
-    arg = leet_arg,
+    arg = leetcode_config.get_leet_arg(),
     lang = "rust",
     hooks = {
       ["question_enter"] = {
