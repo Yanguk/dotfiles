@@ -12,7 +12,6 @@ return {
         require("luasnip.loaders.from_vscode").lazy_load()
       end,
     },
-    "moyiz/blink-emoji.nvim",
     "Kaiser-Yang/blink-cmp-avante",
   },
 
@@ -44,19 +43,13 @@ return {
       preset = "luasnip",
     },
     sources = {
-      default = { "avante", "lsp", "path", "snippets", "buffer", "copilot", "emoji" },
+      default = { "avante", "lsp", "path", "snippets", "buffer", "copilot" },
       providers = {
         copilot = {
           name = "copilot",
           module = "blink-copilot",
           score_offset = 100,
           async = true,
-        },
-        emoji = {
-          module = "blink-emoji",
-          name = "Emoji",
-          score_offset = 15, -- Tune by preference
-          opts = { insert = true }, -- Insert emoji (default) or complete its name
         },
         avante = {
           module = "blink-cmp-avante",
