@@ -77,7 +77,6 @@
             casks = [
               "duckduckgo"
               "orbStack"
-              "ghostty"
               "figma"
               "google-chrome"
               "obsidian"
@@ -86,7 +85,6 @@
               "rectangle"
               "visual-studio-code"
               "hammerspoon"
-              "font-noto-sans-cjk-kr"
               "alacritty"
             ];
             masApps = {
