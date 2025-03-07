@@ -7,4 +7,11 @@ return {
       vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
     end,
   },
+  keys = {
+    {
+      "<leader>ae",
+      "<cmd>AerialToggle!<CR>",
+      desc = "Toggle Aerial",
+    },
+  },
 }
