@@ -56,3 +56,12 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 alias nixEdit="nvim ~/.config/nix/flake.nix"
 alias nixUpdate="nix flake update --flake ~/.config/nix"
 alias nixSwitch="darwin-rebuild switch --flake ~/.config/nix#yanguk"
+
+function yz() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
