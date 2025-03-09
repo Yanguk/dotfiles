@@ -43,6 +43,7 @@ alias lg="lazygit"
 
 # neoVim
 alias vi="nvim"
+export EDITOR='nvim'
 
 # Timezone
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
