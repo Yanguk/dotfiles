@@ -78,7 +78,6 @@
             casks = [
               "duckduckgo"
               "orbStack"
-              # "alacritty"
               "font-noto-sans-cjk-kr"
               "ghostty"
               "figma"
