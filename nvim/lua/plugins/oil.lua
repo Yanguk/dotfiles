@@ -135,6 +135,7 @@ return {
         end
       end,
     },
+    delete_to_trash = true,
   },
   config = function(_, opts)
     -- Clear git status cache on refresh
