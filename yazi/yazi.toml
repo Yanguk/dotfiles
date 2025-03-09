@@ -2,3 +2,9 @@
 
 [manager]
 show_hidden = true
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true, for = "macos" },
+  { run = 'code "$@"', block = true, for = "macos" },
+]
