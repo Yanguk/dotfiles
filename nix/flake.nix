@@ -36,6 +36,7 @@
 
           environment.systemPackages = with pkgs; [
             neovim
+            imagemagick
             tmux
 
             # zsh
@@ -77,6 +78,8 @@
             casks = [
               "duckduckgo"
               "orbStack"
+              # "alacritty"
+              "font-noto-sans-cjk-kr"
               "ghostty"
               "figma"
               "google-chrome"
@@ -86,8 +89,6 @@
               "rectangle"
               "visual-studio-code"
               "hammerspoon"
-              "font-noto-sans-cjk-kr"
-              "alacritty"
             ];
             masApps = {
               "kakaotalk" = 869223134;
