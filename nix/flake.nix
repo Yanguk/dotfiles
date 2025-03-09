@@ -74,6 +74,7 @@
             brews = [
               "awscli-local"
               "nvm"
+              "zig"
             ];
             casks = [
               "duckduckgo"

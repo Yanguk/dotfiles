@@ -2,7 +2,6 @@ simple-update-notifier
 wireshark
 iterm2
 ghc
-gh
 fish
 plugin
 .DS_Store
@@ -23,7 +22,6 @@ zed/*
 lazy-lock.json
 .back
 
-zig-0.14.0
 raycast
 neofetch
 flake.lock
