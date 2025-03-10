@@ -37,6 +37,7 @@
           environment.systemPackages = with pkgs; [
             neovim
             imagemagick
+            tmux
 
             # zsh
             zsh-fast-syntax-highlighting

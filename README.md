@@ -11,7 +11,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 # https://github.com/LnL7/nix-darwin
 
-### nix-darwin install & switch
+### nix-darwin install
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
@@ -29,13 +29,16 @@ darwin-rebuild switch --flake ~/.config/nix#yanguk
 ln -sf ~/.config/zsh/.zshrc ~/.zshrc
 ```
 
-# delta-theme
+# tmux
+
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
+# delta
 
 https://github.com/catppuccin/bat
 
-```bash
 bat cache --build
-```
 
 # Add colemak-dh
 
@@ -47,5 +50,4 @@ bat cache --build
 
 # 구름 입력기
 
-Add `Han 3set Shin P2`
 https://github.com/gureum/gureum

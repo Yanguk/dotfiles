@@ -17,12 +17,13 @@ plugins=(
   yarn
   git
   gh
-  docker
+  tmux
 
-  direnv
   autojump
   zsh-autosuggestions
   fast-syntax-highlighting
+  direnv
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,11 +33,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# terminal
+export TERM="xterm-256color"
+[[ -n $TMUX ]] && export TERM="tmux-256color"
+
 # lazyGit
 export XDG_CONFIG_HOME="$HOME/.config"
 alias lg="lazygit"
 
-# Neovim
+# neoVim
 alias vi="nvim"
 
 # Timezone
