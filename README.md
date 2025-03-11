@@ -9,9 +9,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
   sh -s -- install --determinate
 ````
 
-# https://github.com/LnL7/nix-darwin
-
 ### nix-darwin install & switch
+https://github.com/LnL7/nix-darwin
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
