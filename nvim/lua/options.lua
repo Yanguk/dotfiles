@@ -6,7 +6,7 @@ local autocmd = vim.api.nvim_create_autocmd
 g.mapleader = " "
 g.maplocalleader = "\\"
 ------
-o.laststatus = 3
+opt.laststatus = 3
 o.showmode = false
 
 o.clipboard = "unnamedplus"

@@ -10,6 +10,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ````
 
 ### nix-darwin install & switch
+
 https://github.com/LnL7/nix-darwin
 
 ```bash
