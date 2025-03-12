@@ -42,7 +42,7 @@
             zsh-fast-syntax-highlighting
             zsh-autosuggestions
             oh-my-zsh
-            autojump
+            zoxide
 
             nixfmt-rfc-style
             lazygit
