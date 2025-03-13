@@ -1,8 +1,12 @@
 export LANG=en_US.UTF-8
 
+(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -19,13 +23,15 @@ plugins=(
   gh
   docker
 
-  direnv
   zoxide
   zsh-autosuggestions
   fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# gpg
+export GPG_TTY=$TTY
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -42,9 +48,6 @@ alias vi="nvim"
 # Timezone
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
 alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
-
-# gpg
-export GPG_TTY=$(tty)
 
 # aws-profile-change
 alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p" ~/.aws/credentials ~/.aws/config | sort -rg | uniq | fzf)'
