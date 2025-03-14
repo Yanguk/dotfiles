@@ -9,6 +9,7 @@ map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "file save" })
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("v", ";", ":", { desc = "CMD enter command mode" })
 
 -- Trailing Space 플러그인 관련 매핑
 map(
