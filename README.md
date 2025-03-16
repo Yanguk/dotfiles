@@ -49,3 +49,11 @@ bat cache --build
 
 Add `Han 3set Shin P2`
 https://github.com/gureum/gureum
+
+# Nvim avante Ai search-tool
+
+[tavily](https://tavily.com/)
+
+```bash
+echo "export TAVILY_API_KEY=''" >> ~/.zprofile
+```
