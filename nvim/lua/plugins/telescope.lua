@@ -35,7 +35,7 @@ return {
     { "<leader>fw", "<cmd>Telescope live_grep<CR>", desc = "telescope live grep" },
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "telescope find buffers" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "telescope help page" },
-    { "<leader>ma", "<cmd>Telescope marks<CR>", desc = "telescope find marks" },
+    -- { "<leader>ma", "<cmd>Telescope marks<CR>", desc = "telescope find marks" },
     { "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "telescope find oldfiles" },
     { "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "telescope find in current buffer" },
     { "<leader>cm", "<cmd>Telescope git_commits<CR>", desc = "telescope git commits" },

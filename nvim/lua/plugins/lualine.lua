@@ -4,7 +4,17 @@ return {
   opts = {
     theme = "catppuccin",
     sections = {
-      lualine_x = { "copilot", "encoding", "fileformat", "filetype" }, -- I added copilot here
+      lualine_x = {
+        {
+          require("noice").api.status.mode.get,
+          cond = require("noice").api.status.mode.has,
+          color = { fg = "#ff9e64" },
+        },
+        "copilot",
+        "encoding",
+        "fileformat",
+        "filetype",
+      },
     },
   },
 }
