@@ -11,7 +11,7 @@ return {
   lazy = leetcode_config.is_not_leetcode(),
   opts = {
     arg = leetcode_config.get_leet_arg(),
-    lang = "rust",
+    lang = "python",
     hooks = {
       ["question_enter"] = {
         function()

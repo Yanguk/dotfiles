@@ -68,6 +68,7 @@ return {
       "dockerls",
       "nil_ls",
       "terraformls",
+      "pylsp",
     }
 
     for _, server in pairs(default_servers) do
