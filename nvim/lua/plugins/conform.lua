@@ -73,10 +73,8 @@ return {
   cmd = { "ConformInfo", "Format" },
   keys = {
     {
-      -- Customize or remove this keymap to your liking
       "<leader>fm",
       "<cmd>Format<cr>",
-      mode = "",
       desc = "Format buffer",
     },
   },
