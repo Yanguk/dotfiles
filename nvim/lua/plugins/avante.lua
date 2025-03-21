@@ -3,6 +3,9 @@ return {
   event = "VeryLazy",
   opts = {
     provider = "copilot",
+    behaviour = {
+      enable_cursor_planning_mode = true, -- enable cursor planning mode!
+    },
     copilot = {
       model = "claude-3.7-sonnet",
       proxy = nil, -- [protocol://]host[:port] Use this proxy
