@@ -156,7 +156,6 @@
               enable = true;
               # User owning the Homebrew prefix
               user = username;
-              mutableTaps = false;
             };
           }
         ];
