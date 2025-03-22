@@ -12,7 +12,18 @@ return {
         require("luasnip.loaders.from_vscode").lazy_load()
       end,
     },
-    "Kaiser-Yang/blink-cmp-avante",
+    {
+      "saghen/blink.compat",
+      opts = {},
+      config = function()
+        -- monkeypatch cmp.ConfirmBehavior for Avante
+        require("cmp").ConfirmBehavior = {
+          Insert = "insert",
+          Replace = "replace",
+        }
+      end,
+      lazy = true,
+    },
   },
 
   -- use a release tag to download pre-built binaries
@@ -45,7 +56,17 @@ return {
       preset = "luasnip",
     },
     sources = {
-      default = { "avante", "lsp", "path", "snippets", "buffer", "copilot" },
+      default = {
+        "lsp",
+        "path",
+        "snippets",
+        "buffer",
+        "copilot",
+
+        "avante_commands",
+        "avante_mentions",
+        "avante_files",
+      },
       providers = {
         copilot = {
           name = "copilot",
@@ -53,9 +74,23 @@ return {
           score_offset = 100,
           async = true,
         },
-        avante = {
-          module = "blink-cmp-avante",
-          name = "Avante",
+        avante_commands = {
+          name = "avante_commands",
+          module = "blink.compat.source",
+          score_offset = 90, -- show at a higher priority than lsp
+          opts = {},
+        },
+        avante_files = {
+          name = "avante_files",
+          module = "blink.compat.source",
+          score_offset = 100, -- show at a higher priority than lsp
+          opts = {},
+        },
+        avante_mentions = {
+          name = "avante_mentions",
+          module = "blink.compat.source",
+          score_offset = 1000, -- show at a higher priority than lsp
+          opts = {},
         },
       },
     },
