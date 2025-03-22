@@ -57,3 +57,11 @@ https://github.com/gureum/gureum
 ```bash
 echo "export TAVILY_API_KEY=''" >> ~/.zprofile
 ```
+
+# copilot
+
+```bash
+gh extension install github/gh-copilot
+
+gh extension upgrade gh-copilot
+```
