@@ -11,7 +11,7 @@ return {
   lazy = leetcode_config.is_not_leetcode(),
   opts = {
     arg = leetcode_config.get_leet_arg(),
-    image_support = true,
+    -- image_support = true, 활성화시 문제 wrap이 비활성화됨.
     lang = "javascript",
     hooks = {
       ["question_enter"] = {
