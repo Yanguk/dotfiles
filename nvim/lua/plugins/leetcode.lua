@@ -11,6 +11,7 @@ return {
   lazy = leetcode_config.is_not_leetcode(),
   opts = {
     arg = leetcode_config.get_leet_arg(),
+    image_support = true,
     lang = "javascript",
     hooks = {
       ["question_enter"] = {
