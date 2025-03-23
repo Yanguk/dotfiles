@@ -8,7 +8,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
   },
-  lazy = leetcode_config.is_not_leetcode(),
+  lazy = not leetcode_config.is_leetcode(),
   opts = {
     arg = leetcode_config.get_leet_arg(),
     -- image_support = true, 활성화시 문제 wrap이 비활성화됨.
