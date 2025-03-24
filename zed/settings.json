@@ -18,11 +18,38 @@
     "edit_prediction_provider": "zed"
   },
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "buffer_font_family": "Hack Nerd Font",
+  "ui_font_family": "Hack Nerd Font",
+  "terminal": {
+    "font_family": "Hack Nerd Font"
+  },
+  "languages": {
+    "TypeScript": {
+      "formatter": {
+        "code_actions": {
+          "source.fixAll.eslint": true
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
+    }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": ["import/order"]
+        }
+      }
+    }
   }
 }
