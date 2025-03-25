@@ -43,6 +43,7 @@ return {
       html = { "prettierd" },
       json = { "prettierd" },
       jsonc = { "prettierd" },
+      css = { "prettierd" },
 
       -- racket = { "raco" },
       sh = { "shfmt" },
