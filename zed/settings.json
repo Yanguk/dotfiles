@@ -17,6 +17,9 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
   "vim_mode": true,
   "theme": {
     "mode": "system",
