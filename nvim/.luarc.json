@@ -4,7 +4,5 @@
   "diagnostics.globals": ["vim"],
   "workspace.checkThirdParty": false,
   "workspace.library": ["$VIMRUNTIME", "${3rd}/luv/library", "$LAZYROOT"],
-    "diagnostics.disable": [
-        "missing-fields"
-    ]
+  "diagnostics.disable": ["missing-fields"]
 }
