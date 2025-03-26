@@ -133,6 +133,7 @@
 
                 NSAutomaticQuoteSubstitutionEnabled = false;
                 NSAutomaticDashSubstitutionEnabled = false;
+                ApplePressAndHoldEnabled = false;
               };
 
               CustomUserPreferences = {
