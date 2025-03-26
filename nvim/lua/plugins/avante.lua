@@ -8,9 +8,6 @@ return {
     },
     copilot = {
       model = "claude-3.7-sonnet",
-      timeout = 30000, -- Timeout in milliseconds
-      temperature = 0,
-      max_tokens = 8192,
     },
   },
   build = "make",
@@ -36,7 +33,7 @@ return {
             insert_mode = true,
           },
           -- required for Windows users
-          use_absolute_path = true,
+          -- use_absolute_path = true,
         },
       },
     },
