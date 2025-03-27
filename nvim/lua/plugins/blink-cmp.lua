@@ -45,7 +45,7 @@ return {
       preset = "luasnip",
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "copilot", "avante" },
+      default = { "lsp", "path", "snippets", "buffer", "copilot", "avante", "lazydev" },
       providers = {
         copilot = {
           name = "copilot",
@@ -56,6 +56,12 @@ return {
         avante = {
           module = "blink-cmp-avante",
           name = "Avante",
+        },
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          -- make lazydev completions top priority (see `:h blink.cmp`)
+          score_offset = 100,
         },
       },
     },
