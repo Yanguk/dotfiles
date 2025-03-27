@@ -58,6 +58,7 @@ return {
     }
 
     local default_servers = {
+      "lua_ls",
       "zls",
       "yamlls",
       "tailwindcss",
@@ -91,23 +92,6 @@ return {
     }
 
     local server_configs = {
-      ["lua_ls"] = {
-        settings = {
-          Lua = {
-            runtime = {
-              version = "LuaJIT",
-              special = { reload = "require" },
-            },
-            workspace = {
-              library = {
-                vim.fn.expand("$VIMRUNTIME/lua"),
-                vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
-                vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
-              },
-            },
-          },
-        },
-      },
       ["typos_lsp"] = {
         init_options = {
           config = "~/.config/nvim/typos.toml",
