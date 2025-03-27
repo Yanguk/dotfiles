@@ -3,9 +3,9 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>ae",
+      "gO",
       "<cmd>AerialToggle!<CR>",
-      desc = "Toggle Aerial",
+      desc = "vim.lsp.buf.document_symbol(Aerial)",
     },
   },
 }

@@ -38,9 +38,6 @@ return {
           return { buffer = bufnr, desc = desc }
         end
 
-        vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts("Code action"))
-        vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename, opts("rename"))
-
         if client.server_capabilities.inlayHintProvider then
           vim.keymap.set("n", "<leader>ih", function()
             local current_setting = vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr })

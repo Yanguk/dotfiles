@@ -34,22 +34,22 @@ return {
     --   desc = "Quickfix List (Trouble)",
     -- },
     {
-      "gd",
+      "grd",
       "<cmd>Trouble lsp_definitions toggle focus=true auto_refresh=false<cr>",
       desc = "LSP Definitions (Trouble)",
     },
     {
-      "gr",
+      "grr",
       "<cmd>Trouble lsp_references toggle focus=true auto_refresh=false<cr>",
       desc = "LSP References (Trouble)",
     },
     {
-      "gi",
+      "gri",
       "<cmd>Trouble lsp_implementations toggle focus=true auto_refresh=false<cr>",
       desc = "LSP Implementations (Trouble)",
     },
     {
-      "gD",
+      "grD",
       "<cmd>Trouble lsp_type_definition toggle focus=true auto_refresh=false<cr>",
       desc = "LSP Type Definitions (Trouble)",
     },
