@@ -8,6 +8,7 @@ return {
     suggestion = { enabled = false },
     panel = { enabled = false },
     copilot_model = "gpt-4o-copilot",
+    lsp_binary = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
   },
   config = function(_, opts)
     require("copilot").setup(opts)
