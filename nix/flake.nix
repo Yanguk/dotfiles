@@ -35,7 +35,6 @@
           };
 
           environment.systemPackages = with pkgs; [
-            neovim
             imagemagick
 
             # zsh
@@ -75,6 +74,7 @@
               "awscli-local"
               "nvm"
               "zig"
+              "neovim"
             ];
             casks = [
               "duckduckgo"
@@ -89,6 +89,7 @@
               "rectangle"
               "hammerspoon"
               "zed"
+              "visual-studio-code"
             ];
             masApps = {
               "kakaotalk" = 869223134;
