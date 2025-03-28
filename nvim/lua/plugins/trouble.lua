@@ -34,7 +34,7 @@ return {
     --   desc = "Quickfix List (Trouble)",
     -- },
     {
-      "grd",
+      "gd",
       "<cmd>Trouble lsp_definitions toggle focus=true auto_refresh=false<cr>",
       desc = "LSP Definitions (Trouble)",
     },
