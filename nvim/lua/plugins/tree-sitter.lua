@@ -6,6 +6,7 @@ return {
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = { "lua", "luadoc", "printf", "vim", "vimdoc" },
+      ignore_install = { "dockerfile" },
       auto_install = true,
       highlight = {
         enable = true,
