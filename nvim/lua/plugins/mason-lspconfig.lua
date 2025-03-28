@@ -94,7 +94,7 @@ return {
           config = "~/.config/nvim/typos.toml",
         },
       },
-      ["eslint"] = {
+      eslint = {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)
 
@@ -109,16 +109,19 @@ return {
           )(fname)
         end,
       },
-      ["bashls"] = {
+      bashls = {
         filetypes = { "sh", "zsh", "bash" },
       },
-      ["clangd"] = {
+      clangd = {
         capabilities = {
           offsetEncoding = "utf-16",
         },
       },
-      ["denols"] = {
+      denols = {
         root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+      },
+      volar = {
+        filetypes = { "vue" },
       },
     }
 
@@ -143,9 +146,19 @@ return {
           includeInlayParameterNameHints = "all",
           importModuleSpecifierPreference = "non-relative",
         },
+        tsserver_plugins = {
+          "@vue/typescript-plugin",
+        },
       },
       root_dir = lspconfig.util.root_pattern("package.json"),
       single_file_support = false,
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+      },
     })
   end,
 }
