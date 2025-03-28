@@ -9,6 +9,13 @@ return {
     panel = { enabled = false },
     copilot_model = "gpt-4o-copilot",
     lsp_binary = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
+    should_attach = function(_, bufname)
+      if string.match(bufname, "env") then
+        return false
+      end
+
+      return true
+    end,
   },
   config = function(_, opts)
     require("copilot").setup(opts)
