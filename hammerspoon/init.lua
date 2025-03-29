@@ -1,6 +1,8 @@
+hs.loadSpoon("EmmyLua")
+
 local inputEnglishColemakDh = "io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi"
 
-function changeInputSourceKrToEnWhenEscapeVim()
+local function changeInputSourceKrToEnWhenEscapeVim()
   local inputSource = hs.keycodes.currentSourceID()
 
   if not (inputSource == inputEnglishColemakDh) then
