@@ -8,7 +8,8 @@ return {
     suggestion = { enabled = false },
     panel = { enabled = false },
     copilot_model = "gpt-4o-copilot",
-    lsp_binary = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
+    type = "binary",
+    custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
     should_attach = function(_, bufname)
       if string.match(bufname, "env") then
         return false
