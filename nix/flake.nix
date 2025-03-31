@@ -62,6 +62,7 @@
 
             deno
             rustup
+            uv
           ];
 
           fonts.packages = with pkgs; [
