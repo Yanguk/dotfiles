@@ -8,6 +8,10 @@ return {
     },
     copilot = {
       model = "claude-3.7-sonnet",
+      disable_tooles = {
+        "git_diff",
+        "git_commit",
+      },
     },
     system_prompt = function()
       local hub = require("mcphub").get_hub_instance()
