@@ -10,8 +10,14 @@ return {
     copilot_model = "gpt-4o-copilot",
     type = "binary",
     custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
-    should_attach = function(_, bufname)
+    should_attach = function(bufnr, bufname)
       if string.match(bufname, "env") then
+        return false
+      end
+
+      local buf_type = vim.bo[bufnr].filetype
+
+      if string.find(buf_type, "Avante") then
         return false
       end
 
