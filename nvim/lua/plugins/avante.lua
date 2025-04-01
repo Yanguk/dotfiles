@@ -11,6 +11,16 @@ return {
       disable_tooles = {
         "git_diff",
         "git_commit",
+        "list_files",
+        "search_files",
+        "read_file",
+        "create_file",
+        "rename_file",
+        "delete_file",
+        "create_dir",
+        "rename_dir",
+        "delete_dir",
+        "bash",
       },
     },
     system_prompt = function()
