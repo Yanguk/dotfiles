@@ -89,7 +89,7 @@
               "raycast"
               "rectangle"
               "hammerspoon"
-              "zed"
+              "visual-studio-code"
             ];
             masApps = {
               "kakaotalk" = 869223134;
