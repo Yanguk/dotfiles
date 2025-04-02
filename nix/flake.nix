@@ -36,6 +36,7 @@
 
           environment.systemPackages = with pkgs; [
             imagemagick
+            # pngpaste
 
             # zsh
             zsh-fast-syntax-highlighting
