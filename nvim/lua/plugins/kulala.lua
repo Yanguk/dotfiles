@@ -1,1 +1,1 @@
-return { "mistweaverco/kulala.nvim", opts = {}, ft = { "http" } }
+return { "mistweaverco/kulala.nvim", version = "*", opts = {}, ft = { "http" } }
