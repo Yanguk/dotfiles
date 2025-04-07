@@ -1,12 +1,9 @@
 {
-  "mcpServers": {
-    "github.com/modelcontextprotocol/servers/tree/main/src/git": {
-      "command": "uvx",
-      "args": ["mcp-server-git"]
-    },
-    "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+  "mcpServers": [],
+  "nativeMCPServers": {
+    "neovim": {
+      "disabled": true
     }
   }
 }
+
