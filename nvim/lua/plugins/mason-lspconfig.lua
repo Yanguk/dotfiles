@@ -75,17 +75,17 @@ return {
     -- https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats
     local eslint_root_file = {
       "eslint.config.js",
+      "eslint.config.mjs",
+      "eslint.config.cjs",
+      "eslint.config.ts",
+      "eslint.config.mts",
+      "eslint.config.cts",
       ".eslintrc.js",
       ".eslintrc",
       ".eslintrc.cjs",
       ".eslintrc.yaml",
       ".eslintrc.yml",
       ".eslintrc.json",
-      "eslint.config.mjs",
-      "eslint.config.cjs",
-      "eslint.config.ts",
-      "eslint.config.mts",
-      "eslint.config.cts",
     }
 
     local server_configs = {
