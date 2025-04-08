@@ -60,6 +60,7 @@
             ddgr
             bottom
             yazi
+            stu
 
             deno
             rustup
