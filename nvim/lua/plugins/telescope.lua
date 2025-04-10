@@ -33,14 +33,33 @@ return {
   },
   keys = {
     { "<leader>fw", "<cmd>Telescope live_grep<CR>", desc = "telescope live grep" },
+    {
+      "<leader>fW",
+      function()
+        require("telescope.builtin").live_grep({
+          additional_args = { "--no-ignore", "--hidden" },
+        })
+      end,
+      desc = "telescope All live grep",
+    },
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "telescope find buffers" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "telescope help page" },
-    -- { "<leader>ma", "<cmd>Telescope marks<CR>", desc = "telescope find marks" },
+    { "<leader>ma", "<cmd>Telescope marks<CR>", desc = "telescope find marks" },
     { "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "telescope find oldfiles" },
     { "<leader>fz", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "telescope find in current buffer" },
     { "<leader>cm", "<cmd>Telescope git_commits<CR>", desc = "telescope git commits" },
     { "<leader>gt", "<cmd>Telescope git_status<CR>", desc = "telescope git status" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "telescope find files" },
+    {
+      "<leader>fF",
+      function()
+        require("telescope.builtin").find_files({
+          no_ignore = true, -- Include ignored files
+          hidden = true, -- Optionally include hidden files
+        })
+      end,
+      desc = "telescope find All files",
+    },
     {
       "<leader>fa",
       "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>",

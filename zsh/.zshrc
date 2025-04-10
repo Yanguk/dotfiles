@@ -71,6 +71,6 @@ function yz() {
 }
 
 # package.json의 scripts 읽어서 fzf로 선택하여 실행
-alias pnpms="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
-alias npms="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
-alias yarns="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
