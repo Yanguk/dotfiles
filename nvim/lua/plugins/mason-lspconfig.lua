@@ -117,9 +117,9 @@ return {
           offsetEncoding = "utf-16",
         },
       },
-      denols = {
-        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-      },
+      -- denols = {
+      --   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+      -- },
       volar = {
         filetypes = { "vue" },
       },
@@ -151,7 +151,7 @@ return {
         },
       },
       root_dir = lspconfig.util.root_pattern("package.json"),
-      single_file_support = false,
+      single_file_support = true,
       filetypes = {
         "javascript",
         "javascriptreact",
