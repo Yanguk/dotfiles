@@ -40,6 +40,7 @@ return {
         "prettierd",
       },
       markdown = { "prettierd" },
+      mdx = { "prettierd" },
       html = { "prettierd" },
       json = { "prettierd" },
       jsonc = { "prettierd" },
