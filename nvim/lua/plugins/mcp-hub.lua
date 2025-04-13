@@ -7,9 +7,10 @@ return {
     "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
   },
   opts = {
+    auto_approve = true,
     extensions = {
       avante = {
-        auto_approve_mcp_tool_calls = true, -- Auto approves mcp tool calls.
+        make_slash_commands = true, -- make /slash commands from MCP server prompts
       },
     },
   },
