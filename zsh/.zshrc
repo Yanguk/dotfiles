@@ -75,3 +75,6 @@ function yz() {
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+
+# 공백으로 시작하는 명령어는 history에 저장하지 않음
+setopt hist_ignore_space
