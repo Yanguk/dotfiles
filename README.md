@@ -29,13 +29,16 @@ darwin-rebuild switch --flake ~/.config/nix#yanguk
 ln -sf ~/.config/zsh/.zshrc ~/.zshrc
 ```
 
+# tmux
+
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+
 # delta-theme
 
 https://github.com/catppuccin/bat
 
-```bash
 bat cache --build
-```
 
 # Add colemak-dh
 

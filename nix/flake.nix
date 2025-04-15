@@ -37,6 +37,7 @@
           environment.systemPackages = with pkgs; [
             imagemagick
             pngpaste
+            tmux
 
             # zsh
             zsh-fast-syntax-highlighting
@@ -83,7 +84,6 @@
               "duckduckgo"
               "orbStack"
               "font-noto-sans-cjk-kr"
-              "ghostty"
               "figma"
               "google-chrome"
               "obsidian"
@@ -92,6 +92,7 @@
               "rectangle"
               "hammerspoon"
               "visual-studio-code"
+              "alacritty"
             ];
             masApps = {
               "kakaotalk" = 869223134;
