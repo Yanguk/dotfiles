@@ -78,3 +78,7 @@ function yz() {
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+
+# 커스텀 bin 실행파일
+export PATH="$HOME/.config/bin:$PATH"
+alias nfc='nfd_to_nfc'
