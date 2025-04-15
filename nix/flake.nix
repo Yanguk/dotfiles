@@ -83,7 +83,6 @@
             casks = [
               "duckduckgo"
               "orbStack"
-              "font-noto-sans-cjk-kr"
               "figma"
               "google-chrome"
               "obsidian"
