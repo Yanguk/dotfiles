@@ -1,5 +1,7 @@
+-- 아직까진 디버깅 할일이 거의 없음
 return {
   "mfussenegger/nvim-dap",
+  enabled = false,
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "nvim-neotest/nvim-nio",
