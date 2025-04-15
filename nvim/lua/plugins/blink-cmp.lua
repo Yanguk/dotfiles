@@ -24,22 +24,29 @@ return {
     keymap = {
       preset = "default",
       ["<C-space>"] = {},
-      ["<C-k>"] = {},
-      ["<Up>"] = {},
-      ["<Down>"] = {},
-      -- ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
       -- ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-      -- ['<Up>'] = { 'select_prev', 'fallback' },
-      -- ['<Down>'] = { 'select_next', 'fallback' },
+      ["<C-k>"] = {},
+      -- ['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
 
+      ["<C-u>"] = { "scroll_documentation_up", "fallback" },
+      ["<C-b>"] = {},
       -- ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+
+      ["<C-d>"] = { "scroll_documentation_down", "fallback" },
+      ["<C-f>"] = {},
       -- ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+
       -- ["<C-e>"] = { "hide" },
       -- ["<C-y>"] = { "select_and_accept" },
       -- ["<C-p>"] = { "select_prev", "fallback" },
       -- ["<C-n>"] = { "select_next", "fallback" },
       -- ["<Tab>"] = { "snippet_forward", "fallback" },
       -- ["<S-Tab>"] = { "snippet_backward", "fallback" },
+
+      ["<Up>"] = {},
+      -- ['<Up>'] = { 'select_prev', 'fallback' },
+      ["<Down>"] = {},
+      -- ['<Down>'] = { 'select_next', 'fallback' },
     },
     snippets = {
       preset = "luasnip",
