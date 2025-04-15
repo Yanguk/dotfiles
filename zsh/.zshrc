@@ -39,9 +39,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# TERM
-export TERM='alacritty'
-
 # lazyGit
 export XDG_CONFIG_HOME="$HOME/.config"
 alias lg="lazygit"
