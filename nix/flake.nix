@@ -35,9 +35,10 @@
           };
 
           environment.systemPackages = with pkgs; [
-            imagemagick
-            pngpaste
-            tmux
+            # images
+            # imagemagick # image.nvim
+            # pngpaste # avante.nvim
+            # ueberzugpp # yazi, image.nvim
 
             # zsh
             zsh-fast-syntax-highlighting
@@ -45,8 +46,15 @@
             oh-my-zsh
             zoxide
 
-            nixfmt-rfc-style
+            # TUI app
+            tmux
             lazygit
+            bottom
+            yazi
+            stu
+
+            # util
+            nixfmt-rfc-style
             delta
             bat
             direnv
@@ -59,10 +67,8 @@
             gnupg
             gh
             ddgr
-            bottom
-            yazi
-            stu
 
+            # lang
             deno
             rustup
             uv
