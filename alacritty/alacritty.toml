@@ -3,7 +3,7 @@ TERM = "alacritty"
 
 [font]
 size = 16.0
-normal = { family = "Hack Nerd Font" }
+normal.family = "Hack Nerd Font"
 # bold = { family = "Hack Nerd Font", style = "Bold" }
 # italic = { family = "Hack Nerd Font", style = "Italic" }
 # bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
