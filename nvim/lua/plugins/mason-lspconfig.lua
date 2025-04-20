@@ -120,9 +120,9 @@ return {
       -- denols = {
       --   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
       -- },
-      volar = {
-        filetypes = { "vue" },
-      },
+      -- volar = {
+      --   filetypes = { "vue" },
+      -- },
     }
 
     for server, config in pairs(server_configs) do
@@ -146,9 +146,9 @@ return {
           includeInlayParameterNameHints = "all",
           importModuleSpecifierPreference = "non-relative",
         },
-        tsserver_plugins = {
-          "@vue/typescript-plugin",
-        },
+        -- tsserver_plugins = {
+        --   "@vue/typescript-plugin",
+        -- },
       },
       root_dir = lspconfig.util.root_pattern("package.json"),
       single_file_support = true,
@@ -157,7 +157,7 @@ return {
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        "vue",
+        -- "vue",
       },
     })
   end,
