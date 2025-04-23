@@ -3,7 +3,6 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
     "AndreM222/copilot-lualine",
-    -- "ravitemer/mcphub.nvim",
   },
   opts = {},
   config = function(_, opts)
@@ -16,7 +15,7 @@ return {
             cond = require("noice").api.status.mode.has,
             color = { fg = "#ff9e64" },
           },
-          -- require("mcphub.extensions.lualine"),
+          require("mcphub.extensions.lualine"),
           "copilot",
           "encoding",
           "fileformat",
