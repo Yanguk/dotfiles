@@ -17,6 +17,7 @@ alacritty/themes
 zed/*
 !zed/keymap.json
 !zed/settings.json
+!zed/tasks.json
 
 # nvim
 lazy-lock.json

@@ -98,6 +98,7 @@
               "hammerspoon"
               "visual-studio-code"
               "alacritty"
+              "zed"
             ];
             masApps = {
               "kakaotalk" = 869223134;
