@@ -1,7 +1,7 @@
 return {
   "ravitemer/mcphub.nvim",
   -- enabled = false,
-  lazy = "VeryLazy",
+  -- lazy = "VeryLazy",
   version = "*",
   cmd = "MCPHub", -- lazy load by default
   build = "npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module

@@ -5,7 +5,7 @@ return {
     "AndreM222/copilot-lualine",
   },
   opts = {},
-  config = function(_, opts)
+  config = function()
     require("lualine").setup({
       theme = "catppuccin",
       sections = {
@@ -15,7 +15,7 @@ return {
             cond = require("noice").api.status.mode.has,
             color = { fg = "#ff9e64" },
           },
-          require("mcphub.extensions.lualine"),
+          -- require("mcphub.extensions.lualine"),
           "copilot",
           "encoding",
           "fileformat",
