@@ -7,6 +7,7 @@ return {
   ---@type render.md.UserConfig
   opts = {
     file_types = { "markdown", "Avante" },
+    completions = { blink = { enabled = true } },
   },
   ft = { "markdown", "Avante" },
 }
