@@ -9,7 +9,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
   sh -s -- install --determinate
 ````
 
-### nix-darwin install & switch
+## nix-darwin install & switch
 
 https://github.com/LnL7/nix-darwin
 
@@ -17,7 +17,7 @@ https://github.com/LnL7/nix-darwin
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
 ```
 
-### run switch
+## run switch
 
 ```bash
 darwin-rebuild switch --flake ~/.config/nix#yanguk
@@ -59,12 +59,4 @@ https://github.com/gureum/gureum
 
 ```bash
 echo "export TAVILY_API_KEY=''" >> ~/.zprofile
-```
-
-# copilot
-
-```bash
-gh extension install github/gh-copilot
-
-gh extension upgrade gh-copilot
 ```
