@@ -48,6 +48,7 @@
 
             # TUI app
             tmux
+            zellij
             lazygit
             bottom
             yazi

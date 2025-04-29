@@ -2,12 +2,11 @@
 
 [nix guide](https://zero-to-nix.com)
 
-````bash
-# https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#determinate-nix-installer
 ```bash
+# https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#determinate-nix-installer
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
   sh -s -- install --determinate
-````
+```
 
 ## nix-darwin install & switch
 
