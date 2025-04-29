@@ -35,4 +35,5 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [terminal.shell]
 program = "/bin/zsh"
-args = ["-l", "-c", "zellij attach --index 0 --create"]
+args = ["-l", "-c", "tmux attach || tmux"]
+# args = ["-l", "-c", "zellij attach --index 0 --create"]
