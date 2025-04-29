@@ -58,7 +58,6 @@ return {
       "lua_ls",
       "zls",
       "yamlls",
-      "tailwindcss",
       "graphql",
       "prismals",
       "docker_compose_language_service",
@@ -123,6 +122,18 @@ return {
       -- volar = {
       --   filetypes = { "vue" },
       -- },
+      tailwindcss = {
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                "cva\\(([^)]*)\\)",
+                "[\"'`]([^\"'`]*).*?[\"'`]",
+              },
+            },
+          },
+        },
+      },
     }
 
     for server, config in pairs(server_configs) do
