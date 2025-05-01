@@ -90,7 +90,6 @@
             casks = [
               "duckduckgo"
               "orbStack"
-              # "font-noto-sans-cjk-kr" # for ghostty
               "figma"
               "google-chrome"
               "obsidian"
@@ -99,9 +98,10 @@
               "rectangle"
               "hammerspoon"
               "visual-studio-code"
-              "ghostty"
               "alacritty"
               "zed"
+              "ghostty"
+              "font-noto-sans-cjk-kr" # for ghostty
             ];
             masApps = {
               "kakaotalk" = 869223134;
