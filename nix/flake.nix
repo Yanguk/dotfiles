@@ -86,6 +86,7 @@
               "nvm"
               "zig"
               "neovim"
+              "codecrafters-io/tap/codecrafters"
             ];
             casks = [
               "duckduckgo"
