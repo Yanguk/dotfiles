@@ -70,8 +70,6 @@
             ddgr
 
             # lang
-            deno
-            rustup
             uv
           ];
 
@@ -83,10 +81,12 @@
             enable = true;
             brews = [
               "awscli-local"
-              "nvm"
-              "zig"
               "neovim"
               "codecrafters-io/tap/codecrafters"
+              # lang
+              "zig"
+              "rustup"
+              "nvm"
             ];
             casks = [
               "duckduckgo"
