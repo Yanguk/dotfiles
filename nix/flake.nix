@@ -85,7 +85,6 @@
               "codecrafters-io/tap/codecrafters"
               # lang
               "zig"
-              "rustup"
               "nvm"
             ];
             casks = [

@@ -59,3 +59,7 @@ https://github.com/gureum/gureum
 ```bash
 echo "export TAVILY_API_KEY=''" >> ~/.zprofile
 ```
+
+# Rust
+
+https://www.rust-lang.org/tools/install
