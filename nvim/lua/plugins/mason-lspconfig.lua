@@ -26,8 +26,6 @@ return {
       ensure_installed = { "ts_ls", "rust_analyzer" },
     })
 
-    local lspconfig = require("lspconfig")
-
     local default_config = {
       capabilities = require("blink.cmp").get_lsp_capabilities(),
       on_init = function(client)
@@ -54,41 +52,18 @@ return {
       lineFoldingOnly = true,
     }
 
-    local default_servers = {
-      "lua_ls",
-      "zls",
-      "yamlls",
-      "graphql",
-      "prismals",
-      "docker_compose_language_service",
-      "dockerls",
-      "nil_ls",
-      "terraformls",
-      "pylsp",
-    }
-
-    for _, server in pairs(default_servers) do
-      lspconfig[server].setup(default_config)
-    end
-
-    -- https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats
-    local eslint_root_file = {
-      "eslint.config.js",
-      "eslint.config.mjs",
-      "eslint.config.cjs",
-      "eslint.config.ts",
-      "eslint.config.mts",
-      "eslint.config.cts",
-      ".eslintrc.js",
-      ".eslintrc",
-      ".eslintrc.cjs",
-      ".eslintrc.yaml",
-      ".eslintrc.yml",
-      ".eslintrc.json",
-    }
-
     local server_configs = {
-      ["typos_lsp"] = {
+      lua_ls = {},
+      zls = {},
+      yamlls = {},
+      graphql = {},
+      prismals = {},
+      docker_compose_language_service = {},
+      dockerls = {},
+      nil_ls = {},
+      terraformls = {},
+      pylsp = {},
+      typos_lsp = {
         init_options = {
           config = "~/.config/nvim/typos.toml",
         },
@@ -102,23 +77,29 @@ return {
             command = "EslintFixAll",
           })
         end,
-        root_dir = function(fname)
-          return lspconfig.util.root_pattern(
-            unpack(lspconfig.util.insert_package_json(eslint_root_file, "eslintConfig", fname))
-          )(fname)
-        end,
+        root_markers = {
+          "eslint.config.js",
+          "eslint.config.mjs",
+          "eslint.config.cjs",
+          "eslint.config.ts",
+          "eslint.config.mts",
+          "eslint.config.cts",
+          ".eslintrc.js",
+          ".eslintrc",
+          ".eslintrc.cjs",
+          ".eslintrc.yaml",
+          ".eslintrc.yml",
+          ".eslintrc.json",
+        },
       },
       bashls = {
         filetypes = { "sh", "zsh", "bash" },
       },
       clangd = {
-        capabilities = {
+        capabilities = vim.tbl_deep_extend("force", default_config.capabilities, {
           offsetEncoding = "utf-16",
-        },
+        }),
       },
-      -- denols = {
-      --   root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-      -- },
       -- volar = {
       --   filetypes = { "vue" },
       -- },
@@ -136,8 +117,12 @@ return {
       },
     }
 
-    for server, config in pairs(server_configs) do
-      lspconfig[server].setup(vim.tbl_deep_extend("force", default_config, config))
+    -- setup lspconfig
+    vim.lsp.config("*", default_config)
+
+    for name, opts in pairs(server_configs) do
+      vim.lsp.enable(name)
+      vim.lsp.config(name, opts)
     end
 
     vim.g.rustaceanvim = {
@@ -161,7 +146,7 @@ return {
         --   "@vue/typescript-plugin",
         -- },
       },
-      root_dir = lspconfig.util.root_pattern("package.json"),
+      root_markers = { "package.json" },
       single_file_support = true,
       filetypes = {
         "javascript",
