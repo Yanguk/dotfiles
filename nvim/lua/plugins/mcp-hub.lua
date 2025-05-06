@@ -1,6 +1,6 @@
 return {
   "ravitemer/mcphub.nvim",
-  -- enabled = false,
+  enabled = false,
   -- lazy = "VeryLazy",
   version = "*",
   cmd = "MCPHub", -- lazy load by default
