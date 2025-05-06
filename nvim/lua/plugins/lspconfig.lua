@@ -5,10 +5,6 @@ return {
   dependencies = {
     "saghen/blink.cmp",
 
-    -- mason
-    { "williamboman/mason.nvim", cmd = "Mason", opts = {} },
-    "williamboman/mason-lspconfig.nvim",
-
     -- rust
     {
       "mrcjkb/rustaceanvim",
@@ -21,11 +17,6 @@ return {
     "nvim-lua/plenary.nvim",
   },
   config = function()
-    require("mason-lspconfig").setup({
-      automatic_installation = true,
-      ensure_installed = { "ts_ls", "rust_analyzer" },
-    })
-
     local default_config = {
       capabilities = require("blink.cmp").get_lsp_capabilities(),
       on_init = function(client)
@@ -52,6 +43,7 @@ return {
       lineFoldingOnly = true,
     }
 
+    -- set server config
     local server_configs = {
       lua_ls = {},
       zls = {},

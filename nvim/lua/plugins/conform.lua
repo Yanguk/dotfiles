@@ -81,7 +81,6 @@ return {
   },
   dependencies = {
     "williamboman/mason.nvim",
-    "zapling/mason-conform.nvim",
   },
   config = function(_, opts)
     command("Format", function(args)
@@ -97,6 +96,5 @@ return {
     end, { range = true })
 
     require("conform").setup(opts)
-    require("mason-conform").setup()
   end,
 }
