@@ -26,8 +26,8 @@ local ensure_installed = {
 }
 
 return {
-  "williamboman/mason.nvim",
-  cmd = { "Mason", "MasonInstallAll" },
+  "mason-org/mason.nvim",
+  cmd = { "Mason", "MasonInstallAll", "MasonUpdate", "MasonInstall", "MasonUninstall" },
   opts = {
     ui = {
       border = "rounded",
