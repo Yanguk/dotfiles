@@ -15,6 +15,9 @@ return {
     -- ts-tools
     "pmizio/typescript-tools.nvim",
     "nvim-lua/plenary.nvim",
+
+    -- lsp-server
+    "williamboman/mason.nvim",
   },
   config = function()
     local default_config = {
