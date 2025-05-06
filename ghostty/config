@@ -3,6 +3,7 @@ theme = catppuccin-mocha
 
 font-size = 16
 font-thicken = true
+adjust-cell-width = -5%
 
 font-family = Hack Nerd Font
 font-family = Noto Sans CJK KR
