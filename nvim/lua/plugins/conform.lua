@@ -21,6 +21,20 @@ end, {
   desc = "Enable autoformat-on-save",
 })
 
+command("FormatToggle", function()
+  if vim.g.disable_autoformat then
+    vim.g.disable_autoformat = false
+    vim.b.disable_autoformat = false
+    vim.notify("Autoformat Enabled")
+  else
+    vim.g.disable_autoformat = true
+    vim.b.disable_autoformat = true
+    vim.notify("Autoformat Disabled")
+  end
+end, {
+  desc = "Toggle autoformat-on-save",
+})
+
 return {
   "stevearc/conform.nvim",
   opts = {
@@ -77,6 +91,11 @@ return {
       "<leader>fm",
       "<cmd>Format<cr>",
       desc = "Format buffer",
+    },
+    {
+      "<leader>ft",
+      "<cmd>FormatToggle<cr>", -- Added this line
+      desc = "Toggle autoformat", -- Added description
     },
   },
   dependencies = {
