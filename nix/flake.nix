@@ -86,6 +86,7 @@
               # lang
               "zig"
               "nvm"
+              "mas"
             ];
             casks = [
               "duckduckgo"
