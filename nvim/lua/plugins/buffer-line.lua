@@ -24,7 +24,6 @@ return {
         },
       }),
       options = {
-        close_command = "confirm bdelete %d",
         diagnostics = "nvim_lsp",
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
           local icon = level:match("error") and " " or " "
@@ -37,7 +36,22 @@ return {
     { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next buffer" },
     { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Move to previous buffer" },
     { "<leader>x", "<Cmd>confirm bdelete<CR>", desc = "Buffer close" },
-    { "<leader>X", "<Cmd>BufferLineCloseOthers<CR>", desc = "Buffer close all" },
+    { "<leader>X", "<Cmd>BufferLineCloseOthers<CR>", desc = "Buffer close others" },
+    {
+      "<leader>bs",
+      function()
+        local bufferline = require("bufferline")
+
+        for _, e in ipairs(bufferline.get_elements().elements) do
+          vim.schedule(function()
+            vim.api.nvim_buf_call(e.id, function()
+              vim.cmd("w!")
+            end)
+          end)
+        end
+      end,
+      desc = "Buffer all force save",
+    },
   },
   lazy = false,
 }
