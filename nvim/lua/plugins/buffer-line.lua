@@ -35,7 +35,6 @@ return {
   keys = {
     { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next buffer" },
     { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Move to previous buffer" },
-    { "<leader>x", "<Cmd>confirm bdelete<CR>", desc = "Buffer close" },
     { "<leader>X", "<Cmd>BufferLineCloseOthers<CR>", desc = "Buffer close others" },
     {
       "<leader>bs",
