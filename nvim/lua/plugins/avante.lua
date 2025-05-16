@@ -7,7 +7,7 @@ return {
       use_cwd_as_project_root = true,
     },
     copilot = {
-      model = "gemini-2.5-pro",
+      -- model = "gemini-2.5-pro",
       -- disable_tooles = {
       --   "git_diff",
       --   "git_commit",
