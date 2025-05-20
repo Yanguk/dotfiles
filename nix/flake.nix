@@ -20,6 +20,7 @@
       configuration =
         { pkgs, ... }:
         {
+          system.primaryUser = username;
           nix = {
             enable = false;
             settings = {
