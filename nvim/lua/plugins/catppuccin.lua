@@ -8,17 +8,9 @@ return {
       blink_cmp = true,
       diffview = true,
       grug_far = true,
-      indent_blankline = {
-        enabled = true,
-        scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
-        colored_indent_levels = false,
-      },
       mason = true,
       noice = true,
       lsp_trouble = true,
-      telescope = {
-        enabled = true,
-      },
       which_key = true,
       snacks = {
         enabled = true,
