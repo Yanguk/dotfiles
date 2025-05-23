@@ -154,6 +154,13 @@ return {
         Snacks.terminal()
       end,
       desc = "Toggle Terminal",
+      mode = { "t", "n" },
+    },
+    {
+      "<c-x>",
+      [[<C-\><C-n>]],
+      mode = { "t" },
+      desc = "Toggle Terminal",
     },
     -- zen
     {
