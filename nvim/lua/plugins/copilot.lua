@@ -15,12 +15,6 @@ return {
         return false
       end
 
-      local buf_type = vim.bo[bufnr].filetype
-
-      if string.find(buf_type, "Avante") then
-        return false
-      end
-
       return true
     end,
   },

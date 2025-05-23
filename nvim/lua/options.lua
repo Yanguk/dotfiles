@@ -59,13 +59,12 @@ vim.filetype.add({
 })
 
 local leetcode_config = require("configs.leetcode")
--- Auto resize panes when resizing nvim window, except for leetcode and avante plugins
+
+-- Auto resize panes when resizing nvim window, except for leetcode
 autocmd("VimResized", {
   pattern = "*",
   callback = function()
-    local ft = vim.bo.filetype
-
-    if not string.find(ft, "Avante") and not leetcode_config.is_leetcode() then
+    if not leetcode_config.is_leetcode() then
       vim.cmd("tabdo wincmd =")
     end
   end,

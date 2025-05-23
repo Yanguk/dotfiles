@@ -38,8 +38,6 @@
           environment.systemPackages = with pkgs; [
             # images
             imagemagick # nvim_snack.image
-            # pngpaste # avante.nvim
-            # ueberzugpp # yazi, image.nvim
 
             # zsh
             zsh-fast-syntax-highlighting

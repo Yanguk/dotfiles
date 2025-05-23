@@ -19,7 +19,7 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
 ## run switch
 
 ```bash
-darwin-rebuild switch --flake ~/.config/nix#yanguk
+sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 ```
 
 # zsh
@@ -27,11 +27,6 @@ darwin-rebuild switch --flake ~/.config/nix#yanguk
 ```bash
 ln -sf ~/.config/zsh/.zshrc ~/.zshrc
 ```
-
-# tmux
-
-mkdir -p ~/.config/tmux/plugins/catppuccin
-git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 
 # delta-theme
 
@@ -43,16 +38,14 @@ bat cache --build
 
 [github](https://github.com/ColemakMods/mod-dh)
 
-1. download Colemak
-
-2. cp -r Colemak\ DH.bundle ~/Library/Keyboard\ Layouts
+1. brew Colemak
 
 # 구름 입력기
 
 Add `Han 3set Shin P2`
 https://github.com/gureum/gureum
 
-# Nvim avante Ai search-tool
+# MCP
 
 [tavily](https://tavily.com/)
 
