@@ -26,9 +26,10 @@ return {
       sections = {
         { section = "header" },
         { title = "MRU", padding = 1 },
-        { section = "recent_files", limit = 8, padding = 1 },
+        { section = "recent_files", limit = 10, padding = 1 },
         { title = "Bookmarks", padding = 1 },
-        { section = "keys" },
+        { section = "keys", padding = 2 },
+        { section = "startup" },
       },
       formats = {
         key = function(item)
@@ -51,7 +52,10 @@ return {
         char = "▏",
       },
     },
-    input = { enabled = true },
+    input = {
+      enabled = true,
+      relative = "cursor",
+    },
     picker = { enabled = true },
     lazygit = { enabled = true },
     notifier = { enabled = true },
@@ -62,6 +66,12 @@ return {
     terminal = { enabled = true },
     zen = { enabled = true },
     -- words = { enabled = true },
+    styles = {
+      input = {
+        relative = "cursor",
+        row = -3,
+      },
+    },
   },
   keys = {
     -- lazygit

@@ -1,14 +1,23 @@
 {
   "mcpServers": {
-    "git": {
-      "name": "github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "github.com/modelcontextprotocol/servers/tree/main/src/git": {
       "command": "uvx",
       "args": ["mcp-server-git"]
     },
-    "sequentialthinking": {
-      "name": "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    "github.com/modelcontextprotocol/servers/tree/main/src/memory": {
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "command": "npx"
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "command": "npx"
+    },
+    "github.com/tavily-ai/tavily-mcp": {
+      "args": ["-y", "tavily-mcp@0.2.0"],
+      "env": {
+        "TAVILY_API_KEY": ""
+      },
+      "command": "npx"
     }
   },
   "nativeMCPServers": []
