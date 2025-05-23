@@ -18,10 +18,10 @@ return {
 (o o /     
  |.   ~.   
  じしf_,)ノ]],
-        keys = {
-          { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
-          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
-        },
+        -- keys = {
+        --   -- { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+        --   -- { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+        -- },
       },
       sections = {
         { section = "header" },
@@ -52,7 +52,7 @@ return {
       },
     },
     input = { enabled = true },
-    -- picker = { enabled = true },
+    picker = { enabled = true },
     -- lazygit = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
@@ -62,6 +62,57 @@ return {
     -- words = { enabled = true },
   },
   keys = {
+    -- picker
+    {
+      "<leader><space>",
+      function()
+        Snacks.picker.smart()
+      end,
+      desc = "Smart Find Files",
+    },
+    {
+      "<leader>ff",
+      function()
+        Snacks.picker.files()
+      end,
+      desc = "Find Files",
+    },
+    {
+      "<leader>fg",
+      function()
+        Snacks.picker.git_files()
+      end,
+      desc = "Find Git Files",
+    },
+    {
+      "<leader>fr",
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = "Recent",
+    },
+    {
+      "<leader>fw",
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = "Grep",
+    },
+    {
+      "<leader>gs",
+      function()
+        Snacks.picker.git_status()
+      end,
+      desc = "Git Status",
+    },
+    {
+      "<leader>fb",
+      function()
+        Snacks.picker.buffers()
+      end,
+      desc = "Buffers",
+    },
+    -- buffer
     {
       "<leader>x",
       function()
