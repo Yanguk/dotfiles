@@ -38,5 +38,3 @@ map("n", "<A-=>", ":vertical resize +5<CR>", { silent = true }) -- make the wind
 map("n", "<A-->", ":vertical resize -5<CR>", { silent = true }) -- make the window smaller vertically
 map("n", "<A-+>", ":resize +2<CR>", { silent = true }) -- make the window bigger horizontally by pressing shift and =
 map("n", "<A-_>", ":resize -2<CR>", { silent = true }) -- make the window smaller horizontally by pressing shift and -
-
-map("n", "<leader>x", "<Cmd>confirm bdelete<CR>", { desc = "Buffer close" })
