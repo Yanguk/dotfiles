@@ -26,7 +26,7 @@ return {
       sections = {
         { section = "header" },
         { title = "MRU", padding = 1 },
-        { section = "recent_files", limit = 10, padding = 1 },
+        { section = "recent_files", cwd = true, limit = 10, padding = 1 },
         { title = "Bookmarks", padding = 1 },
         { section = "keys", padding = 2 },
         { section = "startup" },
