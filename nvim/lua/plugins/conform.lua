@@ -93,7 +93,7 @@ return {
       desc = "Format buffer",
     },
     {
-      "<leader>ft",
+      "<leader>tf",
       "<cmd>FormatToggle<cr>", -- Added this line
       desc = "Toggle autoformat", -- Added description
     },

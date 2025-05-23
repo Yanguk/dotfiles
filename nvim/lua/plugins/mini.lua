@@ -15,6 +15,7 @@ return {
     end,
   },
   {
+    -- for codecompanion
     "echasnovski/mini.diff",
     event = "VeryLazy",
     config = function()
