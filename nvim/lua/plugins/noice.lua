@@ -2,9 +2,9 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
-    -- messages = {
-    --   view = "mini",
-    -- },
+    messages = {
+      view = "mini",
+    },
     routes = {
       {
         filter = {

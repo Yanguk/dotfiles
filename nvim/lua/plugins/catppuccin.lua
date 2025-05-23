@@ -15,12 +15,15 @@ return {
       },
       mason = true,
       noice = true,
-      octo = true,
       lsp_trouble = true,
       telescope = {
         enabled = true,
       },
       which_key = true,
+      snacks = {
+        enabled = true,
+        indent_scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
+      },
     },
   },
   init = function()

@@ -37,7 +37,7 @@
 
           environment.systemPackages = with pkgs; [
             # images
-            # imagemagick # image.nvim
+            imagemagick # nvim_snack.image
             # pngpaste # avante.nvim
             # ueberzugpp # yazi, image.nvim
 

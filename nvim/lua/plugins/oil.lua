@@ -44,7 +44,7 @@ local detail = false
 
 return {
   "stevearc/oil.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons", "MagicDuck/grug-far.nvim" },
+  dependencies = { "MagicDuck/grug-far.nvim" },
   ---@module 'oil'
   ---@type oil.SetupOpts
   opts = {
