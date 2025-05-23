@@ -84,7 +84,7 @@ return {
     },
     -- picker
     {
-      "<leader><space>",
+      "<leader>fs",
       function()
         Snacks.picker.smart()
       end,
