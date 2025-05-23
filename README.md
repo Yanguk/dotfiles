@@ -34,18 +34,26 @@ https://github.com/catppuccin/bat
 
 bat cache --build
 
-# Add colemak-dh
+# keyboard lazyout
+
+## Add colemak-dh
 
 [github](https://github.com/ColemakMods/mod-dh)
 
 1. brew Colemak
 
-# 구름 입력기
+## 구름 입력기
 
 Add `Han 3set Shin P2`
 https://github.com/gureum/gureum
 
-# MCP
+# Nvim Ai
+
+## vectorcode
+
+- pipx install vectorcode
+
+## MCP
 
 [tavily](https://tavily.com/)
 

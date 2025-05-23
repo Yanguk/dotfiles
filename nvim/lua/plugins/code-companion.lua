@@ -4,6 +4,14 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "ravitemer/codecompanion-history.nvim",
+    {
+      "Davidyz/VectorCode",
+      version = "*", -- optional, depending on whether you're on nightly or release
+      build = "pipx upgrade vectorcode", -- optional but recommended. This keeps your CLI up-to-date.
+      cmd = "VectorCode", -- if you're lazy-loading VectorCode
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
   },
   opts = {
     extensions = {
@@ -13,6 +21,17 @@ return {
           show_result_in_chat = true, -- Show mcp tool results in chat
           make_vars = true, -- Convert resources to #variables
           make_slash_commands = true, -- Add prompts as /slash commands
+        },
+      },
+      history = {
+        enabled = true,
+        opts = {
+          picker = "snacks",
+        },
+      },
+      vectorcode = {
+        opts = {
+          add_tool = true,
         },
       },
     },

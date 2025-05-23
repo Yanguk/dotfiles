@@ -70,6 +70,8 @@
 
             # lang
             uv
+            # Install and run Python applications in isolated environments
+            pipx
           ];
 
           fonts.packages = with pkgs; [
