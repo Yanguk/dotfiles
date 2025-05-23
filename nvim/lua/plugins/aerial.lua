@@ -5,7 +5,7 @@ return {
     {
       "gO",
       "<cmd>AerialToggle!<CR>",
-      desc = "vim.lsp.buf.document_symbol(Aerial)",
+      desc = "Symbol Aerial",
     },
   },
 }

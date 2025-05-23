@@ -4,7 +4,6 @@ return {
   priority = 1000,
   opts = {
     integrations = {
-      aerial = true,
       blink_cmp = true,
       diffview = true,
       grug_far = true,
