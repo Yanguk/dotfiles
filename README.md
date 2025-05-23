@@ -10,7 +10,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 ## nix-darwin install & switch
 
-https://github.com/LnL7/nix-darwin
+[nix-darwin](https://github.conix-darwin/nix-darwin)
 
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
@@ -36,20 +36,17 @@ bat cache --build
 
 # keyboard lazyout
 
-## Add colemak-dh
+[mod-dh](https://github.com/ColemakMods/mod-dh)
 
-[github](https://github.com/ColemakMods/mod-dh)
+- Add `colemak-dh`
 
-1. brew Colemak
+[gurem](https://github.com/gureum/gureum)
 
-## 구름 입력기
-
-Add `Han 3set Shin P2`
-https://github.com/gureum/gureum
+- Add `Han 3set Shin P2`
 
 # Nvim Ai
 
-## vectorcode
+[vectorcode](https://github.com/Davidyz/VectorCode)
 
 - pipx install vectorcode
 
