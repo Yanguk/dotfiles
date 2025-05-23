@@ -9,7 +9,10 @@ return {
       {
         filter = {
           event = "notify",
-          find = "No information available",
+          any = {
+            { find = "No information available" },
+            { find = "Content is not an image." },
+          },
         },
         opts = {
           skip = true,
