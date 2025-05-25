@@ -38,6 +38,7 @@
           environment.systemPackages = with pkgs; [
             # images
             imagemagick # nvim_snack.image
+            pngpaste # nvim_img-clip
 
             # zsh
             zsh-fast-syntax-highlighting
@@ -46,8 +47,8 @@
             zoxide
 
             # TUI app
-            tmux
-            zellij
+            # tmux
+            # zellij
             lazygit
             bottom
             yazi
@@ -90,7 +91,8 @@
               "mas"
             ];
             casks = [
-              "duckduckgo"
+              # "duckduckgo"
+              # "alacritty"
               "orbStack"
               "figma"
               "google-chrome"
@@ -100,13 +102,13 @@
               "rectangle"
               "hammerspoon"
               "visual-studio-code"
-              "alacritty"
               "zed"
               "ghostty"
               "font-noto-sans-cjk-kr" # for ghostty
             ];
             masApps = {
               "kakaotalk" = 869223134;
+              "adguard-for-safari" = 1440147259;
             };
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;

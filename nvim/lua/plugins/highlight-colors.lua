@@ -1,8 +1,8 @@
 return {
   "brenoprata10/nvim-highlight-colors",
-  enabled = false,
+  cmd = "HighlightColors",
   opts = {
     enable_tailwind = true,
   },
-  event = "BufReadPre",
+  -- event = "BufReadPre",
 }

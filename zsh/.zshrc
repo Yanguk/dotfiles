@@ -22,7 +22,7 @@ plugins=(
   git
   gh
   docker
-  tmux
+  # tmux
 
   zoxide
   zsh-autosuggestions
@@ -58,7 +58,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # nix
 alias nixEdit="nvim ~/.config/nix/flake.nix"
-alias nixUpdate="nix flake update --flake ~/.config/nix"
+alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
 
 # yazi

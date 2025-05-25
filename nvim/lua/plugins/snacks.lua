@@ -38,7 +38,13 @@ return {
       },
     },
     -- explorer = { enabled = true },
-    image = { enabled = true },
+    image = {
+      enabled = true,
+      doc = {
+        -- in .css, issue
+        enabled = false,
+      },
+    },
     indent = {
       enabled = true,
       indent = {
