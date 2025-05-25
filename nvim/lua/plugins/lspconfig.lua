@@ -115,8 +115,8 @@ return {
     vim.lsp.config("*", default_config)
 
     for name, opts in pairs(server_configs) do
-      vim.lsp.enable(name)
       vim.lsp.config(name, opts)
+      vim.lsp.enable(name)
     end
 
     vim.g.rustaceanvim = {
