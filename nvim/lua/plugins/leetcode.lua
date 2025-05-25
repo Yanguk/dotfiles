@@ -3,6 +3,7 @@ local leetcode_config = require("configs.leetcode")
 return {
   "kawre/leetcode.nvim",
   build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+  -- cmd = "Leet",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
@@ -12,59 +13,35 @@ return {
     arg = leetcode_config.get_leet_arg(),
     -- image_support = true, 활성화시 문제 wrap이 비활성화됨.
     lang = "rust",
+    injector = {
+      ---@type table<lc.lang, lc.inject>
+      ["rust"] = {
+        before = { "fn main(){}", "struct Solution;" },
+      },
+    },
     hooks = {
+      ---@type fun(question: lc.ui.Question)[]
       ["question_enter"] = {
-        function()
-          local file_extension = vim.fn.expand("%:e")
+        function(question)
+          local problem_dir = vim.fn.stdpath("data") .. "/leetcode/Cargo.toml"
+          local content = [[
+            [package]
+            name = "leetcode"
+            edition = "2024"
 
-          if file_extension == "rs" then
-            local target_dir = vim.fn.stdpath("data") .. "/leetcode"
-            local output_file = target_dir .. "/rust-project.json"
+            [lib]
+            name = "%s"
+            path = "%s"
+          ]]
 
-            if vim.fn.isdirectory(target_dir) == 1 then
-              local crates = ""
-              local next = ""
+          local file = io.open(problem_dir, "w")
 
-              local rs_files = vim.fn.globpath(target_dir, "*.rs", false, true)
-              for _, f in ipairs(rs_files) do
-                local file_path = f
-                crates = crates .. next .. '{"root_module": "' .. file_path .. '","edition": "2021","deps": []}'
-                next = ","
-              end
-
-              if crates == "" then
-                print("No .rs files found in directory: " .. target_dir)
-                return
-              end
-
-              local sysroot_src = vim.fn.system("rustc --print sysroot"):gsub("\n", "")
-                .. "/lib/rustlib/src/rust/library"
-
-              local json_content = '{"sysroot_src": "' .. sysroot_src .. '", "crates": [' .. crates .. "]}"
-
-              local file = io.open(output_file, "w")
-              if file then
-                file:write(json_content)
-                file:close()
-
-                local clients = vim.lsp.get_clients()
-                local rust_analyzer_attached = false
-                for _, client in ipairs(clients) do
-                  if client.name == "rust_analyzer" then
-                    rust_analyzer_attached = true
-                    break
-                  end
-                end
-
-                if rust_analyzer_attached then
-                  vim.cmd("LspRestart rust_analyzer")
-                end
-              else
-                print("Failed to open file: " .. output_file)
-              end
-            else
-              print("Directory " .. target_dir .. " does not exist.")
-            end
+          if file then
+            local formatted = (content:gsub(" +", "")):format(question.q.frontend_id, question:path())
+            file:write(formatted)
+            file:close()
+          else
+            print("Failed to open file: " .. problem_dir)
           end
         end,
       },
