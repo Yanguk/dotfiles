@@ -16,7 +16,7 @@ return {
     injector = {
       ---@type table<lc.lang, lc.inject>
       ["rust"] = {
-        before = { "fn main(){}", "struct Solution;" },
+        before = { "#![allow(dead_code)]", "fn main(){}", "struct Solution;" },
       },
     },
     hooks = {
