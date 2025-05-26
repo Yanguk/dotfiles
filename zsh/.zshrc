@@ -60,6 +60,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 alias nixEdit="nvim ~/.config/nix/flake.nix"
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
+alias nixUpgrade="sudo determinate-nixd upgrade"
 
 # yazi
 function yz() {
