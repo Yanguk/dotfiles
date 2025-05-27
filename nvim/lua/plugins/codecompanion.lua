@@ -41,11 +41,14 @@ return {
         return require("codecompanion.adapters").extend("copilot", {
           schema = {
             model = {
-              default = "gemini-2.5-pro",
+              default = "claude-3.7-sonnet",
             },
           },
         })
       end,
+    },
+    opts = {
+      show_model_choices = true,
     },
   },
   keys = {
