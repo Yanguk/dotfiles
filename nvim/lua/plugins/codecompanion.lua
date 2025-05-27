@@ -12,6 +12,7 @@ return {
     --   cmd = "VectorCode", -- if you're lazy-loading VectorCode
     --   dependencies = { "nvim-lua/plenary.nvim" },
     -- },
+    "j-hui/fidget.nvim",
   },
   opts = {
     extensions = {
@@ -82,6 +83,11 @@ return {
     },
   },
   init = function(_, opts)
-    require("configs.codecompanion-spinner"):init()
+    -- #cursor top loading
+    -- require("configs.codecompanion-spinner"):init()
+    -- #noice loading
+    -- require("configs.codecompanion-spinner-2"):init()
+    -- #fidget loading
+    require("configs.codecompanion-fidget-spinner"):init()
   end,
 }
