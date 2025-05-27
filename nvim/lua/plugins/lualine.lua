@@ -8,6 +8,7 @@ return {
     require("lualine").setup({
       theme = "catppuccin",
       sections = {
+        lualine_c = { { "filename", path = 2 } },
         lualine_x = {
           {
             require("noice").api.status.mode.get,
