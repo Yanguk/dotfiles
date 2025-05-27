@@ -51,11 +51,13 @@ return {
     {
       "<leader>at",
       "<cmd>CodeCompanionChat Toggle<CR>",
+      mode = { "v", "n" },
       desc = "Toggle a chat buffe",
     },
     {
-      "<leader>aa",
+      "<leader>ap",
       "<cmd>CodeCompanionActions<CR>",
+      mode = { "v", "n" },
       desc = "Open the action palette",
     },
     {
