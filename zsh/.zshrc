@@ -89,29 +89,41 @@ function _show_spinner() {
     local spinner=("⠋" "⠙" "⠹" "⠸" "⠼" "⠴" "⠦" "⠧" "⠇" "⠏")
     local i=0
 
-    tput civis
+    local cyan="\033[36m" # 청록색
+    local reset="\033[0m" # reset
+
 
     if [[ -z "$pid" ]]; then
         echo "No PID provided. Running spinner for 3 seconds..."
+
+        echo -ne "\033[s\033[?25l"
+
         for _ in {1..30}; do
-            echo -ne "\r${spinner[i]}"
+            # Restore the cursor position, set cyan color, and print the spinner
+            echo -ne "\033[u${cyan}${spinner[i]}${reset}"
+
             i=$(( (i + 1) % ${#spinner[@]} ))
             sleep 0.1
         done
-        echo -ne "\r" # Clear spinner line
-        tput cnorm
 
+        # Clear spinner line, restore cursor position, and show the cursor
+        echo -ne "\033[u \033[u\033[?25h"
         return
     fi
 
+    # Save the cursor position and hide the cursor
+    echo -ne "\033[s\033[?25l"
+
     while kill -0 "$pid" 2>/dev/null; do
-        echo -ne "\r${spinner[i]}"
+        # Restore the cursor position, set cyan color, and print the spinner
+        echo -ne "\033[u${cyan}${spinner[i]}${reset}"
+
         i=$(( (i + 1) % ${#spinner[@]} ))
         sleep 0.1
     done
 
-    echo -ne "\r" # Clear spinner line
-    tput cnorm
+    # Clear spinner line, restore cursor position, and show the cursor
+    echo -ne "\033[u \033[u\033[?25h"
 }
 
 ######## knorwe ########
