@@ -52,7 +52,7 @@ function M.create_progress_message(request)
     client_id = "client " .. id,
     client = M.llm_role_title(request.data.adapter),
     id = id,
-    message = "Awaiting Response: ",
+    message = "[" .. request.data.strategy .. "] " .. "Awaiting Response: ",
   }
   return msg
 end
@@ -83,7 +83,7 @@ end
 
 function M.report_exit_status(request)
   if request.data.status == "success" then
-    return "Completed"
+    return "󰄴 Completed" -- Circle with a checkmark for completed status
   elseif request.data.status == "error" then
     return " Error"
   else
