@@ -77,12 +77,13 @@ alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
-# 공백으로 시작하는 명령어는 history에 저장하지 않음
+# 공백으로 시작하는 명령어는 history에 저장하지 않음 -> ddgr 사용시 히스토리 안남게하기 위함
 setopt HIST_IGNORE_SPACE
 
 # Created by `pipx` on 2025-05-23 07:43:15
 export PATH="$PATH:/Users/yanguk/.local/bin"
 
+# indicator
 function _show_spinner() {
     local pid=$1
     local spinner=("⠋" "⠙" "⠹" "⠸" "⠼" "⠴" "⠦" "⠧" "⠇" "⠏")
@@ -113,6 +114,7 @@ function _show_spinner() {
     tput cnorm
 }
 
+######## knorwe ########
 function dumboPr() {
     if [ -z "$1" ]; then
         echo "Usage: createPR <TITLE>"
@@ -124,18 +126,33 @@ function dumboPr() {
     REVIEWERS="kimch3617,KIMSeHyung,dkssud9556,cheol-95,jh5391,aihua42"
     LABEL="dumbo"
 
+    # Find the Git root directory
+    GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [ -z "$GIT_ROOT" ]; then
+        echo "Not inside a Git repository."
+        return 1
+    fi
+
+    # Read the template file
+    TEMPLATE_FILE="$GIT_ROOT/.github/PULL_REQUEST_TEMPLATE.md"
+    if [ ! -f "$TEMPLATE_FILE" ]; then
+        echo "Template file not found: $TEMPLATE_FILE"
+        return 1
+    fi
+
+    TEMPLATE_BODY=$(cat "$TEMPLATE_FILE")
+
     echo -n "Creating pull request..."
     # Create the PR
-    gh pr create --assignee "@me" --base "$BASE_BRANCH" --title "$TITLE" --body "" --reviewer "$REVIEWERS" --label "$LABEL" &
+    PR_URL=$(gh pr create --assignee "@me" --base "$BASE_BRANCH" --title "$TITLE" --body "$TEMPLATE_BODY" --reviewer "$REVIEWERS" --label "$LABEL")
+
     local gh_pid=$!
 
     # Show spinner while the command is running
     _show_spinner "$gh_pid"
     wait "$gh_pid"
 
-    PR_URL=$(gh pr view --json url -q .url)
-
-    if [[ "$PR_URL" == *"https://"* ]]; then
+    if [ -n "$PR_URL" ]; then
         echo "\nPull request created: $PR_URL"
         open "$PR_URL"
     else
