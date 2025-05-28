@@ -12,6 +12,7 @@ return {
       lsp_trouble = true,
       which_key = true,
       render_markdown = true,
+      octo = true,
       snacks = {
         enabled = true,
         indent_scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
