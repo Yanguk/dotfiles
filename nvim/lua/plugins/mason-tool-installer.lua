@@ -15,6 +15,7 @@ return {
       "copilot-language-server",
       "clangd",
       "zls",
+      "beautysh",
       "bash-language-server",
       "copilot-language-server",
       "docker-compose-language-service",

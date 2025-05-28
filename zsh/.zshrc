@@ -1,7 +1,7 @@
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
@@ -17,16 +17,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # omz plugins
 plugins=(
-  pnpm
-  yarn
-  git
-  gh
-  docker
-  # tmux
+    pnpm
+    yarn
+    git
+    gh
+    docker
+    # tmux
 
-  zoxide
-  zsh-autosuggestions
-  fast-syntax-highlighting
+    zoxide
+    zsh-autosuggestions
+    fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -64,12 +64,12 @@ alias nixUpgrade="sudo determinate-nixd upgrade"
 
 # yazi
 function yz() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 
 # package.json의 scripts 읽어서 fzf로 선택하여 실행
@@ -82,3 +82,64 @@ setopt HIST_IGNORE_SPACE
 
 # Created by `pipx` on 2025-05-23 07:43:15
 export PATH="$PATH:/Users/yanguk/.local/bin"
+
+function _show_spinner() {
+    local pid=$1
+    local spinner=("⠋" "⠙" "⠹" "⠸" "⠼" "⠴" "⠦" "⠧" "⠇" "⠏")
+    local i=0
+
+    tput civis
+
+    if [[ -z "$pid" ]]; then
+        echo "No PID provided. Running spinner for 3 seconds..."
+        for _ in {1..30}; do
+            echo -ne "\r${spinner[i]}"
+            i=$(( (i + 1) % ${#spinner[@]} ))
+            sleep 0.1
+        done
+        echo -ne "\r" # Clear spinner line
+        tput cnorm
+
+        return
+    fi
+
+    while kill -0 "$pid" 2>/dev/null; do
+        echo -ne "\r${spinner[i]}"
+        i=$(( (i + 1) % ${#spinner[@]} ))
+        sleep 0.1
+    done
+
+    echo -ne "\r" # Clear spinner line
+    tput cnorm
+}
+
+function dumboPr() {
+    if [ -z "$1" ]; then
+        echo "Usage: createPR <TITLE>"
+        return 1
+    fi
+
+    TITLE=$1
+    BASE_BRANCH="dumbo/dev"
+    REVIEWERS="kimch3617,KIMSeHyung,dkssud9556,cheol-95,jh5391,aihua42"
+    LABEL="dumbo"
+
+    echo -n "Creating pull request..."
+    # Create the PR
+    gh pr create --assignee "@me" --base "$BASE_BRANCH" --title "$TITLE" --body "" --reviewer "$REVIEWERS" --label "$LABEL" &
+    local gh_pid=$!
+
+    # Show spinner while the command is running
+    _show_spinner "$gh_pid"
+    wait "$gh_pid"
+
+    PR_URL=$(gh pr view --json url -q .url)
+
+    if [[ "$PR_URL" == *"https://"* ]]; then
+        echo "\nPull request created: $PR_URL"
+        open "$PR_URL"
+    else
+        echo "\nFailed to create the pull request."
+        return 1
+    fi
+}

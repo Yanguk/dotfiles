@@ -61,6 +61,7 @@ return {
 
       -- racket = { "raco" },
       sh = { "shfmt" },
+      zsh = { "beautysh" },
       -- rust = { "rustfmt" }, @deprecated
       -- c = { "clang_format" },
 
