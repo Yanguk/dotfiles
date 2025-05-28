@@ -25,6 +25,7 @@ return {
       --   },
       -- },
       history = {
+        expiration_days = 5,
         enabled = true,
         opts = {
           picker = "snacks",
