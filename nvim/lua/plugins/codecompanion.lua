@@ -37,17 +37,17 @@ return {
       --   },
       -- },
     },
-    adapters = {
-      copilot = function()
-        return require("codecompanion.adapters").extend("copilot", {
-          schema = {
-            model = {
-              default = "claude-3.7-sonnet",
-            },
-          },
-        })
-      end,
-    },
+    -- adapters = {
+    --   copilot = function()
+    --     return require("codecompanion.adapters").extend("copilot", {
+    --       schema = {
+    --         model = {
+    --           default = "claude-3.7-sonnet",
+    --         },
+    --       },
+    --     })
+    --   end,
+    -- },
     opts = {
       show_model_choices = true,
     },
