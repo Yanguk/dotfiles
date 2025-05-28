@@ -138,14 +138,14 @@ function dumboPr() {
     REVIEWERS="kimch3617,KIMSeHyung,dkssud9556,cheol-95,jh5391,aihua42"
     LABEL="dumbo"
 
-    # Find the Git root directory
+    # Git 루트 디렉토리 확인
     GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
     if [ -z "$GIT_ROOT" ]; then
         echo "Not inside a Git repository."
         return 1
     fi
 
-    # Read the template file
+    # 템플릿 파일 읽기
     TEMPLATE_FILE="$GIT_ROOT/.github/PULL_REQUEST_TEMPLATE.md"
     if [ ! -f "$TEMPLATE_FILE" ]; then
         echo "Template file not found: $TEMPLATE_FILE"
@@ -155,14 +155,22 @@ function dumboPr() {
     TEMPLATE_BODY=$(cat "$TEMPLATE_FILE")
 
     echo -n "Creating pull request..."
-    # Create the PR
-    PR_URL=$(gh pr create --assignee "@me" --base "$BASE_BRANCH" --title "$TITLE" --body "$TEMPLATE_BODY" --reviewer "$REVIEWERS" --label "$LABEL")
+    
+    # gh 명령어를 백그라운드에서 실행하고 출력 저장
+    {
+        PR_URL=$(gh pr create --assignee "@me" --base "$BASE_BRANCH" --title "$TITLE" --body "$TEMPLATE_BODY" --reviewer "$REVIEWERS" --label "$LABEL")
+        echo "$PR_URL" > /tmp/pr_url_output
+    } &
 
     local gh_pid=$!
 
-    # Show spinner while the command is running
+    # 스피너 실행
     _show_spinner "$gh_pid"
     wait "$gh_pid"
+
+    # 임시 파일에서 PR URL 읽기
+    PR_URL=$(cat /tmp/pr_url_output)
+    rm -f /tmp/pr_url_output
 
     if [ -n "$PR_URL" ]; then
         echo "\nPull request created: $PR_URL"
