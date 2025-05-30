@@ -5,26 +5,23 @@ return {
   cmd = "Copilot",
   event = "InsertEnter",
   opts = {
+    filetypes = {
+      markdown = false,
+      octo = false,
+      sh = function()
+        if string.match(vim.fs.basename(vim.api.nvim_buf_get_name(0)), "^%.env.*") then
+          -- disable for .env files
+          return false
+        end
+        return true
+      end,
+      [""] = false,
+    },
     suggestion = { enabled = false },
     panel = { enabled = false },
     copilot_model = "gpt-4o-copilot",
     type = "binary",
     custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
-    should_attach = function(_bufnr, bufname)
-      if not bufname or bufname == "" then
-        return false
-      end
-
-      local excluded_patterns = { "env", "octo" }
-
-      for _, pattern in ipairs(excluded_patterns) do
-        if string.match(bufname, pattern) then
-          return false
-        end
-      end
-
-      return true
-    end,
   },
   config = function(_, opts)
     require("copilot").setup(opts)
