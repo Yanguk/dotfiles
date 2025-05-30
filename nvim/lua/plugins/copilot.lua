@@ -10,7 +10,11 @@ return {
     copilot_model = "gpt-4o-copilot",
     type = "binary",
     custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
-    should_attach = function(bufnr, bufname)
+    should_attach = function(_bufnr, bufname)
+      if not bufname or bufname == "" then
+        return false
+      end
+
       local excluded_patterns = { "env", "octo" }
 
       for _, pattern in ipairs(excluded_patterns) do
