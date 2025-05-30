@@ -38,3 +38,16 @@ map("n", "<A-=>", ":vertical resize +5<CR>", { silent = true }) -- make the wind
 map("n", "<A-->", ":vertical resize -5<CR>", { silent = true }) -- make the window smaller vertically
 map("n", "<A-+>", ":resize +2<CR>", { silent = true }) -- make the window bigger horizontally by pressing shift and =
 map("n", "<A-_>", ":resize -2<CR>", { silent = true }) -- make the window smaller horizontally by pressing shift and -
+
+-- emoji
+map("n", "<leader>eit", function()
+  vim.api.nvim_put({ "👍" }, "c", true, true)
+end, { desc = "Insert Thumbs Up Emoji" })
+
+map("n", "<leader>eir", function()
+  vim.api.nvim_put({ "🚀" }, "c", true, true)
+end, { desc = "Insert Rocket Emoji" })
+
+map("n", "<leader>eic", function()
+  vim.api.nvim_put({ "💥" }, "c", true, true)
+end, { desc = "Insert Explosion Emoji" })
