@@ -8,7 +8,4 @@ return {
   },
   opts = {},
   cmd = { "Emoji" },
-  config = function(_, opts)
-    require("emoji").setup(opts)
-  end,
 }
