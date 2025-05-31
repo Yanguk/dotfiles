@@ -108,7 +108,6 @@
             ];
             masApps = {
               "kakaotalk" = 869223134;
-              "adguard-for-safari" = 1440147259;
             };
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;

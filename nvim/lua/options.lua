@@ -71,3 +71,5 @@ autocmd("VimResized", {
 })
 
 vim.cmd([[ inoremap <C-c> <Esc>\`^ ]])
+
+vim.diagnostic.config({ virtual_text = true })
