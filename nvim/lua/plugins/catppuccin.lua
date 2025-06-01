@@ -4,7 +4,7 @@ return {
   priority = 1000,
   opts = {
     integrations = {
-      avante = true,
+      -- avante = true,
       blink_cmp = true,
       diffview = true,
       grug_far = true,

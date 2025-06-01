@@ -49,21 +49,21 @@ return {
     snippets = {
       preset = "luasnip",
     },
-    per_filetype = {
-      lua = { inherit_defaults = true, "lazydev" },
-    },
     sources = {
+      per_filetype = {
+        lua = { inherit_defaults = true, "lazydev" },
+        AvanteInput = {
+          "avante_commands",
+          "avante_mentions",
+          "avante_files",
+        },
+      },
       default = {
         "lsp",
         "path",
         "snippets",
         "buffer",
         "copilot",
-
-        -- avante
-        "avante_commands",
-        "avante_mentions",
-        "avante_files",
       },
       providers = {
         copilot = {
