@@ -7,6 +7,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
+    "ibhagwan/fzf-lua",
   },
   lazy = not leetcode_config.is_leetcode(),
   opts = {
