@@ -12,6 +12,17 @@ return {
         require("luasnip.loaders.from_vscode").lazy_load()
       end,
     },
+    {
+      "saghen/blink.compat",
+      config = function()
+        -- monkeypatch cmp.ConfirmBehavior for Avante
+        require("cmp").ConfirmBehavior = {
+          Insert = "insert",
+          Replace = "replace",
+        }
+      end,
+      lazy = true,
+    },
   },
 
   -- use a release tag to download pre-built binaries
@@ -38,17 +49,21 @@ return {
     snippets = {
       preset = "luasnip",
     },
+    per_filetype = {
+      lua = { inherit_defaults = true, "lazydev" },
+    },
     sources = {
-      per_filetype = {
-        codecompanion = { "codecompanion" },
-      },
       default = {
         "lsp",
         "path",
         "snippets",
         "buffer",
         "copilot",
-        "lazydev",
+
+        -- avante
+        "avante_commands",
+        "avante_mentions",
+        "avante_files",
       },
       providers = {
         copilot = {
@@ -62,6 +77,24 @@ return {
           module = "lazydev.integrations.blink",
           -- make lazydev completions top priority (see `:h blink.cmp`)
           score_offset = 100,
+        },
+        avante_commands = {
+          name = "avante_commands",
+          module = "blink.compat.source",
+          score_offset = 90, -- show at a higher priority than lsp
+          opts = {},
+        },
+        avante_files = {
+          name = "avante_files",
+          module = "blink.compat.source",
+          score_offset = 100, -- show at a higher priority than lsp
+          opts = {},
+        },
+        avante_mentions = {
+          name = "avante_mentions",
+          module = "blink.compat.source",
+          score_offset = 100, -- show at a higher priority than lsp
+          opts = {},
         },
       },
     },

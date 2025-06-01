@@ -64,7 +64,9 @@ local leetcode_config = require("configs.leetcode")
 autocmd("VimResized", {
   pattern = "*",
   callback = function()
-    if not leetcode_config.is_leetcode() then
+    local ft = vim.bo.filetype
+
+    if not string.find(ft, "Avante") and leetcode_config.is_not_leetcode() then
       vim.cmd("tabdo wincmd =")
     end
   end,
