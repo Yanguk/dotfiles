@@ -1,6 +1,10 @@
 return {
   "stevearc/aerial.nvim",
-  opts = {},
+  opts = {
+    layout = {
+      default_direction = "prefer_left",
+    },
+  },
   keys = {
     {
       "gO",
