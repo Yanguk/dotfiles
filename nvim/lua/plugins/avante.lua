@@ -5,7 +5,13 @@ return {
   opts = {
     provider = "copilot",
     behaviour = {
-      use_cwd_as_project_root = true,
+      auto_suggestions = false,
+    },
+    windows = {
+      sidebar_header = {
+        -- enabled = false,
+        rounded = false,
+      },
     },
     copilot = {
       -- model = "gemini-2.5-pro",
