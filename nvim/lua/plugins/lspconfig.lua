@@ -1,7 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  event = { "BufReadPost", "BufNewFile" },
-  cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+  lazy = false,
   dependencies = {
     "saghen/blink.cmp",
 
@@ -150,5 +149,7 @@ return {
         -- "vue",
       },
     })
+
+    vim.lsp.enable("typescript-tools")
   end,
 }

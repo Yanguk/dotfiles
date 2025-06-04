@@ -71,5 +71,3 @@ autocmd("VimResized", {
 })
 
 vim.diagnostic.config({ virtual_text = true })
-
-vim.cmd("filetype on")
