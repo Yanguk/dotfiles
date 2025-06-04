@@ -1,49 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   lazy = false,
-  dependencies = {
-    -- rust
-    {
-      "mrcjkb/rustaceanvim",
-      version = "*", -- Recommended
-      lazy = false, -- This plugin is already lazy
-    },
-
-    -- ts-tools
-    "pmizio/typescript-tools.nvim",
-    "nvim-lua/plenary.nvim",
-
-    -- lsp-server
-    "williamboman/mason.nvim",
-  },
   config = function()
-    local default_config = {
-      capabilities = {
-        textDocument = {
-          -- nvim-ufo (ts 에서 배열을 폴드할려면 lsp로 해야함)
-          foldingRange = {
-            dynamicRegistration = false,
-            lineFoldingOnly = true,
-          },
-        },
-      },
-      on_init = function(client)
-        client.server_capabilities.semanticTokensProvider = nil
-      end,
-      on_attach = function(client, bufnr)
-        local function opts(desc)
-          return { buffer = bufnr, desc = desc }
-        end
-
-        if client.server_capabilities.inlayHintProvider then
-          vim.keymap.set("n", "<leader>ih", function()
-            local current_setting = vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr })
-
-            vim.lsp.inlay_hint.enable(not current_setting, { bufnr = bufnr })
-          end, opts("toggle [I]nlay [H]ints"))
-        end
-      end,
-    }
+    local default_config = require("configs.lspconfig")
+    local eslint_base_on_attach = vim.lsp.config.eslint.on_attach
 
     -- set server config
     local server_configs = {
@@ -66,23 +26,14 @@ return {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)
 
-          vim.api.nvim_buf_create_user_command(0, "LspEslintFixAll", function()
-            client:exec_cmd({
-              title = "Fix all Eslint errors for current buffer",
-              command = "eslint.applyAllFixes",
-              arguments = {
-                {
-                  uri = vim.uri_from_bufnr(bufnr),
-                  version = vim.lsp.util.buf_versions[bufnr],
-                },
-              },
-            }, { bufnr = bufnr })
-          end, {})
+          if eslint_base_on_attach then
+            eslint_base_on_attach(client, bufnr)
 
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "LspEslintFixAll",
-          })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              command = "LspEslintFixAll",
+            })
+          end
         end,
       },
       bashls = {
@@ -117,37 +68,5 @@ return {
       vim.lsp.config(name, opts)
       vim.lsp.enable(name)
     end
-
-    vim.g.rustaceanvim = {
-      server = {
-        on_init = default_config.on_init,
-        on_attach = default_config.on_attach,
-        capabilities = default_config.capabilities,
-      },
-    }
-
-    require("typescript-tools").setup({
-      on_init = default_config.on_init,
-      on_attach = default_config.on_attach,
-      capabilities = default_config.capabilities,
-      settings = {
-        tsserver_file_preferences = {
-          includeInlayParameterNameHints = "all",
-          importModuleSpecifierPreference = "non-relative",
-        },
-        -- tsserver_plugins = {
-        --   "@vue/typescript-plugin",
-        -- },
-      },
-      root_markers = { "package.json" },
-      single_file_support = true,
-      filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        -- "vue",
-      },
-    })
   end,
 }
