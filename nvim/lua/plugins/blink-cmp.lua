@@ -99,11 +99,6 @@ return {
       },
     },
     completion = {
-      accept = {
-        auto_brackets = {
-          enabled = true,
-        },
-      },
       menu = {
         draw = {
           treesitter = { "lsp" },

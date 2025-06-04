@@ -2,8 +2,6 @@ return {
   "neovim/nvim-lspconfig",
   lazy = false,
   dependencies = {
-    "saghen/blink.cmp",
-
     -- rust
     {
       "mrcjkb/rustaceanvim",
@@ -20,7 +18,15 @@ return {
   },
   config = function()
     local default_config = {
-      capabilities = require("blink.cmp").get_lsp_capabilities(),
+      capabilities = {
+        textDocument = {
+          -- nvim-ufo (ts 에서 배열을 폴드할려면 lsp로 해야함)
+          foldingRange = {
+            dynamicRegistration = false,
+            lineFoldingOnly = true,
+          },
+        },
+      },
       on_init = function(client)
         client.server_capabilities.semanticTokensProvider = nil
       end,
@@ -37,12 +43,6 @@ return {
           end, opts("toggle [I]nlay [H]ints"))
         end
       end,
-    }
-
-    -- nvim-ufo (ts 에서 배열을 폴드할려면 lsp로 해야함)
-    default_config.capabilities.textDocument.foldingRange = {
-      dynamicRegistration = false,
-      lineFoldingOnly = true,
     }
 
     -- set server config
@@ -149,7 +149,5 @@ return {
         -- "vue",
       },
     })
-
-    vim.lsp.enable("typescript-tools")
   end,
 }
