@@ -7,6 +7,7 @@ return {
     global_keymaps = true,
     global_keymaps_prefix = "<leader>R",
     kulala_keymaps_prefix = "",
+    default_env = "staging",
   },
   config = function(_, opts)
     require("kulala").setup(opts)
