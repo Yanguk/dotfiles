@@ -1,11 +1,7 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  },
+  opts = {},
   keys = {
     {
       "<leader>?",
@@ -15,4 +11,12 @@ return {
       desc = "Buffer Local Keymaps (which-key)",
     },
   },
+  config = function()
+    require("which-key").add({
+      { "<leader>ei", group = "Emoji insert", icon = "😊" },
+      { "<leader>eit", icon = "👍" },
+      { "<leader>eic", icon = "💥" },
+      { "<leader>eir", icon = "🚀" },
+    })
+  end,
 }
