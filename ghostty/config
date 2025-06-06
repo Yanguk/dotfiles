@@ -18,8 +18,8 @@ macos-titlebar-style = tabs
 mouse-hide-while-typing
 
 # window-save-state = always
-# background-opacity = 0.8
-# background-blur-radius = 10
+background-opacity = 0.85
+background-blur-radius = 10
 
 keybind = alt+shift+minus=csi:95;3u
 keybind = alt+shift+plus=csi:43;3u
