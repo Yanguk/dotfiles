@@ -38,7 +38,7 @@
           environment.systemPackages = with pkgs; [
             # images
             imagemagick # nvim_snack.image
-            pngpaste # nvim_img-clip
+            # pngpaste # nvim_img-clip
 
             # zsh
             zsh-fast-syntax-highlighting
@@ -52,7 +52,7 @@
             lazygit
             bottom
             yazi
-            stu
+            # stu
 
             # util
             nixfmt-rfc-style
@@ -70,9 +70,9 @@
             ddgr
 
             # lang
-            uv
+            # uv
             # Install and run Python applications in isolated environments
-            pipx
+            # pipx
           ];
 
           fonts.packages = with pkgs; [
@@ -85,6 +85,7 @@
               "awscli-local"
               "neovim"
               "codecrafters-io/tap/codecrafters"
+              "pngpaste" # nvim_img-clip
               # lang
               "zig"
               "nvm"
@@ -94,21 +95,22 @@
               # "duckduckgo"
               # "alacritty"
               # "zed"
+              # "zen"
+              # "raycast"
               "orbStack"
               "figma"
               "google-chrome"
               "obsidian"
               "slack"
-              "raycast"
               "rectangle"
               "hammerspoon"
               "visual-studio-code"
               "ghostty"
               "font-noto-sans-cjk-kr" # for ghostty
-              "zen"
             ];
             masApps = {
               "kakaotalk" = 869223134;
+              "adguard-for-safari" = 1440147259;
             };
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
