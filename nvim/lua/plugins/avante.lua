@@ -35,6 +35,14 @@ return {
         -- },
       },
     },
+    input = {
+      provider = "snacks",
+      provider_opts = {
+        -- Additional snacks.input options
+        title = "Avante Input",
+        icon = " ",
+      },
+    },
     -- system_prompt = function()
     --   local hub = require("mcphub").get_hub_instance()
     --   return hub:get_active_servers_prompt()
