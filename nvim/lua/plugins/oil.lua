@@ -121,6 +121,9 @@ return {
       end,
     },
     -- delete_to_trash = true,
+    lsp_file_methods = {
+      autosave_changes = "unmodified",
+    },
   },
   config = function(_, opts)
     -- Clear git status cache on refresh
