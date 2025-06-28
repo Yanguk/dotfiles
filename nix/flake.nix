@@ -82,7 +82,7 @@
           homebrew = {
             enable = true;
             brews = [
-              "awscli-local"
+              # "awscli-local"
               "neovim"
               "codecrafters-io/tap/codecrafters"
               "pngpaste" # nvim_img-clip
@@ -107,6 +107,7 @@
               "visual-studio-code"
               "ghostty"
               "font-noto-sans-cjk-kr" # for ghostty
+              "dbeaver-community"
             ];
             masApps = {
               "kakaotalk" = 869223134;
