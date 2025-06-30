@@ -17,7 +17,7 @@ title = " "
 macos-titlebar-style = tabs
 mouse-hide-while-typing
 
-# window-save-state = always
+window-save-state = always
 background-opacity = 0.95
 background-blur-radius = 10
 
