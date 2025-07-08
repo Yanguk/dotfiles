@@ -23,6 +23,14 @@ local default_config = {
         vim.lsp.inlay_hint.enable(not current_setting, { bufnr = bufnr })
       end, opts("toggle [I]nlay [H]ints"))
     end
+
+    if client.server_capabilities.documentSymbolProvider then
+      local navic_ok, navic_mod = pcall(require, "nvim-navic")
+
+      if navic_ok and navic_mod then
+        navic_mod.attach(client, bufnr)
+      end
+    end
   end,
 }
 

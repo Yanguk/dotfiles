@@ -18,6 +18,10 @@ return {
         enabled = true,
         indent_scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
       },
+      navic = {
+        enabled = true,
+        custom_bg = "NONE", -- Use the default background color
+      },
     },
   },
   init = function()

@@ -22,6 +22,13 @@ return {
           "filetype",
         },
       },
+      winbar = {
+        lualine_c = {
+          {
+            "navic",
+          },
+        },
+      },
     })
   end,
 }
