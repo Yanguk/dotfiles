@@ -123,5 +123,9 @@ return {
     end, { range = true })
 
     require("conform").setup(opts)
+
+    if require("configs.leetcode").is_leetcode() then
+      vim.cmd("FormatDisable!")
+    end
   end,
 }

@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   lazy = false,
+  enabled = not require("configs.leetcode").is_leetcode(),
   config = function()
     local default_config = require("configs.lspconfig")
     local eslint_base_on_attach = vim.lsp.config.eslint.on_attach

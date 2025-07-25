@@ -2,6 +2,7 @@ local default_config = require("configs.lspconfig")
 
 return {
   "pmizio/typescript-tools.nvim",
+  enabled = not require("configs.leetcode").is_leetcode(),
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
     on_init = default_config.on_init,

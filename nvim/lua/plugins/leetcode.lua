@@ -12,7 +12,7 @@ return {
   opts = {
     arg = leetcode_config.get_leet_arg(),
     -- image_support = true, 활성화시 문제 wrap이 비활성화됨.
-    lang = "typescript", -- ts로 풀고 -> 다른언어 선택해서 푸는방식으로 공부 예정
+    lang = "javascript", -- js로 풀고 -> 다른언어 선택해서 푸는방식으로 공부 예정
     -- lang = "python3",
     -- lang = "rust",
     injector = {
