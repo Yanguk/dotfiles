@@ -1,6 +1,7 @@
 local init = false
 return {
   "brenoprata10/nvim-highlight-colors",
+  lazy = false,
   cmd = "HighlightColors",
   opts = {
     enable_tailwind = true,
@@ -8,14 +9,14 @@ return {
   keys = {
     {
       "<leader>th",
-      function()
-        if not init then
-          require("nvim-highlight-colors").turnOn()
-          init = true
-        else
-          require("nvim-highlight-colors").toggle()
-        end
-      end,
+      -- function()
+      --   if not init then
+      --     require("nvim-highlight-colors").turnOn()
+      --     init = true
+      --   else
+      --     require("nvim-highlight-colors").toggle()
+      --   end
+      -- end,
       "<cmd>HighlightColors Toggle<cr>",
       desc = "Toggle Highlight Colors",
     },

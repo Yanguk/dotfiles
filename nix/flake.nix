@@ -70,6 +70,8 @@
             ddgr
 
             # lang
+            deno
+            bun
             # uv
             # Install and run Python applications in isolated environments
             # pipx
