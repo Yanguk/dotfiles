@@ -62,12 +62,16 @@ vim.filetype.add({
 autocmd("VimResized", {
   pattern = "*",
   callback = function()
-    local ft = vim.bo.filetype
-
-    if not string.find(ft, "Avante") and not require("configs.leetcode").is_leetcode() then
-      vim.cmd("tabdo wincmd =")
-    end
+    vim.cmd("wincmd =")
   end,
 })
 
 vim.diagnostic.config({ virtual_text = true })
+
+-- Auto equalize windows when Avante is attached
+autocmd("FileType", {
+  pattern = "Avante",
+  callback = function()
+    vim.cmd("wincmd =")
+  end,
+})
