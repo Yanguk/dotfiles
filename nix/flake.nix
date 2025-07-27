@@ -38,7 +38,7 @@
           environment.systemPackages = with pkgs; [
             # images
             imagemagick # nvim_snack.image
-            # pngpaste # nvim_img-clip
+            pngpaste # nvim_img-clip
 
             # zsh
             zsh-fast-syntax-highlighting
@@ -61,7 +61,7 @@
             direnv
             fzf
             terraform
-            terraform-local
+            # terraform-local
             awscli2
             ripgrep
             wget
@@ -72,13 +72,21 @@
             # lang
             deno
             bun
+            zig
             # uv
             # Install and run Python applications in isolated environments
             # pipx
+
+            # app
+            raycast
+
+            # etc
+            codecrafters-cli
           ];
 
           fonts.packages = with pkgs; [
             nerd-fonts.hack
+            noto-fonts-cjk-sans # for ghostty
           ];
 
           homebrew = {
@@ -86,19 +94,15 @@
             brews = [
               # "awscli-local"
               "neovim"
-              "codecrafters-io/tap/codecrafters"
-              "pngpaste" # nvim_img-clip
               # lang
-              "zig"
               "nvm"
               "mas"
             ];
             casks = [
-              # "duckduckgo"
               # "alacritty"
               # "zed"
               # "zen"
-              # "raycast"
+              "duckduckgo"
               "orbStack"
               "figma"
               "google-chrome"
@@ -108,12 +112,11 @@
               "hammerspoon"
               "visual-studio-code"
               "ghostty"
-              "font-noto-sans-cjk-kr" # for ghostty
               "dbeaver-community"
             ];
             masApps = {
               "kakaotalk" = 869223134;
-              "adguard-for-safari" = 1440147259;
+              # "adguard-for-safari" = 1440147259;
             };
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
