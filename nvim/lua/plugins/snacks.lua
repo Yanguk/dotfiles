@@ -165,7 +165,7 @@ return {
       "<c-x>",
       [[<C-\><C-n>]],
       mode = { "t" },
-      desc = "Toggle Terminal",
+      desc = "exit Terminal",
     },
     -- zen
     {
