@@ -24,7 +24,6 @@ in
       # "awscli-local"
       "neovim"
       # lang
-      "nvm"
       "mas"
     ];
     casks = [

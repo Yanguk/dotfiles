@@ -44,15 +44,12 @@ in
   programs = {
     zsh = {
       enable = true;
+      enableCompletion = false;
       initContent = ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
         # GPG
         export GPG_TTY=$TTY
-
-        # nvm
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
         # yazi auto-cd function
         yz() {
@@ -89,6 +86,8 @@ in
           "romkatv/powerlevel10k kind:zsh"
           "ntnyq/omz-plugin-pnpm"
           "zsh-users/zsh-autosuggestions"
+          "marlonrichert/zsh-autocomplete"
+          "lukechilds/zsh-nvm"
 
           "zdharma-continuum/fast-syntax-highlighting kind:defer"
           "ohmyzsh/ohmyzsh path:plugins/git"
@@ -97,8 +96,8 @@ in
       };
 
       setOptions = [
-        # 공백으로 시작하는 명령어는 history에 저장하지 않음
-        "HIST_IGNORE_SPACE"
+        # 공백으로 시작하는 명령어는 history에 저장하지 않음 / 기본값으로 지정되어었음..
+        # "HIST_IGNORE_SPACE"
       ];
     };
 
