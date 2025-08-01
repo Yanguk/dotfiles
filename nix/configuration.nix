@@ -18,60 +18,6 @@ in
     hostPlatform = "aarch64-darwin";
   };
 
-  environment.systemPackages = with pkgs; [
-    # images
-    imagemagick # nvim_snack.image
-    pngpaste # nvim_img-clip
-
-    # zsh
-    zsh-fast-syntax-highlighting
-    zsh-autosuggestions
-    oh-my-zsh
-    zoxide
-
-    # TUI app
-    # tmux
-    # zellij
-    lazygit
-    bottom
-    yazi
-    # stu
-
-    # util
-    nixfmt-rfc-style
-    delta
-    bat
-    direnv
-    fzf
-    terraform
-    # terraform-local
-    awscli2
-    ripgrep
-    wget
-    gnupg
-    gh
-    ddgr
-
-    # lang
-    deno
-    bun
-    zig
-    # uv
-    # Install and run Python applications in isolated environments
-    # pipx
-
-    # app
-    raycast
-
-    # etc
-    codecrafters-cli
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.hack
-    noto-fonts-cjk-sans # for ghostty
-  ];
-
   homebrew = {
     enable = true;
     brews = [
