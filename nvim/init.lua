@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 vim.env.LAZYROOT = vim.fn.stdpath("data") .. "/lazy"
 
 -- Bootstrap lazy.nvim
