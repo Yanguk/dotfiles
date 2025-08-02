@@ -18,7 +18,8 @@ return {
       copilot = {
         -- model = "gemini-2.5-pro",
         -- model = "claude-3.7-sonnet",
-        model = "gpt-4.1",
+        -- model = "gpt-4.1",
+        model = "claude-sonnet-4",
         -- disable_tooles = {
         --   "git_diff",
         --   "git_commit",
