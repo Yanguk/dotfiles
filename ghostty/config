@@ -9,7 +9,7 @@ font-family = Hack Nerd Font
 font-family = Noto Sans CJK KR
 
 # shell-integration = zsh
-shell-integration-features = no-cursor
+# shell-integration-features = no-cursor
 
 macos-option-as-alt = true
 title = " "

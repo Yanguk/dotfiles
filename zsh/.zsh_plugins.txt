@@ -1,8 +1,12 @@
 romkatv/powerlevel10k path:powerlevel10k.zsh-theme
 ntnyq/omz-plugin-pnpm
 zsh-users/zsh-autosuggestions
+jeffreytse/zsh-vi-mode
 
 zdharma-continuum/fast-syntax-highlighting kind:defer
+
+mattmc3/ez-compinit
+zsh-users/zsh-completions kind:fpath path:src
 
 ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/yarn
