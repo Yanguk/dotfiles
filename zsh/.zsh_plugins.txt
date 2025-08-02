@@ -1,0 +1,9 @@
+romkatv/powerlevel10k path:powerlevel10k.zsh-theme
+ntnyq/omz-plugin-pnpm
+zsh-users/zsh-autosuggestions
+
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/yarn
+ohmyzsh/ohmyzsh path:plugins/zoxide

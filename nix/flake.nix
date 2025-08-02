@@ -6,8 +6,8 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # home-manager.url = "github:nix-community/home-manager";
+    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -16,7 +16,7 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
-      home-manager,
+    # home-manager,
     }:
     let
       username = "yangukheo";
@@ -35,16 +35,16 @@
               user = username;
             };
           }
-          home-manager.darwinModules.home-manager
-          {
-            users.users.${username} = {
-              name = username;
-              home = "/Users/${username}";
-            };
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home.nix;
-          }
+          # home-manager.darwinModules.home-manager
+          # {
+          #   users.users.${username} = {
+          #     name = username;
+          #     home = "/Users/${username}";
+          #   };
+          #   home-manager.useGlobalPkgs = true;
+          #   home-manager.useUserPackages = true;
+          #   home-manager.users.${username} = import ./home.nix;
+          # }
         ];
       };
     };

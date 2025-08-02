@@ -1,3 +1,4 @@
+# # 1. Fastest prompts and lightweight sources early
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -6,62 +7,48 @@ fi
 
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
 
+# 2. Essential env and PATH first
 export LANG=en_US.UTF-8
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# omz plugins
-plugins=(
-    pnpm
-    yarn
-    git
-    gh
-    docker
-    # tmux
-
-    zoxide
-    zsh-autosuggestions
-    fast-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# gpg
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY=$TTY
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# 3. Plugins (antidote) - static bundle, manual update only!
+zsh_plugins=~/.config/zsh/.zsh_plugins
+
+# Ensure the .zsh_plugins.txt file exists so you can add plugins.
+[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
+
+# Lazy-load antidote from its functions directory.
+fpath=($(brew --prefix)/opt/antidote/share/antidote/functions $fpath)
+autoload -Uz antidote
+
+# Generate a new static file whenever .zsh_plugins.txt is updated.
+if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+    antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+fi
+
+# Source your static plugins file.
+source ${zsh_plugins}.zsh
+
+# 4. Aliases/functions (after essentials)
 # lazyGit
-export XDG_CONFIG_HOME="$HOME/.config"
 alias lg="lazygit"
-
 # Neovim
 alias vi="nvim"
-
 # Timezone
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
 alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
-
 # aws-profile-change
 alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p" ~/.aws/credentials ~/.aws/config | sort -rg | uniq | fzf)'
-
-# java
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
 # nix
 alias nixEdit="nvim ~/.config/nix/flake.nix"
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
 alias nixUpgrade="sudo determinate-nixd upgrade"
-
 # yazi
 function yz() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -71,14 +58,9 @@ function yz() {
     fi
     rm -f -- "$tmp"
 }
-
-# package.json의 scripts 읽어서 fzf로 선택하여 실행
+# package.json scripts fzf launcher
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
-# 공백으로 시작하는 명령어는 history에 저장하지 않음
 setopt HIST_IGNORE_SPACE
-
-# Created by `pipx` on 2025-05-23 07:43:15
-export PATH="$PATH:/Users/yanguk/.local/bin"
