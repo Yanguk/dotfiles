@@ -12,20 +12,16 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 [nix-darwin](https://github.conix-darwin/nix-darwin)
 
+- install
+
 ```bash
 nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
 ```
 
-## run switch
+- switch
 
 ```bash
 sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
-```
-
-# zsh
-
-```bash
-echo 'export ZDOTDIR="$HOME/.config/zsh"' >> ~/.zshenv
 ```
 
 # delta-theme

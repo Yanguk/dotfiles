@@ -46,6 +46,7 @@ in
     gh
     ddgr
     zoxide
+    antidote
 
     ## LANG
     deno
@@ -69,7 +70,6 @@ in
     enable = true;
     brews = [
       "neovim"
-      "antidote"
     ];
     casks = [
       "duckduckgo"
@@ -91,6 +91,19 @@ in
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableBashCompletion = false;
+    enableCompletion = false;
+    variables = {
+      ZDOTDIR = "$HOME/.config/zsh";
+    };
+    promptInit = ''
+      fpath=(${pkgs.antidote}/share/antidote/functions $fpath)
+      autoload -Uz antidote
+    '';
   };
 
   system = {

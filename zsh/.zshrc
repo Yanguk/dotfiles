@@ -22,12 +22,10 @@ zsh_plugins=${ZDOTDIR}/.zsh_plugins
 # Ensure the .zsh_plugins.txt file exists so you can add plugins.
 [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
 
-# Lazy-load antidote from its functions directory.
-fpath=($(brew --prefix)/opt/antidote/share/antidote/functions $fpath)
-autoload -Uz antidote
 
 # Generate a new static file whenever .zsh_plugins.txt is updated.
 if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
+    # Lazy-load at nix config.promptInit
     antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
 fi
 
