@@ -12,9 +12,6 @@ in
   };
 
   nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
     hostPlatform = "aarch64-darwin";
   };
 
@@ -29,6 +26,7 @@ in
     lazygit
     bottom
     yazi
+    neovim
     # stu
 
     ## UTIL
@@ -37,7 +35,7 @@ in
     bat
     direnv
     fzf
-    terraform
+    # terraform # unfree
     # terraform-local
     awscli2
     ripgrep
@@ -68,9 +66,6 @@ in
 
   homebrew = {
     enable = true;
-    brews = [
-      "neovim"
-    ];
     casks = [
       "duckduckgo"
       "orbStack"

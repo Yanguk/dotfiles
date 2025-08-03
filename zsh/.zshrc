@@ -43,7 +43,6 @@ alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
 # aws-profile-change
 alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p" ~/.aws/credentials ~/.aws/config | sort -rg | uniq | fzf)'
 # nix
-alias nixEdit="nvim ~/.config/nix/flake.nix"
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
 alias nixUpgrade="sudo determinate-nixd upgrade"
