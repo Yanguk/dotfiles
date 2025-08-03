@@ -17,7 +17,7 @@ export GPG_TTY=$TTY
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # 3. Plugins (antidote) - static bundle, manual update only!
-zsh_plugins=~/.config/zsh/.zsh_plugins
+zsh_plugins=${ZDOTDIR}/.zsh_plugins
 
 # Ensure the .zsh_plugins.txt file exists so you can add plugins.
 [[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt

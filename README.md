@@ -25,7 +25,7 @@ sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 # zsh
 
 ```bash
-ln -sf ~/.config/zsh/.zshrc ~/.zshrc
+echo 'export ZDOTDIR="$HOME/.config/zsh"' >> ~/.zshenv
 ```
 
 # delta-theme

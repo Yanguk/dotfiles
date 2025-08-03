@@ -19,11 +19,11 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    # images
+    ## IMAGES
     imagemagick # nvim_snack.image
     pngpaste # nvim_img-clip
 
-    # TUI app
+    ## TUI APP
     # tmux
     # zellij
     lazygit
@@ -31,7 +31,7 @@ in
     yazi
     # stu
 
-    # util
+    ## UTIL
     nixfmt-rfc-style
     delta
     bat
@@ -47,20 +47,17 @@ in
     ddgr
     zoxide
 
-    # lang
+    ## LANG
     deno
     bun
     zig
     volta
     # uv
-    # Install and run Python applications in isolated environments
     # pipx
 
-    # app
-    raycast
-
-    # etc
+    ## ETC
     codecrafters-cli
+    mas
   ];
 
   fonts.packages = with pkgs; [
@@ -71,16 +68,10 @@ in
   homebrew = {
     enable = true;
     brews = [
-      # "awscli-local"
       "neovim"
-      # lang
       "antidote"
-      "mas"
     ];
     casks = [
-      # "alacritty"
-      # "zed"
-      # "zen"
       "duckduckgo"
       "orbStack"
       "figma"
@@ -92,10 +83,10 @@ in
       "visual-studio-code"
       "ghostty"
       "dbeaver-community"
+      "raycast"
     ];
     masApps = {
       "kakaotalk" = 869223134;
-      # "adguard-for-safari" = 1440147259;
     };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
@@ -103,7 +94,6 @@ in
   };
 
   system = {
-    # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
     stateVersion = 6;
 
