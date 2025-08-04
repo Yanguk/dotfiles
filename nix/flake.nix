@@ -21,6 +21,9 @@
     {
       # $ darwin-rebuild build --flake .#yanguk
       darwinConfigurations.yanguk = nix-darwin.lib.darwinSystem {
+        specialArgs = {
+          inherit username;
+        };
         modules = [
           ./configuration.nix
           nix-homebrew.darwinModules.nix-homebrew

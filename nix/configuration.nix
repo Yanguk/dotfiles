@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let
-  username = "yangukheo";
-in
+{ pkgs, username, ... }:
 {
   system.primaryUser = username;
   nix = {
