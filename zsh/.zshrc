@@ -61,3 +61,11 @@ alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
 setopt HIST_IGNORE_SPACE
+
+# zsh-vi-mode
+function zvm_before_init() {
+  zvm_bindkey viins '^[[A' history-beginning-search-backward
+  zvm_bindkey viins '^[[B' history-beginning-search-forward
+  zvm_bindkey vicmd '^[[A' history-beginning-search-backward
+  zvm_bindkey vicmd '^[[B' history-beginning-search-forward
+}
