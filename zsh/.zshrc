@@ -33,20 +33,21 @@ fi
 source ${zsh_plugins}.zsh
 
 # 4. Aliases/functions (after essentials)
-# lazyGit
 alias lg="lazygit"
-# Neovim
 alias vi="nvim"
-# Timezone
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
 alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
-# aws-profile-change
 alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p" ~/.aws/credentials ~/.aws/config | sort -rg | uniq | fzf)'
-# nix
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
 alias nixUpgrade="sudo determinate-nixd upgrade"
-# yazi
+
+alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
+
+setopt HIST_IGNORE_SPACE
+
 function yz() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
     yazi "$@" --cwd-file="$tmp"
@@ -55,17 +56,19 @@ function yz() {
     fi
     rm -f -- "$tmp"
 }
-# package.json scripts fzf launcher
-alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
-alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
-alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
-setopt HIST_IGNORE_SPACE
-
-# zsh-vi-mode
 function zvm_before_init() {
-  zvm_bindkey viins '^[[A' history-beginning-search-backward
-  zvm_bindkey viins '^[[B' history-beginning-search-forward
-  zvm_bindkey vicmd '^[[A' history-beginning-search-backward
-  zvm_bindkey vicmd '^[[B' history-beginning-search-forward
+    # up, down 시 히스토리 substring search
+    autoload -U history-search-end
+    zle -N history-beginning-search-backward-end history-search-end
+    zle -N history-beginning-search-forward-end history-search-end
+    # bindkey "^[[A" history-beginning-search-backward-end
+    # bindkey "^[[B" history-beginning-search-forward-end
+
+    # zsh-vi-mode
+    zvm_bindkey viins '^[[A' history-beginning-search-backward-end
+    zvm_bindkey viins '^[[B' history-beginning-search-forward-end
+    zvm_bindkey vicmd '^[[A' history-beginning-search-backward-end
+    zvm_bindkey vicmd '^[[B' history-beginning-search-forward-end
 }
+

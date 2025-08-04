@@ -37,6 +37,7 @@ return {
       "typos-lsp",
       "yaml-language-server",
       "yamlfmt",
+      "beautysh",
     },
   },
 }
