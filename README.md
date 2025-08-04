@@ -40,20 +40,10 @@ bat cache --build
 
 - Add `Han 3set Shin P2`
 
-# Nvim Ai
-
-[vectorcode](https://github.com/Davidyz/VectorCode)
-
-- pipx install vectorcode
-
 ## MCP
 
 [tavily](https://tavily.com/)
 
 ```bash
-echo "export TAVILY_API_KEY=''" >> ~/.zprofile
+echo "export TAVILY_API_KEY=''" >> ~/.zshenv
 ```
-
-# Rust
-
-https://www.rust-lang.org/tools/install

@@ -16,27 +16,20 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    ## IMAGES
-    imagemagick # nvim_snack.image
-    pngpaste # nvim_img-clip
+    imagemagick # for nvim_snack.image
+    pngpaste # for nvim_img-clip
 
-    ## TUI APP
-    # tmux
-    # zellij
     lazygit
     bottom
     yazi
     neovim
-    # stu
+    # stu # aws s3 tui
 
-    ## UTIL
     nixfmt-rfc-style
     delta
     bat
     direnv
     fzf
-    # terraform # unfree
-    # terraform-local
     awscli2
     ripgrep
     wget
@@ -46,15 +39,13 @@ in
     zoxide
     antidote
 
-    ## LANG
     deno
     bun
     zig
     volta
-    # uv
-    # pipx
+    # rustup
+    # git
 
-    ## ETC
     codecrafters-cli
     mas
   ];
@@ -79,6 +70,7 @@ in
       "ghostty"
       "dbeaver-community"
       "raycast"
+      # "colemak-dh"
     ];
     masApps = {
       "kakaotalk" = 869223134;
