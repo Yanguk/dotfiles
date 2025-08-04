@@ -8,8 +8,7 @@ adjust-cell-width = -5%
 font-family = Hack Nerd Font
 font-family = Noto Sans CJK KR
 
-# shell-integration = zsh
-# shell-integration-features = no-cursor
+shell-integration = zsh
 
 macos-option-as-alt = true
 title = " "
