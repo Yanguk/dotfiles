@@ -75,3 +75,5 @@ autocmd("FileType", {
     vim.cmd("wincmd =")
   end,
 })
+
+vim.env.ZDOTDIR = vim.fn.expand("$HOME/.config/zsh")
