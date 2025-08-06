@@ -69,7 +69,12 @@ return {
     -- scroll = { enabled = true },
     statuscolumn = { enabled = true },
     terminal = { enabled = true },
-    zen = { enabled = true },
+    zen = {
+      enabled = true,
+      -- toggles = {
+      --   dim = false,
+      -- },
+    },
     -- words = { enabled = true },
     styles = {
       input = {
