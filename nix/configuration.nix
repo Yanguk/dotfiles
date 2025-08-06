@@ -20,6 +20,7 @@
     bottom
     yazi
     neovim
+    tmux
     # stu # aws s3 tui
 
     nixfmt-rfc-style
@@ -65,6 +66,7 @@
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
+      "alacritty"
       "dbeaver-community"
       "raycast"
       # "colemak-dh"

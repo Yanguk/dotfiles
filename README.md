@@ -40,10 +40,14 @@ bat cache --build
 
 - Add `Han 3set Shin P2`
 
-## MCP
+# MCP
 
 [tavily](https://tavily.com/)
 
 ```bash
 echo "export TAVILY_API_KEY=''" >> ~/.zshenv
 ```
+
+# Tmux
+
+[theme](https://github.com/catppuccin/tmux)
