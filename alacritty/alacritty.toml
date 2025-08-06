@@ -7,7 +7,7 @@ normal.family = "Hack Nerd Font"
 
 [keyboard]
 bindings = [
-  { key = "F", mods = "Command|Control", action = "ToggleFullscreen" },
+  { key = "F", mods = "Command|Control", action = "ToggleSimpleFullscreen" },
   { key = "Minus", mods = "Alt|Shift", chars = "\u001b[95;3u" },
   { key = "Equals", mods = "Alt|Shift", chars = "\u001b[43;3u" },
   { key = "Space", mods = "Command|Shift", action = "ToggleViMode" },
@@ -17,11 +17,11 @@ bindings = [
 hide_when_typing = true
 
 [window]
-decorations = "Buttonless"
+decorations = "Transparent"
 dynamic_padding = true
 option_as_alt = "OnlyLeft"
 title = "Alacritty"
-padding = { x = 5, y = 5 }
+padding = { x = 5, y = 22 }
 dimensions = { columns = 120, lines = 40 }
 blur = true
 opacity = 0.95
