@@ -45,7 +45,6 @@
     # git
 
     codecrafters-cli
-    mas
   ];
 
   fonts.packages = with pkgs; [
@@ -71,9 +70,9 @@
       "raycast"
       # "colemak-dh"
     ];
-    masApps = {
-      "kakaotalk" = 869223134;
-    };
+    # masApps = {
+    #   "kakaotalk" = 869223134;
+    # };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
