@@ -38,6 +38,7 @@ return {
       "yaml-language-server",
       "yamlfmt",
       "beautysh",
+      "cspell",
     },
   },
 }

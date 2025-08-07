@@ -15,3 +15,5 @@ clippy
 noice
 folke
 bufnr
+winnr
+catppuccin
