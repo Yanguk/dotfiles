@@ -1,6 +1,5 @@
 return {
   "saghen/blink.cmp",
-  enabled = not require("configs.leetcode").is_leetcode(),
   event = { "InsertEnter", "CmdlineEnter" },
   -- optional: provides snippets for the snippet source
   dependencies = {
