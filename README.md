@@ -50,4 +50,4 @@ echo "export TAVILY_API_KEY=''" >> ~/.zshenv
 
 # Tmux
 
-[theme](https://github.com/catppuccin/tmux)
+[tpm](https://github.com/tmux-plugins/tpm)

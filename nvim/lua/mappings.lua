@@ -2,11 +2,6 @@
 local map = vim.keymap.set
 
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
-map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
-map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
-map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
-map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
-
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "file save" })
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("v", ";", ":", { desc = "CMD enter command mode" })
@@ -51,3 +46,9 @@ end, { desc = "Insert Rocket Emoji" })
 map("n", "<leader>eic", function()
   vim.api.nvim_put({ "💥" }, "c", true, true)
 end, { desc = "Insert Explosion Emoji" })
+
+-- nvim-tmux-navitagion 에서 처리함
+-- map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
+-- map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
+-- map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
+-- map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
