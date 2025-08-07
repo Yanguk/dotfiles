@@ -1,5 +1,11 @@
 {
-  "userWords": ["yangukheo", "yanguk"],
-  "words": ["nvim"]
+  "userWords": ["yangukheo", "yanguk", "knowre"],
+  "words": ["nvim", "scorable", "courseware"],
+  "flagWords": [
+    "hte: the",
+    "widht: width",
+    "lenght: length",
+    "colour: color",
+    "calender: calendar"
+  ]
 }
-
