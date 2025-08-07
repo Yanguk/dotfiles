@@ -17,6 +17,7 @@ return {
       { "<leader>eit", icon = "👍" },
       { "<leader>eic", icon = "💥" },
       { "<leader>eir", icon = "🚀" },
+      { "<leader>ca", icon = "📝" },
     })
   end,
 }

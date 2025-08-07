@@ -18,11 +18,12 @@ return {
       nil_ls = {},
       terraformls = {},
       pylsp = {},
-      typos_lsp = {
-        init_options = {
-          config = "~/.config/nvim/typos.toml",
-        },
-      },
+      -- NOTE: typos 대신 cspell 사용경험이 좋았음
+      -- typos_lsp = {
+      --   init_options = {
+      --     config = "~/.config/nvim/typos.toml",
+      --   },
+      -- },
       eslint = {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)

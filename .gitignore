@@ -35,3 +35,5 @@ configstore
 zsh/.zsh_plugins.zsh
 zsh/.zcompdump
 zsh/.zprofile
+
+.cspellcache

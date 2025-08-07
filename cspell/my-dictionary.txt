@@ -1,0 +1,17 @@
+yanguk
+knowre
+nvim
+neovim
+yarnrc
+moknowre
+alacritty
+dotenv
+lspconfig
+stylelua
+vite
+luarc
+autocmd
+clippy
+noice
+folke
+bufnr
