@@ -1,3 +1,4 @@
+-- cSpell:disable
 return {
   "neovim/nvim-lspconfig",
   lazy = false,
@@ -24,6 +25,10 @@ return {
       --     config = "~/.config/nvim/typos.toml",
       --   },
       -- },
+      cspell_ls = {
+        cmd = { "cspell-lsp", "--stdio", "--config", require("configs.cspell").get_cspell_path() },
+        root_markers = {},
+      },
       eslint = {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)
@@ -63,7 +68,7 @@ return {
       },
     }
 
-    -- setup lspconfig
+    -- setup lsp
     vim.lsp.config("*", default_config)
 
     for name, opts in pairs(server_configs) do
