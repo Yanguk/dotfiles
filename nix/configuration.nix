@@ -1,3 +1,4 @@
+# cSpell:disable
 { pkgs, username, ... }:
 {
   system.primaryUser = username;
@@ -55,7 +56,6 @@
   homebrew = {
     enable = true;
     casks = [
-      "duckduckgo"
       "orbStack"
       "figma"
       "google-chrome"
@@ -67,12 +67,8 @@
       "ghostty"
       "alacritty"
       "dbeaver-community"
-      "raycast"
       # "colemak-dh"
     ];
-    # masApps = {
-    #   "kakaotalk" = 869223134;
-    # };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;

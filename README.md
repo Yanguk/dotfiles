@@ -30,7 +30,7 @@ https://github.com/catppuccin/bat
 
 bat cache --build
 
-# keyboard lazyout
+# keyboard layout
 
 [mod-dh](https://github.com/ColemakMods/mod-dh)
 

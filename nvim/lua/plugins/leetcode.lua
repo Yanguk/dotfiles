@@ -3,7 +3,7 @@ local leetcode_config = require("configs.leetcode")
 return {
   "kawre/leetcode.nvim",
   build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
-  -- cmd = "Leet",
+  cmd = "Leet",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
@@ -12,9 +12,9 @@ return {
   opts = {
     arg = leetcode_config.get_leet_arg(),
     -- image_support = true, 활성화시 문제 wrap이 비활성화됨.
-    lang = "javascript", -- js로 풀고 -> 다른언어 선택해서 푸는방식으로 공부 예정
+    -- lang = "javascript",
     -- lang = "python3",
-    -- lang = "rust",
+    lang = "rust",
     injector = {
       ---@type table<lc.lang, lc.inject>
       ["rust"] = {
