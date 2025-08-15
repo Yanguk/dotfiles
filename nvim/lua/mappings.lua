@@ -53,11 +53,6 @@ end, { desc = "Insert Explosion Emoji" })
 -- map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 -- map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
--- cSpell utility commands
-map("n", "<leader>ca", function()
-  require("configs.cspell").add_word_to_c_spell_dictionary()
-end, { desc = "Add word under cursor to cSpell dictionary" })
-
 -- Delete all marks
 map("n", "<leader>mD", "<cmd>delmarks a-zA-Z0-9<CR>", { desc = "Delete all marks" })
 map("n", "<leader>md", "<cmd>delmarks!<CR>", { desc = "Delete marks" })

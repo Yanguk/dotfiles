@@ -21,7 +21,6 @@
     bottom
     yazi
     neovim
-    tmux
     # stu # aws s3 tui
 
     nixfmt-rfc-style
@@ -56,6 +55,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "duckduckgo"
       "orbStack"
       "figma"
       "google-chrome"
@@ -65,7 +65,6 @@
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
-      "alacritty"
       "dbeaver-community"
       # "colemak-dh"
     ];

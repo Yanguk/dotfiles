@@ -1,5 +1,3 @@
-local byDomain = require("configs.by-domain")
-
 local command = vim.api.nvim_create_user_command
 
 command("FormatDisable", function(args)
@@ -79,11 +77,6 @@ return {
       terraform = { "terraform_fmt" },
     },
     format_on_save = function(bufnr)
-      -- 해당 프로젝트는 eslint로 포멧
-      if byDomain.isDisableAutoFormatBuf(bufnr) then
-        return
-      end
-
       -- Disable with a global or buffer-local variable
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
         return
@@ -124,8 +117,6 @@ return {
 
     require("conform").setup(opts)
 
-    if require("configs.leetcode").is_leetcode() then
-      vim.cmd("FormatDisable!")
-    end
+    vim.cmd("FormatDisable")
   end,
 }
