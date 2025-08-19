@@ -3,8 +3,22 @@ return {
   lazy = false,
   version = "*",
   config = function()
+    local mocha = require("catppuccin.palettes").get_palette("mocha")
     require("bufferline").setup({
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      highlights = require("catppuccin.groups.integrations.bufferline").get_theme({
+        styles = { "italic", "bold" },
+        custom = {
+          all = {
+            fill = { bg = "#000000" },
+          },
+          mocha = {
+            background = { fg = mocha.text },
+          },
+          latte = {
+            background = { fg = "#000000" },
+          },
+        },
+      }),
       options = {
         diagnostics = "nvim_lsp",
         ---@diagnostic disable-next-line: unused-local
@@ -14,13 +28,6 @@ return {
         end,
       },
     })
-
-    vim.g.transparent_groups = vim.list_extend(
-      vim.g.transparent_groups or {},
-      vim.tbl_map(function(v)
-        return v.hl_group
-      end, vim.tbl_values(require("bufferline.config").highlights))
-    )
   end,
   keys = {
     { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next buffer" },
