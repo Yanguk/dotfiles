@@ -1,5 +1,6 @@
 return {
   "alexghergh/nvim-tmux-navigation",
+  enabled = false,
   opts = {
     keybindings = {
       left = "<C-h>",

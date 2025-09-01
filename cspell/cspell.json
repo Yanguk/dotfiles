@@ -1,6 +1,16 @@
 {
-  "userWords": ["yangukheo", "yanguk", "knowre"],
-  "words": ["nvim", "scorable", "courseware"],
+  "userWords": [
+    "yangukheo",
+    "yanguk",
+    "knowre",
+    "actlog",
+    "usize"
+  ],
+  "words": [
+    "nvim",
+    "scorable",
+    "courseware"
+  ],
   "flagWords": [
     "hte: the",
     "widht: width",

@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     version = "*",
     opts = {},
     lazy = true,
@@ -16,7 +16,8 @@ return {
   },
   {
     -- for codecompanion
-    "echasnovski/mini.diff",
+    "nvim-mini/mini.diff",
+    enabled = false,
     event = "VeryLazy",
     config = function()
       local diff = require("mini.diff")
@@ -26,4 +27,5 @@ return {
       })
     end,
   },
+  { "nvim-mini/mini.trailspace", version = false, opts = {}, event = "BufReadPost" },
 }

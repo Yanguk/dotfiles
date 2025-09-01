@@ -3,7 +3,7 @@ return {
   dependencies = {
     "kevinhwang91/promise-async",
   },
-  event = "VeryLazy",
+  event = "BufReadPost",
   opts = {
     provider_selector = function()
       return { "treesitter", "indent" }
