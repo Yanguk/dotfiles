@@ -44,6 +44,10 @@
     # rustup
     # git
 
+    python3Full
+    python313Packages.pip
+    pipx
+
     codecrafters-cli
   ];
 
@@ -65,7 +69,7 @@
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
-      "dbeaver-community"
+      "beekeeper-studio"
       # "colemak-dh"
     ];
     onActivation.cleanup = "zap";

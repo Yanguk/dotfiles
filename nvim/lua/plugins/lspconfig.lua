@@ -18,7 +18,7 @@ return {
       dockerls = {},
       nil_ls = {},
       terraformls = {},
-      pylsp = {},
+      pyright = {},
       -- NOTE: typos 대신 cspell 사용경험이 좋았음
       -- typos_lsp = {
       --   init_options = {
