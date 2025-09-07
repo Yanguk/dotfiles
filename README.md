@@ -32,13 +32,13 @@ bat cache --build
 
 # keyboard layout
 
-[mod-dh](https://github.com/ColemakMods/mod-dh)
-
-- Add `colemak-dh`
+~~[mod-dh](https://github.com/ColemakMods/mod-dh)~~
 
 [gurem](https://github.com/gureum/gureum)
 
 - Add `Han 3set Shin P2`
+
+[canary](https://github.com/Apsu/Canary/blob/main/INSTALL.md)
 
 # MCP
 

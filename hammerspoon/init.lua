@@ -1,6 +1,9 @@
 hs.loadSpoon("EmmyLua")
 
-local inputEnglishColemakDh = "io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi"
+local inputEnCanaru = "org.sil.ukelele.keyboardlayout.canary.canary"
+local _inputEnglishColemakDh = "io.github.colemakmods.keyboardlayout.colemakdh.colemakdhansi"
+
+local inputEn = inputEnCanaru
 
 local esc_bind
 
@@ -8,9 +11,9 @@ local esc_bind
 local function changeInputSourceToEnglish()
   local inputSource = hs.keycodes.currentSourceID()
 
-  if not (inputSource == inputEnglishColemakDh) then
+  if not (inputSource == inputEn) then
     hs.eventtap.keyStroke({}, "right")
-    hs.keycodes.currentSourceID(inputEnglishColemakDh)
+    hs.keycodes.currentSourceID(inputEn)
   end
 end
 
