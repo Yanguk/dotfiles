@@ -34,17 +34,17 @@ hs.hotkey.bind({ "control" }, 33, changeInputSourceKrToEnWhenEscapeVim)
 esc_bind = hs.hotkey.new({}, "escape", changeInputSourceKrToEnWhenEscapeVim):enable()
 
 -- 한영전환을 위한 입력 소스 토글 함수
-local function toggleInputSource()
-  local currentSource = hs.keycodes.currentSourceID()
-
-  if currentSource == inputEn then
-    -- 영어에서 한글로
-    hs.keycodes.currentSourceID(inputKr)
-  else
-    -- 한글에서 영어로
-    hs.keycodes.currentSourceID(inputEn)
-  end
-end
+-- local function toggleInputSource()
+--   local currentSource = hs.keycodes.currentSourceID()
+--
+--   if currentSource == inputEn then
+--     -- 영어에서 한글로
+--     hs.keycodes.currentSourceID(inputKr)
+--   else
+--     -- 한글에서 영어로
+--     hs.keycodes.currentSourceID(inputEn)
+--   end
+-- end
 
 -- control + space를 한영전환으로 매핑
-hs.hotkey.bind({ "control" }, "space", toggleInputSource)
+-- hs.hotkey.bind({ "control" }, "space", toggleInputSource)
