@@ -57,12 +57,7 @@ return {
       tailwindcss = {
         settings = {
           tailwindCSS = {
-            experimental = {
-              classRegex = {
-                "cva\\(([^)]*)\\)",
-                "[\"'`]([^\"'`]*).*?[\"'`]",
-              },
-            },
+            classFunctions = { "cva", "cx" },
           },
         },
       },
