@@ -20,9 +20,10 @@ return {
     },
     suggestion = { enabled = false },
     panel = { enabled = false },
-    copilot_model = "gpt-4.1",
-    type = "binary",
-    custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
+    server = {
+      type = "binary",
+      custom_server_filepath = vim.fn.stdpath("data") .. "/mason/bin/copilot-language-server",
+    },
   },
   config = function(_, opts)
     require("copilot").setup(opts)

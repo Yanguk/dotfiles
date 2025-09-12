@@ -44,10 +44,7 @@
     # rustup
     # git
 
-    python3Full
-    python313Packages.pip
     pipx
-
     codecrafters-cli
   ];
 
@@ -70,7 +67,6 @@
       "visual-studio-code"
       "ghostty"
       "beekeeper-studio"
-      # "colemak-dh"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
