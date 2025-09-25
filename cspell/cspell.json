@@ -4,12 +4,17 @@
     "yanguk",
     "knowre",
     "actlog",
-    "usize"
+    "daekyo",
+    "kunnr"
   ],
   "words": [
     "nvim",
     "scorable",
-    "courseware"
+    "courseware",
+    "ollama",
+    "usize",
+    "comptime",
+    "errdefer"
   ],
   "flagWords": [
     "hte: the",

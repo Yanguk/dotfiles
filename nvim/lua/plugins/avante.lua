@@ -4,6 +4,7 @@ return {
   version = false,
   opts = {
     provider = "copilot",
+    -- provider = "ollama",
     behaviour = {
       use_cwd_as_project_root = true,
       auto_suggestions = false,
@@ -19,7 +20,7 @@ return {
         -- model = "gemini-2.5-pro",
         -- model = "claude-3.7-sonnet",
         -- model = "gpt-4.1",
-        model = "claude-sonnet-4",
+        -- model = "claude-sonnet-4",
         -- disable_tooles = {
         --   "git_diff",
         --   "git_commit",
@@ -34,6 +35,10 @@ return {
         --   "delete_dir",
         --   "bash",
         -- },
+      },
+      ollama = {
+        endpoint = "http://localhost:11434",
+        model = "gemma3",
       },
     },
     input = {

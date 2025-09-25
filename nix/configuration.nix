@@ -46,6 +46,7 @@
 
     pipx
     codecrafters-cli
+    # ollama
   ];
 
   fonts.packages = with pkgs; [
