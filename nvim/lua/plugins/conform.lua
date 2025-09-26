@@ -1,3 +1,5 @@
+local util = require("configs.util")
+
 local command = vim.api.nvim_create_user_command
 
 command("FormatDisable", function(args)
@@ -33,6 +35,14 @@ end, {
   desc = "Toggle autoformat-on-save",
 })
 
+local function jsTsFormatter(bufnr)
+  if util.has_prettier_config(bufnr) then
+    return { "prettierd" }
+  else
+    return { "biome" }
+  end
+end
+
 return {
   "stevearc/conform.nvim",
   opts = {
@@ -46,18 +56,10 @@ return {
     formatters_by_ft = {
       http = { "kulala" },
       lua = { "stylua" },
-      javascript = {
-        "prettierd",
-      },
-      typescript = {
-        "prettierd",
-      },
-      javascriptreact = {
-        "prettierd",
-      },
-      typescriptreact = {
-        "prettierd",
-      },
+      javascript = jsTsFormatter,
+      typescript = jsTsFormatter,
+      javascriptreact = jsTsFormatter,
+      typescriptreact = jsTsFormatter,
       markdown = { "prettierd" },
       html = { "prettierd" },
       json = { "prettierd" },
