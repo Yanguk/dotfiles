@@ -21,13 +21,11 @@
 [interactive]
   diffFilter = delta --color-only
 
-[include]
-	path = ~/.config/delta/themes/catppuccin.gitconfig
-
 [delta]
   side-by-side = true
   navigate = true    # use n and N to move between diff sections
-  features = catppuccin-mocha
+  syntax-theme = kanagawa
+  ; syntax-theme = Catppuccin Mocha
 
 [merge]
   conflictstyle = zdiff3
