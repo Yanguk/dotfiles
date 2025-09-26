@@ -24,6 +24,16 @@ end
 -- 프로젝트별 prettier 설정 캐시
 local prettier_config_cache = {}
 
+-- Attach to buffer close event to clear cache
+vim.api.nvim_create_autocmd("BufDelete", {
+  callback = function(args)
+    local bufname = vim.api.nvim_buf_get_name(args.buf)
+    if prettier_config_cache[bufname] ~= nil then
+      prettier_config_cache[bufname] = nil
+    end
+  end,
+})
+
 --- Determines if the current buffer has a Prettier configuration.
 --- @param bufnr number The buffer number to check.
 --- @return boolean Whether a Prettier configuration exists.
