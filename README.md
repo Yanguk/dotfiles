@@ -26,8 +26,6 @@ sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 
 # delta-theme
 
-https://github.com/rebelot/kanagawa.nvim/blob/master/extras/tmTheme/kanagawa.tmTheme
-
 https://github.com/catppuccin/bat
 
 bat cache --build

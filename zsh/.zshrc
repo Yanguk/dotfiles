@@ -44,7 +44,6 @@ alias nixUpgrade="sudo determinate-nixd upgrade"
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
-alias bss="bun run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
 setopt HIST_IGNORE_SPACE
 
