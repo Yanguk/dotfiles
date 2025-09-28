@@ -61,6 +61,7 @@ return {
       javascriptreact = jsTsFormatter,
       typescriptreact = jsTsFormatter,
       markdown = { "prettierd" },
+      mdx = { "prettierd" },
       html = { "prettierd" },
       json = { "prettierd" },
       jsonc = { "prettierd" },
