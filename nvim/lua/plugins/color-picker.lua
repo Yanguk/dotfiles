@@ -27,5 +27,9 @@ return {
     },
   },
   ---@type oklch.Opts
-  opts = {},
+  opts = {
+    highlight = {
+      enabled = false,
+    },
+  },
 }
