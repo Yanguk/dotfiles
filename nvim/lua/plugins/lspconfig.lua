@@ -29,6 +29,7 @@ return {
         cmd = { "cspell-lsp", "--stdio", "--config", require("configs.cspell").get_cspell_path() },
         root_markers = {},
       },
+      biome = {},
       eslint = {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)

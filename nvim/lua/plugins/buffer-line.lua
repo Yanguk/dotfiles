@@ -12,8 +12,26 @@ return {
           local icon = level:match("error") and " " or " "
           return " " .. icon .. count
         end,
+        -- numbers = function(opts)
+        --   local state = require("bufferline.state")
+        --   for i, buf in ipairs(state.components) do
+        --     if buf.id == opts.id then
+        --       return i
+        --     end
+        --   end
+        --   return opts.ordinal
+        -- end,
       },
     })
+
+    for i = 1, 9 do
+      vim.keymap.set(
+        "n",
+        string.format("<A-%d>", i),
+        string.format('<cmd>lua require("bufferline").go_to_buffer(%d, true)<cr>', i),
+        { silent = true }
+      )
+    end
   end,
   keys = {
     { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next buffer" },

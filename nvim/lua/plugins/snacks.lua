@@ -54,7 +54,7 @@ return {
         enabled = false,
       },
       scope = {
-        enabled = false,
+        enabled = true,
         char = "▏",
       },
     },
