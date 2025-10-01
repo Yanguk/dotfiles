@@ -120,6 +120,6 @@ return {
 
     require("conform").setup(opts)
 
-    -- vim.cmd("FormatDisable")
+    vim.cmd("FormatDisable")
   end,
 }
