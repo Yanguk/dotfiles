@@ -1,8 +1,5 @@
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = {
-    "AndreM222/copilot-lualine",
-  },
   opts = {},
   config = function()
     require("lualine").setup({
@@ -15,8 +12,22 @@ return {
             cond = require("noice").api.status.mode.has,
             color = { fg = "#ff9e64" },
           },
-          -- require("mcphub.extensions.lualine"),
-          "copilot",
+          {
+            function()
+              return " "
+            end,
+            color = function()
+              local status = require("sidekick.status").get()
+
+              if status then
+                return status.kind == "Error" and "DiagnosticError" or status.busy and "DiagnosticWarn" or "Special"
+              end
+            end,
+            cond = function()
+              local status = require("sidekick.status")
+              return status.get() ~= nil
+            end,
+          },
           "encoding",
           "fileformat",
           "filetype",

@@ -21,7 +21,8 @@
     bottom
     yazi
     neovim
-    tmux
+    # tmux
+    zellij
     # stu # aws s3 tui
 
     nixfmt-rfc-style

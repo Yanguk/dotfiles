@@ -47,3 +47,10 @@ bat cache --build
 ```bash
 echo "export TAVILY_API_KEY=''" >> ~/.zshenv
 ```
+
+# copilot
+https://github.com/github/copilot-cli
+
+```
+npm install -g @github/copilot
+```
