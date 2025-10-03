@@ -2,7 +2,11 @@ return {
   {
     "nvim-mini/mini.icons",
     version = "*",
-    opts = {},
+    opts = {
+      extension = {
+        ["mdx"] = { glyph = "", hl = "MiniIconsOrange" },
+      },
+    },
     lazy = true,
     specs = {
       { "nvim-tree/nvim-web-devicons", enabled = false, optional = true },

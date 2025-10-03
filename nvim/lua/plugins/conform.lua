@@ -39,7 +39,7 @@ local function jsTsFormatter(bufnr)
   if util.has_prettier_config(bufnr) then
     return { "prettierd" }
   else
-    return { "biome" }
+    return { "biome-check" }
   end
 end
 
