@@ -66,6 +66,7 @@ return {
       json = { "prettierd" },
       jsonc = { "prettierd" },
       css = { "prettierd" },
+      kdl = { "kdlfmt" },
 
       -- racket = { "raco" },
       sh = { "shfmt" },

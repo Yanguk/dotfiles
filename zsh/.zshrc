@@ -1,3 +1,6 @@
+# eval "$(zellij setup --generate-auto-start zsh)"
+alias zj="zellij"
+
 # # 1. Fastest prompts and lightweight sources early
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
 
@@ -71,4 +74,3 @@ function zvm_before_init() {
     zvm_bindkey vicmd '^[[A' history-beginning-search-backward-end
     zvm_bindkey vicmd '^[[B' history-beginning-search-forward-end
 }
-
