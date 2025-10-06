@@ -21,14 +21,14 @@ return {
       desc = "Goto/Apply Next Edit Suggestion",
     },
     {
-      "<leader>aa",
+      "<leader>Aa",
       function()
         require("sidekick.cli").toggle({ name = "copilot" })
       end,
       desc = "Sidekick Toggle CLI",
     },
     {
-      "<leader>at",
+      "<leader>st",
       function()
         require("sidekick.cli").send({ msg = "{this}" })
       end,
@@ -36,7 +36,7 @@ return {
       desc = "Send This",
     },
     {
-      "<leader>av",
+      "<leader>Av",
       function()
         require("sidekick.cli").send({ msg = "{selection}" })
       end,
@@ -44,7 +44,7 @@ return {
       desc = "Send Visual Selection",
     },
     {
-      "<leader>ap",
+      "<leader>Ap",
       function()
         require("sidekick.cli").prompt()
       end,
