@@ -128,6 +128,16 @@
           MJConfigFile = "~/.config/hammerspoon/init.lua";
         };
       };
+
+      dock = {
+        autohide = true;
+        show-recents = false;
+        autohide-delay = 0.03;
+        autohide-time-modifier = 0.03;
+        # launchanim = true;
+        orientation = "bottom";
+        # tilesize = 48;
+      };
     };
   };
 }
