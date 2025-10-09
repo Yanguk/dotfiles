@@ -23,6 +23,7 @@
       darwinConfigurations.yanguk = nix-darwin.lib.darwinSystem {
         specialArgs = {
           inherit username;
+          inherit inputs;
         };
         modules = [
           ./configuration.nix

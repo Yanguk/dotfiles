@@ -28,7 +28,7 @@ return {
       desc = "Sidekick Toggle CLI",
     },
     {
-      "<leader>st",
+      "<leader>At",
       function()
         require("sidekick.cli").send({ msg = "{this}" })
       end,
