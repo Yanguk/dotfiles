@@ -3,7 +3,7 @@
 {
   system.primaryUser = username;
   nix = {
-    # enable = false;
+    enable = false;
     settings = {
       experimental-features = "nix-command flakes";
     };
@@ -30,7 +30,7 @@
     bat
     direnv
     fzf
-    # awscli2
+    awscli2
     ripgrep
     wget
     gnupg
