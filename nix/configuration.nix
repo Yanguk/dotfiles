@@ -10,6 +10,9 @@
   };
 
   nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
     hostPlatform = "aarch64-darwin";
   };
 
@@ -49,6 +52,10 @@
     pipx
     codecrafters-cli
     # ollama
+
+    postgresql
+    boundary
+    terraform
   ];
 
   fonts.packages = with pkgs; [
@@ -58,6 +65,9 @@
 
   homebrew = {
     enable = true;
+    taps = [
+      "hashicorp/tap"
+    ];
     casks = [
       "duckduckgo"
       "orbStack"
@@ -70,6 +80,7 @@
       "visual-studio-code"
       "ghostty"
       "beekeeper-studio"
+      "hashicorp-boundary-desktop"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
@@ -129,15 +140,15 @@
         };
       };
 
-      dock = {
-        autohide = true;
-        show-recents = false;
-        autohide-delay = 0.03;
-        autohide-time-modifier = 0.03;
-        # launchanim = true;
-        orientation = "bottom";
-        # tilesize = 48;
-      };
+      # dock = {
+      #   autohide = true;
+      #   show-recents = false;
+      #   autohide-delay = 0.03;
+      #   autohide-time-modifier = 0.03;
+      #   # launchanim = true;
+      #   orientation = "bottom";
+      #   # tilesize = 48;
+      # };
     };
   };
 }
