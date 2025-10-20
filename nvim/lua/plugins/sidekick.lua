@@ -7,6 +7,7 @@ return {
         backend = "zellij", -- or "tmux"
       },
     },
+    nes = { enabled = false },
   },
   keys = {
     {

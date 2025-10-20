@@ -114,4 +114,39 @@ M.has_prettier_config = function(bufnr)
   return has_config
 end
 
+--- Determines if the current buffer has a Biome configuration.
+--- @param bufnr number The buffer number to check.
+--- @return boolean Whether a Biome configuration exists.
+M.has_biome = function(bufnr)
+  local current_file = vim.api.nvim_buf_get_name(bufnr)
+
+  if current_file == "" then
+    return false
+  end
+
+  local current_dir = vim.fn.fnamemodify(current_file, ":h")
+
+  -- 프로젝트 루트 찾기
+  local project_root = M.find_project_root(current_dir, "package.json")
+
+  if not project_root then
+    return false
+  end
+
+  -- Biome 설정 파일 목록
+  local biome_configs = {
+    "biome.json",
+    "biome.jsonc",
+  }
+
+  -- 프로젝트 루트에서 biome 설정 파일 확인
+  for _, config_file in ipairs(biome_configs) do
+    if vim.fn.filereadable(project_root .. "/" .. config_file) == 1 then
+      return true
+    end
+  end
+
+  return false
+end
+
 return M
