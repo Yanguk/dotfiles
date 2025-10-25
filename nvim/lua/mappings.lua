@@ -33,6 +33,10 @@ map("n", "<A-=>", ":vertical resize +5<CR>", { silent = true }) -- make the wind
 map("n", "<A-->", ":vertical resize -5<CR>", { silent = true }) -- make the window smaller vertically
 map("n", "<A-+>", ":resize +2<CR>", { silent = true }) -- make the window bigger horizontally by pressing shift and =
 map("n", "<A-_>", ":resize -2<CR>", { silent = true }) -- make the window smaller horizontally by pressing shift and -
+-- map("n", "<S-A-Up>", ":resize +2<CR>", { silent = true })
+-- map("n", "<S-A-Down>", ":resize -2<CR>", { silent = true })
+-- map("n", "<S-A-Right>", ":vertical resize +5<CR>", { silent = true })
+-- map("n", "<S-A-Left>", ":vertical resize -5<CR>", { silent = true })
 
 -- emoji
 map("n", "<leader>eit", function()

@@ -36,3 +36,4 @@ zsh/.zsh_plugins.zsh
 zsh/.zcompdump
 zsh/.zprofile
 .copilot/
+.android

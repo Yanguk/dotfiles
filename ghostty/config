@@ -13,12 +13,13 @@ macos-option-as-alt = true
 # title = " "
 
 macos-titlebar-style = tabs
+# macos-titlebar-style = hidden
 mouse-hide-while-typing
 
-# window-save-state = always
 background-opacity = 0.95
 background-blur-radius = 10
 
+# window-save-state = always
 keybind = alt+shift+minus=csi:95;3u
 keybind = alt+shift+plus=csi:43;3u
 
