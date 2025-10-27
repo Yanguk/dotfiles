@@ -22,11 +22,35 @@ return {
       desc = "Goto/Apply Next Edit Suggestion",
     },
     {
+      "<c-.>",
+      function()
+        require("sidekick.cli").toggle()
+      end,
+      desc = "Sidekick Toggle",
+      mode = { "n", "t", "i", "x" },
+    },
+    {
       "<leader>Aa",
       function()
-        require("sidekick.cli").toggle({ name = "copilot" })
+        require("sidekick.cli").toggle({ name = "copilot", focus = true })
       end,
       desc = "Sidekick Toggle CLI",
+    },
+    {
+      "<leader>As",
+      function()
+        require("sidekick.cli").select()
+      end,
+      -- Or to select only installed tools:
+      -- require("sidekick.cli").select({ filter = { installed = true } })
+      desc = "Select CLI",
+    },
+    {
+      "<leader>Ad",
+      function()
+        require("sidekick.cli").close()
+      end,
+      desc = "Detach a CLI Session",
     },
     {
       "<leader>At",
@@ -35,6 +59,13 @@ return {
       end,
       mode = { "x", "n" },
       desc = "Send This",
+    },
+    {
+      "<leader>Af",
+      function()
+        require("sidekick.cli").send({ msg = "{file}" })
+      end,
+      desc = "Send File",
     },
     {
       "<leader>Av",
@@ -51,14 +82,6 @@ return {
       end,
       mode = { "n", "x" },
       desc = "Sidekick Select Prompt",
-    },
-    {
-      "<c-.>",
-      function()
-        require("sidekick.cli").focus()
-      end,
-      mode = { "n", "x", "i", "t" },
-      desc = "Sidekick Switch Focus",
     },
   },
 }
