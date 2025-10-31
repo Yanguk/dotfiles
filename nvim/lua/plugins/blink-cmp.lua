@@ -52,11 +52,6 @@ return {
     sources = {
       per_filetype = {
         lua = { inherit_defaults = true, "lazydev" },
-        AvanteInput = {
-          "avante_commands",
-          "avante_mentions",
-          "avante_files",
-        },
       },
       default = {
         "lsp",
@@ -77,24 +72,6 @@ return {
           module = "lazydev.integrations.blink",
           -- make lazydev completions top priority (see `:h blink.cmp`)
           score_offset = 100,
-        },
-        avante_commands = {
-          name = "avante_commands",
-          module = "blink.compat.source",
-          score_offset = 90, -- show at a higher priority than lsp
-          opts = {},
-        },
-        avante_files = {
-          name = "avante_files",
-          module = "blink.compat.source",
-          score_offset = 100, -- show at a higher priority than lsp
-          opts = {},
-        },
-        avante_mentions = {
-          name = "avante_mentions",
-          module = "blink.compat.source",
-          score_offset = 100, -- show at a higher priority than lsp
-          opts = {},
         },
       },
     },

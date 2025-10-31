@@ -3,7 +3,7 @@ return {
   opts = {
     cli = {
       mux = {
-        enabled = false,
+        enabled = true,
         backend = "zellij", -- or "tmux"
       },
     },
@@ -30,14 +30,14 @@ return {
       mode = { "n", "t", "i", "x" },
     },
     {
-      "<leader>Aa",
+      "<leader>aa",
       function()
         require("sidekick.cli").toggle({ name = "copilot", focus = true })
       end,
       desc = "Sidekick Toggle CLI",
     },
     {
-      "<leader>As",
+      "<leader>as",
       function()
         require("sidekick.cli").select()
       end,
@@ -46,14 +46,14 @@ return {
       desc = "Select CLI",
     },
     {
-      "<leader>Ad",
+      "<leader>ad",
       function()
         require("sidekick.cli").close()
       end,
       desc = "Detach a CLI Session",
     },
     {
-      "<leader>At",
+      "<leader>at",
       function()
         require("sidekick.cli").send({ msg = "{this}" })
       end,
@@ -61,14 +61,14 @@ return {
       desc = "Send This",
     },
     {
-      "<leader>Af",
+      "<leader>af",
       function()
         require("sidekick.cli").send({ msg = "{file}" })
       end,
       desc = "Send File",
     },
     {
-      "<leader>Av",
+      "<leader>av",
       function()
         require("sidekick.cli").send({ msg = "{selection}" })
       end,
@@ -76,7 +76,7 @@ return {
       desc = "Send Visual Selection",
     },
     {
-      "<leader>Ap",
+      "<leader>ap",
       function()
         require("sidekick.cli").prompt()
       end,

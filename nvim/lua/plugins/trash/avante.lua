@@ -1,5 +1,5 @@
 return {
-  -- enabled = false,
+  enabled = false,
   "yetone/avante.nvim",
   event = "VeryLazy",
   version = false,
