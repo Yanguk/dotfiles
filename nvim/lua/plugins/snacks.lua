@@ -63,7 +63,14 @@ return {
       relative = "cursor",
     },
     picker = { enabled = true },
-    lazygit = { enabled = true },
+    lazygit = {
+      enabled = true,
+      config = {
+        os = {
+          edit = '[ -z ""$NVIM"" ] && (nvim -- {{filename}}) || (nvim --server ""$NVIM"" --remote-send ""q"" && nvim --server ""$NVIM"" --remote {{filename}})',
+        },
+      },
+    },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     -- scroll = { enabled = true },
