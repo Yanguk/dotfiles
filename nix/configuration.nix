@@ -48,6 +48,8 @@
     volta
     # rustup
     # git
+    jujutsu
+    jjui
 
     pipx
     codecrafters-cli
@@ -79,8 +81,13 @@
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
-      "beekeeper-studio"
+      "dbeaver-community"
+      # "beekeeper-studio"
+      # "gemini-cli"
+
+      # office
       "hashicorp-boundary-desktop"
+      "openvpn-connect"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;

@@ -3,6 +3,7 @@ local leetcode_config = require("configs.leetcode")
 return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot",
+  enabled = false,
   event = "InsertEnter",
   opts = {
     filetypes = {
