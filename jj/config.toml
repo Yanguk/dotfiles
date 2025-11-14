@@ -4,9 +4,20 @@ email = "yanguk@duck.com"
 name = "Yanguk"
 
 [ui]
+# nvim hunk
 diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
 editor = "nvim"
 
+# jj-diff
+[merge-tools.diffconflicts]
+program = "nvim"
+merge-args = [
+    "-c", "let g:jj_diffconflicts_marker_length=$marker_length",
+    "-c", "JJDiffConflicts!", "$output", "$base", "$left", "$right",
+]
+merge-tool-edits-conflict-markers = true
+
+# p10k
 [template-aliases]
 'format_short_change_id(id)' = 'id.shortest(4)'
 'format_short_commit_id(id)' = 'id.shortest(4)'
@@ -25,9 +36,11 @@ separate(" ",
 )
 '''
 
+# p10k
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 
+# p10k
 [colors]
 wip = "yellow"
 todo = "blue"

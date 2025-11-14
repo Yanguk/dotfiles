@@ -33,6 +33,7 @@ fi
 
 # Source your static plugins file.
 source ${zsh_plugins}.zsh
+source <(jj util completion zsh)
 
 # 4. Aliases/functions (after essentials)
 alias lg="lazygit"
