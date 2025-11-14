@@ -13,3 +13,5 @@ ohmyzsh/ohmyzsh path:plugins/zoxide
 ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/yarn
 ntnyq/omz-plugin-pnpm
+
+mafredri/zsh-async

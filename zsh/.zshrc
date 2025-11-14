@@ -74,3 +74,6 @@ function zvm_before_init() {
     zvm_bindkey vicmd '^[[A' history-beginning-search-backward-end
     zvm_bindkey vicmd '^[[B' history-beginning-search-forward-end
 }
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
