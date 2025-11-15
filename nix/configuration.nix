@@ -18,7 +18,7 @@
 
   environment.systemPackages = with pkgs; [
     imagemagick # for nvim_snack.image
-    pngpaste # for nvim_img-clip
+    # pngpaste # for nvim_img-clip
 
     lazygit
     bottom
@@ -51,8 +51,8 @@
     jujutsu
     jjui
 
-    pipx
-    codecrafters-cli
+    # codecrafters-cli
+    # pipx
     # ollama
 
     postgresql
