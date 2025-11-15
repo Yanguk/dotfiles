@@ -17,6 +17,9 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY=$TTY
 
+HISTSIZE=10000
+SAVEHIST=10000
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # 3. Plugins (antidote) - static bundle, manual update only!
