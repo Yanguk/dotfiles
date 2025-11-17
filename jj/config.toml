@@ -7,8 +7,9 @@ name = "Yanguk"
 # nvim hunk
 diff-editor = "hunk"
 editor = "nvim"
+default-command = "log"
 
-[merge.tools.hunk]
+[merge-tools.hunk]
 program = "nvim"
 edit-args = ["-c", "DiffEditor $left $right $output"]
 

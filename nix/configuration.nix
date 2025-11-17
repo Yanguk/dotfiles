@@ -31,7 +31,7 @@
     nixfmt-rfc-style
     delta
     bat
-    direnv
+    # direnv
     fzf
     awscli2
     ripgrep
@@ -68,7 +68,10 @@
   homebrew = {
     enable = true;
     taps = [
-      "hashicorp/tap"
+      "hashicorp/tap" # office
+    ];
+    brews = [
+      "direnv"
     ];
     casks = [
       "duckduckgo"
@@ -85,9 +88,8 @@
       # "beekeeper-studio"
       # "gemini-cli"
 
-      # office
-      "hashicorp-boundary-desktop"
-      "openvpn-connect"
+      "hashicorp-boundary-desktop" # office
+      "openvpn-connect" # office
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
