@@ -2,39 +2,6 @@ local util = require("configs.util")
 
 local command = vim.api.nvim_create_user_command
 
-command("FormatDisable", function(args)
-  if args.bang then
-    -- FormatDisable! will disable formatting just for this buffer
-    vim.b.disable_autoformat = true
-  else
-    vim.g.disable_autoformat = true
-  end
-end, {
-  desc = "Disable autoformat-on-save",
-  bang = true,
-})
-
-command("FormatEnable", function()
-  vim.b.disable_autoformat = false
-  vim.g.disable_autoformat = false
-end, {
-  desc = "Enable autoformat-on-save",
-})
-
-command("FormatToggle", function()
-  if vim.g.disable_autoformat then
-    vim.g.disable_autoformat = false
-    vim.b.disable_autoformat = false
-    vim.notify("Autoformat Enabled")
-  else
-    vim.g.disable_autoformat = true
-    vim.b.disable_autoformat = true
-    vim.notify("Autoformat Disabled")
-  end
-end, {
-  desc = "Toggle autoformat-on-save",
-})
-
 local function jsTsFormatter(bufnr)
   if util.has_biome(bufnr) then
     return { "biome-check" }
@@ -98,6 +65,12 @@ return {
       desc = "Format buffer",
     },
     {
+      "<leader>fm",
+      "<cmd>'<,'>Format<cr>",
+      desc = "Format buffer",
+      mode = { "v" },
+    },
+    {
       "<leader>tf",
       "<cmd>FormatToggle<cr>", -- Added this line
       desc = "Toggle autoformat", -- Added description
@@ -107,8 +80,42 @@ return {
     "williamboman/mason.nvim",
   },
   config = function(_, opts)
+    command("FormatDisable", function(args)
+      if args.bang then
+        -- FormatDisable! will disable formatting just for this buffer
+        vim.b.disable_autoformat = true
+      else
+        vim.g.disable_autoformat = true
+      end
+    end, {
+      desc = "Disable autoformat-on-save",
+      bang = true,
+    })
+
+    command("FormatEnable", function()
+      vim.b.disable_autoformat = false
+      vim.g.disable_autoformat = false
+    end, {
+      desc = "Enable autoformat-on-save",
+    })
+
+    command("FormatToggle", function()
+      if vim.g.disable_autoformat then
+        vim.g.disable_autoformat = false
+        vim.b.disable_autoformat = false
+        vim.notify("Autoformat Enabled")
+      else
+        vim.g.disable_autoformat = true
+        vim.b.disable_autoformat = true
+        vim.notify("Autoformat Disabled")
+      end
+    end, {
+      desc = "Toggle autoformat-on-save",
+    })
+
     command("Format", function(args)
       local range = nil
+
       if args.count ~= -1 then
         local end_line = vim.api.nvim_buf_get_lines(0, args.line2 - 1, args.line2, true)[1]
         range = {
@@ -116,6 +123,7 @@ return {
           ["end"] = { args.line2, end_line:len() },
         }
       end
+
       require("conform").format({ async = true, lsp_format = "fallback", range = range })
     end, { range = true })
 

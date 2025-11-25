@@ -4,7 +4,7 @@ email = "yanguk@duck.com"
 name = "Yanguk"
 
 [ui]
-diff-editor = "hunk"
+# diff-editor = "hunk"
 editor = "nvim"
 default-command = "log"
 
