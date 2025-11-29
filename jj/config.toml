@@ -7,6 +7,8 @@ name = "Yanguk"
 # diff-editor = "hunk"
 editor = "nvim"
 default-command = "log"
+pager = "delta"
+diff-formatter = ":git"
 
 [merge-tools.hunk]
 program = "nvim"
@@ -16,8 +18,14 @@ edit-args = ["-c", "DiffEditor $left $right $output"]
 [merge-tools.diffconflicts]
 program = "nvim"
 merge-args = [
-    "-c", "let g:jj_diffconflicts_marker_length=$marker_length",
-    "-c", "JJDiffConflicts!", "$output", "$base", "$left", "$right",
+  "-c",
+  "let g:jj_diffconflicts_marker_length=$marker_length",
+  "-c",
+  "JJDiffConflicts!",
+  "$output",
+  "$base",
+  "$left",
+  "$right",
 ]
 merge-tool-edits-conflict-markers = true
 
