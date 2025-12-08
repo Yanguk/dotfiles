@@ -2,8 +2,8 @@ git:
   pagers:
     - colorArg: always
       pager: delta --dark --paging=never --tabs=2 -s
-  commit:
-    signOff: true
+  # commit:
+  #   signOff: true
 gui:
   theme:
     activeBorderColor:

@@ -15,7 +15,8 @@
     "ollama",
     "usize",
     "comptime",
-    "errdefer"
+    "errdefer",
+    "trpc"
   ],
   "flagWords": [
     "hte: the",
