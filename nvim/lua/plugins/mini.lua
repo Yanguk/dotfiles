@@ -18,18 +18,18 @@ return {
       end
     end,
   },
-  {
-    -- for codecompanion
-    "nvim-mini/mini.diff",
-    enabled = false,
-    event = "VeryLazy",
-    config = function()
-      local diff = require("mini.diff")
-      diff.setup({
-        -- Disabled by default
-        source = diff.gen_source.none(),
-      })
-    end,
-  },
+  -- {
+  --   -- for codecompanion
+  --   "nvim-mini/mini.diff",
+  --   enabled = false,
+  --   event = "VeryLazy",
+  --   config = function()
+  --     local diff = require("mini.diff")
+  --     diff.setup({
+  --       -- Disabled by default
+  --       source = diff.gen_source.none(),
+  --     })
+  --   end,
+  -- },
   { "nvim-mini/mini.trailspace", version = false, opts = {}, event = "BufReadPost" },
 }

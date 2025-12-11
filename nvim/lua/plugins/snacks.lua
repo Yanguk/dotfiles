@@ -73,7 +73,7 @@ return {
     },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    -- scroll = { enabled = true },
+    scroll = { enabled = true },
     statuscolumn = { enabled = true },
     terminal = { enabled = true },
     zen = {

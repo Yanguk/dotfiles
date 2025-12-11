@@ -12,17 +12,17 @@ return {
         require("luasnip.loaders.from_vscode").lazy_load()
       end,
     },
-    {
-      "saghen/blink.compat",
-      config = function()
-        -- monkeypatch cmp.ConfirmBehavior for Avante
-        require("cmp").ConfirmBehavior = {
-          Insert = "insert",
-          Replace = "replace",
-        }
-      end,
-      lazy = true,
-    },
+    -- {
+    --   "saghen/blink.compat",
+    --   config = function()
+    --     -- monkeypatch cmp.ConfirmBehavior for Avante
+    --     require("cmp").ConfirmBehavior = {
+    --       Insert = "insert",
+    --       Replace = "replace",
+    --     }
+    --   end,
+    --   lazy = true,
+    -- },
   },
 
   -- use a release tag to download pre-built binaries
@@ -58,15 +58,15 @@ return {
         "path",
         "snippets",
         "buffer",
-        "copilot",
+        -- "copilot",
       },
       providers = {
-        copilot = {
-          name = "copilot",
-          module = "blink-copilot",
-          score_offset = 100,
-          async = true,
-        },
+        -- copilot = {
+        --   name = "copilot",
+        --   module = "blink-copilot",
+        --   score_offset = 100,
+        --   async = true,
+        -- },
         lazydev = {
           name = "LazyDev",
           module = "lazydev.integrations.blink",
