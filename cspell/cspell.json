@@ -6,7 +6,8 @@
     "actlog",
     "daekyo",
     "kunnr",
-    "Pressable"
+    "Pressable",
+    "orelse"
   ],
   "words": [
     "nvim",

@@ -44,14 +44,13 @@
 
     deno
     bun
-    zig
     volta
     # rustup
     # git
     jujutsu
     jjui
 
-    # codecrafters-cli
+    codecrafters-cli
     # pipx
     # ollama
 
@@ -72,6 +71,7 @@
     ];
     brews = [
       "direnv"
+      "zig"
     ];
     casks = [
       "duckduckgo"
@@ -87,6 +87,7 @@
       "dbeaver-community"
       # "beekeeper-studio"
       # "gemini-cli"
+      "antigravity"
 
       "hashicorp-boundary-desktop" # office
       "openvpn-connect" # office
