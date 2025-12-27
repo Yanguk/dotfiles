@@ -24,8 +24,8 @@
     bottom
     yazi
     neovim
-    # tmux
-    zellij
+    tmux
+    # zellij
     # stu # aws s3 tui
 
     nixfmt-rfc-style
@@ -84,6 +84,8 @@
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
+      "alacritty"
+      "zen"
       "dbeaver-community"
       # "beekeeper-studio"
       # "gemini-cli"
