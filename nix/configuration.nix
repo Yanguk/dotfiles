@@ -17,6 +17,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    difftastic # diff
+
     imagemagick # for nvim_snack.image
     pngpaste # for nvim_img-clip, nvim_obsidian
 

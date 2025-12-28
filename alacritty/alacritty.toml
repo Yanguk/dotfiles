@@ -10,7 +10,7 @@ bindings = [
   { key = "F", mods = "Command|Control", action = "ToggleFullscreen" },
   { key = "Minus", mods = "Alt|Shift", chars = "\u001b[95;3u" },
   { key = "Equals", mods = "Alt|Shift", chars = "\u001b[43;3u" },
-  { key = "Space", mods = "Command|Shift", action = "ToggleViMode" },
+  # { key = "Space", mods = "Command|Shift", action = "ToggleViMode" },
 ]
 
 [mouse]

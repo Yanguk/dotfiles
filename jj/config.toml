@@ -7,8 +7,7 @@ name = "Yanguk"
 # diff-editor = "hunk"
 editor = "nvim"
 default-command = "log"
-pager = "delta"
-diff-formatter = ":git"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
 
 [merge-tools.hunk]
 program = "nvim"
@@ -66,5 +65,4 @@ backend = "gpg"
 key = "4393B4559800E556EC978C9C879056D45517B74F"
 
 [git]
-# [git]
 # sign-on-push = true
