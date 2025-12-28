@@ -18,7 +18,7 @@
 
   environment.systemPackages = with pkgs; [
     imagemagick # for nvim_snack.image
-    # pngpaste # for nvim_img-clip
+    pngpaste # for nvim_img-clip, nvim_obsidian
 
     lazygit
     bottom
