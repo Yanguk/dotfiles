@@ -2,7 +2,7 @@ return {
   "obsidian-nvim/obsidian.nvim",
   version = "*", -- use latest release, remove to use latest commit
   ft = "markdown",
-  cmd =  "Obsidian",
+  cmd = "Obsidian",
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
@@ -17,13 +17,13 @@ return {
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
       folder = "calendar",
-      date_format = "%Y-%m-%d",
-      -- Optional, if you want to change the date format of the default alias of daily notes.
-      alias_format = "%B %-d, %Y",
-      -- Optional, default tags to add to each new daily note created.
-      default_tags = { "daily-notes" },
-      -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-      template = nil,
+      -- date_format = "%Y-%m-%d",
+      -- -- Optional, if you want to change the date format of the default alias of daily notes.
+      -- alias_format = "%B %-d, %Y",
+      -- -- Optional, default tags to add to each new daily note created.
+      -- default_tags = { "daily-notes" },
+      -- -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+      -- template = nil,
     },
     -- see below for full list of options 👇
   },
