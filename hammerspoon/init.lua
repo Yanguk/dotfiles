@@ -1,50 +1,38 @@
 hs.loadSpoon("EmmyLua")
 
-local inputEnCanary = "org.sil.ukelele.keyboardlayout.canary.canary"
-local inputKrShinP2 = "org.youknowone.inputmethod.Gureum.han3shin-p2"
+-- 1. Configuration: Input Source IDs
+local INPUT_SOURCE = {
+    ENGLISH = "org.sil.ukelele.keyboardlayout.canary.canary",
+    KOREAN  = "org.youknowone.inputmethod.Gureum.han3shin-p2"
+}
 
-local inputEn = inputEnCanary
-local inputKr = inputKrShinP2
+-- 2. State Management
+local escBind = nil
 
-local esc_bind
-
--- 입력 소스를 영어로 변경하는 공통 함수
-local function changeInputSourceToEnglish()
-  local inputSource = hs.keycodes.currentSourceID()
-
-  if not (inputSource == inputEn) then
-    hs.eventtap.keyStroke({}, "right")
-    hs.keycodes.currentSourceID(inputEn)
-  end
+-- 3. Core Logic
+local function switchToEnglish()
+    local current = hs.keycodes.currentSourceID()
+    if current ~= INPUT_SOURCE.ENGLISH then
+        -- Optional: Send a 'right' stroke if needed (kept from original logic)
+        hs.eventtap.keyStroke({}, "right")
+        hs.keycodes.currentSourceID(INPUT_SOURCE.ENGLISH)
+    end
 end
 
--- Escape 키 입력을 처리하는 공통 함수
-local function pressEscapeKey()
-  esc_bind:disable()
-  hs.eventtap.keyStroke({}, "escape")
-  esc_bind:enable()
+local function handleEscapeAndSwitch()
+    -- First, switch input source to English
+    switchToEnglish()
+
+    -- Then, send the actual Escape key stroke
+    -- We disable the binding temporarily to avoid recursion
+    if escBind then escBind:disable() end
+    hs.eventtap.keyStroke({}, "escape")
+    if escBind then escBind:enable() end
 end
 
-local function changeInputSourceKrToEnWhenEscapeVim()
-  changeInputSourceToEnglish()
-  pressEscapeKey()
-end
+-- 4. Key Bindings
+-- Global Escape key binding
+escBind = hs.hotkey.new({}, "escape", handleEscapeAndSwitch):enable()
 
-hs.hotkey.bind({ "control" }, 33, changeInputSourceKrToEnWhenEscapeVim)
-esc_bind = hs.hotkey.new({}, "escape", changeInputSourceKrToEnWhenEscapeVim):enable()
-
--- 한영전환을 위한 입력 소스 토글 함수
--- local function toggleInputSource()
---   local currentSource = hs.keycodes.currentSourceID()
---
---   if currentSource == inputEn then
---     -- 영어에서 한글로
---     hs.keycodes.currentSourceID(inputKr)
---   else
---     -- 한글에서 영어로
---     hs.keycodes.currentSourceID(inputEn)
---   end
--- end
-
--- control + space를 한영전환으로 매핑
--- hs.hotkey.bind({ "control" }, "space", toggleInputSource)
+-- Control + [ (Specific mapping from original config)
+hs.hotkey.bind({ "control" }, 33, handleEscapeAndSwitch)

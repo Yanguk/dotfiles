@@ -51,11 +51,10 @@ map("n", "<leader>eic", function()
   vim.api.nvim_put({ "💥" }, "c", true, true)
 end, { desc = "Insert Explosion Emoji" })
 
--- nvim-tmux-navitagion 에서 처리함
--- map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
--- map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
--- map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
--- map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
+map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
+map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
+map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
+map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 -- Delete all marks
 map("n", "<leader>mD", "<cmd>delmarks a-zA-Z0-9<CR>", { desc = "Delete all marks" })
