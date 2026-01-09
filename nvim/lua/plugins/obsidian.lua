@@ -25,6 +25,7 @@ return {
       -- -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
       -- template = nil,
     },
+    notes_subdir = "scratch",
     -- see below for full list of options 👇
   },
   -- init = function()
