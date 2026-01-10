@@ -88,6 +88,7 @@
       "ghostty"
       "alacritty"
       "zen"
+      "zed"
       "dbeaver-community"
       # "beekeeper-studio"
       # "gemini-cli"
