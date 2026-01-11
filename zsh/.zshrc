@@ -1,5 +1,5 @@
 # eval "$(zellij setup --generate-auto-start zsh)"
-alias zj="zellij"
+# alias zj="zellij"
 
 # # 1. Fastest prompts and lightweight sources early
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"

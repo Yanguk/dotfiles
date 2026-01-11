@@ -30,7 +30,7 @@
     # zellij
     # stu # aws s3 tui
 
-    nixfmt-rfc-style
+    nixfmt
     delta
     bat
     # direnv

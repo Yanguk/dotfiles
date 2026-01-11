@@ -26,11 +26,7 @@
   },
   "languages": {
     "TypeScript": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      },
+      "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
         "source.organizeImports": true

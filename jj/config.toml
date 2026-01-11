@@ -29,6 +29,7 @@ merge-args = [
 merge-tool-edits-conflict-markers = true
 
 # p10k
+# https://zerowidth.com/2025/async-zsh-jujutsu-prompt-with-p10k/
 [template-aliases]
 'format_short_change_id(id)' = 'id.shortest(4)'
 'format_short_commit_id(id)' = 'id.shortest(4)'
