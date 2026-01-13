@@ -27,6 +27,9 @@ return {
     },
     notes_subdir = "scratch",
     -- see below for full list of options 👇
+    footer = {
+      enabled = false,
+    },
   },
   -- init = function()
   --   vim.opt.conceallevel = 1
