@@ -19,16 +19,17 @@ return {
       nil_ls = {},
       terraformls = {},
       pyright = {},
+      codebook = {},
       -- NOTE: typos 대신 cspell 사용경험이 좋았음
       -- typos_lsp = {
       --   init_options = {
       --     config = "~/.config/nvim/typos.toml",
       --   },
       -- },
-      cspell_ls = {
-        cmd = { "cspell-lsp", "--stdio", "--config", require("configs.cspell").get_cspell_path() },
-        root_markers = {},
-      },
+      -- cspell_ls = {
+      --   cmd = { "cspell-lsp", "--stdio", "--config", require("configs.cspell").get_cspell_path() },
+      --   root_markers = {},
+      -- },
       biome = {},
       eslint = {
         on_attach = function(client, bufnr)

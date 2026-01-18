@@ -74,6 +74,7 @@
     brews = [
       "direnv"
       "zig"
+      "tree-sitter-cli"
     ];
     casks = [
       "duckduckgo"

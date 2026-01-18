@@ -1,0 +1,32 @@
+dictionaries = [
+    "en_us",
+    "en_gb",
+]
+words = [
+    "actlog",
+    "comptime",
+    "courseware",
+    "daekyo",
+    "errdefer",
+    "highscore",
+    "jira",
+    "knowre",
+    "kunnr",
+    "nvim",
+    "ollama",
+    "orelse",
+    "pressable",
+    "scorable",
+    "trpc",
+    "usize",
+    "yanguk",
+    "yangukheo",
+]
+flag_words = [
+    "hte",
+    "widht",
+    "lenght",
+    "colour",
+    "calender",
+]
+ignore_patterns = ['[\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\u2022\u00B7]+']
