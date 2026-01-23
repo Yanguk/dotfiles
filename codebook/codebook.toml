@@ -6,7 +6,9 @@ words = [
     "actlog",
     "comptime",
     "courseware",
+    "curriculums",
     "daekyo",
+    "dotenv",
     "errdefer",
     "highscore",
     "jira",
@@ -17,10 +19,12 @@ words = [
     "orelse",
     "pressable",
     "scorable",
+    "tanstack",
     "trpc",
     "usize",
     "yanguk",
     "yangukheo",
+    "zod",
 ]
 flag_words = [
     "hte",
@@ -29,4 +33,8 @@ flag_words = [
     "colour",
     "calender",
 ]
-ignore_patterns = ['[\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F\u2022\u00B7]+']
+ignore_patterns = [
+    '.*[\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F].*',
+    '\d+[\uAC00-\uD7A3\u1100-\u11FF\u3130-\u318F]+',
+    '[\u2022\u00B7]+',
+]
