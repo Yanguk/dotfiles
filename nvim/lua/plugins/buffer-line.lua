@@ -4,7 +4,6 @@ return {
   version = "*",
   config = function()
     require("bufferline").setup({
-      highlights = require("catppuccin.special.bufferline").get_theme(),
       options = {
         diagnostics = "nvim_lsp",
         ---@diagnostic disable-next-line: unused-local

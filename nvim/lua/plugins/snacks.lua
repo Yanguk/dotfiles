@@ -46,7 +46,7 @@ return {
       },
     },
     indent = {
-      enabled = true,
+      enabled = false,
       indent = {
         char = "▏",
       },
