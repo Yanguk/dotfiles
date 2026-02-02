@@ -4,8 +4,8 @@ return {
     cli = {
       mux = {
         -- enabled = true,
-        -- enabled = false,
-        -- backend = "zellij", -- or "tmux"
+        enabled = false,
+        backend = "zellij", -- or "tmux"
       },
     },
     nes = { enabled = false },
