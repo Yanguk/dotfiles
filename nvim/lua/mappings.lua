@@ -1,5 +1,6 @@
 -- cSpell:disable
 local map = vim.keymap.set
+local cmd = vim.api.nvim_create_user_command
 
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "file save" })
@@ -59,3 +60,9 @@ map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 -- Delete all marks
 map("n", "<leader>mD", "<cmd>delmarks a-zA-Z0-9<CR>", { desc = "Delete all marks" })
 map("n", "<leader>md", "<cmd>delmarks!<CR>", { desc = "Delete marks" })
+
+vim.api.nvim_create_user_command(
+  "Tcc",
+  require("utils.text-case-convert").cycle_case_style,
+  { desc = "Cycle kebab → camel → snake case" }
+)

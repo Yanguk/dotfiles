@@ -70,7 +70,7 @@ key = "4393B4559800E556EC978C9C879056D45517B74F"
 # sign-on-push = true
 
 [aliases]
-# See https://jj-vcs.github.io/jj/latest/config/#aliases 
+# See https://jj-vcs.github.io/jj/latest/config/#aliases
 pre-commit = [
   "util",
   "exec",

@@ -78,6 +78,7 @@
     ];
     casks = [
       "duckduckgo"
+      "claude-code"
       "orbStack"
       "figma"
       "google-chrome"

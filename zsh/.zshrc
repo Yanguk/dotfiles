@@ -1,6 +1,8 @@
 # eval "$(zellij setup --generate-auto-start zsh)"
 # alias zj="zellij"
 
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+
 # # 1. Fastest prompts and lightweight sources early
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
 
@@ -47,6 +49,7 @@ alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
 alias nixUpgrade="sudo determinate-nixd upgrade"
+alias nixClean="nix-collect-garbage -d"
 
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
