@@ -95,6 +95,7 @@
       # "beekeeper-studio"
       # "gemini-cli"
       "antigravity"
+      "codex"
 
       "hashicorp-boundary-desktop" # office
       "openvpn-connect" # office
