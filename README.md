@@ -1,12 +1,6 @@
-# install nix
+# install lix
 
-[nix guide](https://zero-to-nix.com)
-
-```bash
-# https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file#determinate-nix-installer
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | \
-  sh -s -- install --determinate
-```
+[lix](https://lix.systems/install/#on-any-other-linuxmacos-system)
 
 ## nix-darwin install & switch
 
@@ -15,7 +9,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 - install
 
 ```bash
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
+sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
 ```
 
 - switch
@@ -24,38 +18,10 @@ nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/.config/nix#yanguk
 sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 ```
 
-# delta-theme
-
-https://github.com/catppuccin/bat
-
-bat cache --build
-
 # keyboard layout
-
-~~[mod-dh](https://github.com/ColemakMods/mod-dh)~~
 
 [gurem](https://github.com/gureum/gureum)
 
 - Add `Han 3set Shin P2`
 
 [canary](https://github.com/Apsu/Canary/blob/main/INSTALL.md)
-
-# MCP
-
-[tavily](https://tavily.com/)
-
-```bash
-echo "export TAVILY_API_KEY=''" >> ~/.zshenv
-```
-
-# copilot
-https://github.com/github/copilot-cli
-
-```
-npm install -g @github/copilot
-```
-# Tmux
-
-[tpm](https://github.com/tmux-plugins/tpm)
-
-[term 256-color](https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95)

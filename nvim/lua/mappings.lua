@@ -66,3 +66,7 @@ vim.api.nvim_create_user_command(
   require("utils.text-case-convert").cycle_case_style,
   { desc = "Cycle kebab → camel → snake case" }
 )
+
+vim.api.nvim_create_user_command("Pwd", function()
+  vim.fn.setreg("+", vim.fn.expand("%:p"))
+end, { desc = "Copy file path" })

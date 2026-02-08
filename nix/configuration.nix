@@ -64,6 +64,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.hack
     noto-fonts-cjk-sans # for ghostty
+    pretendard
   ];
 
   homebrew = {
