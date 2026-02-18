@@ -1,5 +1,5 @@
-# theme = Catppuccin Mocha
-theme = Kanagawa Wave
+theme = Catppuccin Mocha
+# theme = Kanagawa Wave
 # theme = Kanagawa Dragon
 
 font-size = 16
@@ -18,8 +18,8 @@ macos-titlebar-style = tabs
 # macos-titlebar-style = hidden
 mouse-hide-while-typing
 
-# background-opacity = 0.95
-# background-blur-radius = 10
+background-opacity = 0.95
+background-blur-radius = 10
 
 # window-save-state = always
 keybind = alt+shift+minus=csi:95;3u

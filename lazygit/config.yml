@@ -4,50 +4,51 @@ git:
       pager: delta --dark --paging=never --tabs=2 -s
       # commit:
       #   signOff: true
-# gui:
-#   theme:
-#     activeBorderColor:
-#       - '#89b4fa'
-#       - bold
-#     inactiveBorderColor:
-#       - '#a6adc8'
-#     optionsTextColor:
-#       - '#89b4fa'
-#     selectedLineBgColor:
-#       - '#313244'
-#     cherryPickedCommitBgColor:
-#       - '#45475a'
-#     cherryPickedCommitFgColor:
-#       - '#89b4fa'
-#     unstagedChangesColor:
-#       - '#f38ba8'
-#     defaultFgColor:
-#       - '#cdd6f4'
-#     searchingActiveBorderColor:
-#       - '#f9e2af'
-#   authorColors:
-#     '*': '#b4befe'
-
 gui:
   theme:
     activeBorderColor:
-      - '#7e9cd8' # Muted blue
+      - '#89b4fa'
       - bold
     inactiveBorderColor:
-      - '#a3b8ef' # Pastel gray-blue
+      - '#a6adc8'
     optionsTextColor:
-      - '#c8c093' # Soft white
+      - '#89b4fa'
     selectedLineBgColor:
-      - '#223249' # Deep muted blue
+      - '#313244'
     cherryPickedCommitBgColor:
-      - '#3c4f5a' # Calm muted gray
+      - '#45475a'
     cherryPickedCommitFgColor:
-      - '#7fb4ca' # Pastel blue
+      - '#89b4fa'
     unstagedChangesColor:
-      - '#e82424' # Muted red
+      - '#f38ba8'
     defaultFgColor:
-      - '#dcd7ba' # Soft white
+      - '#cdd6f4'
     searchingActiveBorderColor:
-      - '#7e9cd8' # Muted blue
+      - '#f9e2af'
   authorColors:
-    '*': '#a3b8ef' # Pastel gray-blue
+    '*': '#b4befe'
+
+# **kanagawa**
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - '#7e9cd8' # Muted blue
+#       - bold
+#     inactiveBorderColor:
+#       - '#a3b8ef' # Pastel gray-blue
+#     optionsTextColor:
+#       - '#c8c093' # Soft white
+#     selectedLineBgColor:
+#       - '#223249' # Deep muted blue
+#     cherryPickedCommitBgColor:
+#       - '#3c4f5a' # Calm muted gray
+#     cherryPickedCommitFgColor:
+#       - '#7fb4ca' # Pastel blue
+#     unstagedChangesColor:
+#       - '#e82424' # Muted red
+#     defaultFgColor:
+#       - '#dcd7ba' # Soft white
+#     searchingActiveBorderColor:
+#       - '#7e9cd8' # Muted blue
+#   authorColors:
+#     '*': '#a3b8ef' # Pastel gray-blue
