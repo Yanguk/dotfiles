@@ -76,10 +76,9 @@
       "direnv"
       "zig"
       "tree-sitter-cli"
+      "gemini-cli"
     ];
     casks = [
-      "duckduckgo"
-      "claude-code"
       "orbStack"
       "figma"
       "google-chrome"
@@ -90,11 +89,9 @@
       "visual-studio-code"
       "ghostty"
       "dbeaver-community"
-      # "zen"
       "alacritty"
+      # "zen"
       # "zed"
-      # "beekeeper-studio"
-      # "gemini-cli"
       "antigravity"
       "codex"
 

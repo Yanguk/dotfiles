@@ -25,3 +25,8 @@ sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 - Add `Han 3set Shin P2`
 
 [canary](https://github.com/Apsu/Canary/blob/main/INSTALL.md)
+
+# tmux
+[tpm](https://github.com/tmux-plugins/tpm)
+
+[theme](https://github.com/catppuccin/tmux)

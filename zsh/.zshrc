@@ -18,6 +18,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GPG_TTY=$TTY
+export EDITOR=nvim
 
 HISTSIZE=10000
 SAVEHIST=10000

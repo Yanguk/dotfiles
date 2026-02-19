@@ -6,6 +6,15 @@ return {
     -- flavour = "mocha",
     transparent_background = true,
     auto_integrations = true,
+    lsp_styles = {
+      underlines = {
+        errors = { "undercurl" },
+        warnings = { "undercurl" },
+        hints = { "undercurl" },
+        information = { "undercurl" },
+        ok = { "undercurl" },
+      },
+    },
   },
   config = function(_, opts)
     require("catppuccin").setup(opts)
@@ -13,7 +22,6 @@ return {
     vim.cmd.colorscheme("catppuccin")
   end,
 }
-
 
 -- return {
 --   "rebelot/kanagawa.nvim",

@@ -1,0 +1,30 @@
+[custom_commands.open_file]
+key = ["O"]
+lua = '''
+local file = context.file()
+if not file then
+    flash("No file selected")
+    return
+end
+
+exec_shell("$EDITOR $(realpath " .. file .. ")")
+'''
+
+[custom_commands.quick_revset]
+key = ["ctrl+r"]
+lua = '''
+local selected = choose({
+    options = {
+        "mine()",
+        "all()",
+        "trunk()..@",
+        revset.default()
+    },
+    title = "Quick Revset"
+})
+
+if selected then
+    revset.set(selected)
+    flash("Revset: " .. selected)
+end
+'''

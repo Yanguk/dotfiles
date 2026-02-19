@@ -34,7 +34,7 @@ return {
     {
       "<leader>aa",
       function()
-        require("sidekick.cli").toggle({ name = "copilot", focus = true })
+        require("sidekick.cli").toggle({ name = "codex", focus = true })
       end,
       desc = "Sidekick Toggle CLI",
     },
