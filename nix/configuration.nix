@@ -27,7 +27,7 @@
     yazi
     neovim
     tmux
-    # zellij
+    zellij
     # stu # aws s3 tui
 
     nixfmt
@@ -91,7 +91,7 @@
       "ghostty"
       "dbeaver-community"
       # "zen"
-      # "alacritty"
+      "alacritty"
       # "zed"
       # "beekeeper-studio"
       # "gemini-cli"

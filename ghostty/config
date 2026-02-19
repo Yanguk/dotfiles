@@ -2,7 +2,7 @@ theme = Catppuccin Mocha
 # theme = Kanagawa Wave
 # theme = Kanagawa Dragon
 
-font-size = 16
+font-size = 14
 font-thicken = true
 adjust-cell-width = -5%
 

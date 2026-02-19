@@ -1,5 +1,5 @@
 # eval "$(zellij setup --generate-auto-start zsh)"
-# alias zj="zellij"
+alias zj="zellij"
 
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 
