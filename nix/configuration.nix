@@ -44,7 +44,7 @@
     zoxide
     antidote
 
-    deno
+    # deno
     bun
     volta
     # rustup

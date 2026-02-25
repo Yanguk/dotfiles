@@ -53,6 +53,7 @@ return {
           },
         },
       },
+      sourcekit = {},
     }
 
     -- setup lsp

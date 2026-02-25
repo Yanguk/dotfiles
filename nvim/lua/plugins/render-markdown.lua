@@ -2,7 +2,7 @@ return {
   "MeanderingProgrammer/render-markdown.nvim",
   ft = {
     "markdown",
-    "Avante",
+    -- "Avante",
     -- "codecompanion",
   },
   opts = {

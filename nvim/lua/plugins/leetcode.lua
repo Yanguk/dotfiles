@@ -26,6 +26,10 @@ return {
       ---@type fun(question: lc.ui.Question)[]
       ["question_enter"] = {
         function(question)
+          if question.lang ~= "rust" then
+            return
+          end
+
           local problem_dir = vim.fn.stdpath("data") .. "/leetcode/Cargo.toml"
           local content = [[
             [package]
