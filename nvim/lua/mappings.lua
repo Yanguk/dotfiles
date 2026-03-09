@@ -61,12 +61,8 @@ map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 map("n", "<leader>mD", "<cmd>delmarks a-zA-Z0-9<CR>", { desc = "Delete all marks" })
 map("n", "<leader>md", "<cmd>delmarks!<CR>", { desc = "Delete marks" })
 
-vim.api.nvim_create_user_command(
-  "Tcc",
-  require("utils.text-case-convert").cycle_case_style,
-  { desc = "Cycle kebab → camel → snake case" }
-)
+cmd("Tcc", require("utils.text-case-convert").cycle_case_style, { desc = "Cycle kebab → camel → snake case" })
 
-vim.api.nvim_create_user_command("Pwd", function()
+cmd("Pwd", function()
   vim.fn.setreg("+", vim.fn.expand("%:p"))
 end, { desc = "Copy file path" })

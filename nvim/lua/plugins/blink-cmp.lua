@@ -4,7 +4,7 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = {
     "rafamadriz/friendly-snippets",
-    "fang2hou/blink-copilot",
+    -- "fang2hou/blink-copilot",
     {
       "L3MON4D3/LuaSnip",
       version = "v2.*",

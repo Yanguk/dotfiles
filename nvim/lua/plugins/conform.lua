@@ -6,7 +6,7 @@ local function jsTsFormatter(bufnr)
   if util.has_biome(bufnr) then
     return { "biome-check" }
   else
-    return { "prettierd" }
+    return { "prettier" }
   end
 end
 
@@ -23,16 +23,16 @@ return {
     formatters_by_ft = {
       http = { "kulala" },
       lua = { "stylua" },
-      javascript = jsTsFormatter,
-      typescript = jsTsFormatter,
-      javascriptreact = jsTsFormatter,
-      typescriptreact = jsTsFormatter,
-      markdown = { "prettierd" },
-      mdx = { "prettierd" },
-      html = { "prettierd" },
-      json = { "prettierd" },
-      jsonc = { "prettierd" },
-      css = { "prettierd" },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescriptreact = { "prettier" },
+      markdown = { "prettier" },
+      mdx = { "prettier" },
+      html = { "prettier" },
+      json = { "prettier" },
+      jsonc = { "prettier" },
+      css = { "prettier" },
       kdl = { "kdlfmt" },
 
       -- racket = { "raco" },

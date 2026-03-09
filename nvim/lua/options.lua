@@ -68,12 +68,4 @@ autocmd("VimResized", {
 
 -- vim.diagnostic.config({ virtual_text = true })
 
--- Auto equalize windows when Avante is attached
--- autocmd("FileType", {
---   pattern = "Avante",
---   callback = function()
---     vim.cmd("wincmd =")
---   end,
--- })
-
 vim.env.ZDOTDIR = vim.fn.expand("$HOME/.config/zsh")

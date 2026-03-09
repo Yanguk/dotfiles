@@ -1,6 +1,4 @@
 theme = Catppuccin Mocha
-# theme = Kanagawa Wave
-# theme = Kanagawa Dragon
 
 font-size = 14
 font-thicken = true
@@ -28,6 +26,7 @@ keybind = alt+shift+plus=csi:43;3u
 cursor-color=cell-foreground
 cursor-text=cell-background
 
+# https://github.com/ghostty-org/ghostty/discussions/3708#discussioncomment-15329614
 # # Vim-mode keybindings for Ghostty.
 # #
 # # Note: We're missing a number of actions to produce a better vim experience.

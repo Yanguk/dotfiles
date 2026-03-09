@@ -6,7 +6,7 @@ return {
       mux = {
         -- enabled = true,
         enabled = false,
-        backend = "zellij", -- or "tmux"
+        backend = "tmux",
       },
     },
     nes = { enabled = false },

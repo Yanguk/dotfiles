@@ -27,7 +27,7 @@
     yazi
     neovim
     tmux
-    zellij
+    # zellij
     # stu # aws s3 tui
 
     nixfmt
@@ -76,27 +76,36 @@
       "direnv"
       "zig"
       "tree-sitter-cli"
+      "anomalyco/tap/opencode"
       "gemini-cli"
     ];
     casks = [
-      "orbStack"
       "figma"
       "google-chrome"
-      "obsidian"
       "slack"
+
+      "obsidian"
+      "orbStack"
       "rectangle"
       "hammerspoon"
       "visual-studio-code"
       "ghostty"
       "dbeaver-community"
-      "alacritty"
+
+      # "alacritty"
       # "zen"
       # "zed"
+
       "antigravity"
       "codex"
+      "claude-code"
+      "claude"
+      "copilot-cli"
 
       "hashicorp-boundary-desktop" # office
       "openvpn-connect" # office
+
+      "bruno"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
