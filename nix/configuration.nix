@@ -106,6 +106,7 @@
       "openvpn-connect" # office
 
       "bruno"
+      "intellij-idea"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;

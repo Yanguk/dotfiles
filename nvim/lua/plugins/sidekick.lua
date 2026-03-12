@@ -4,8 +4,8 @@ return {
   opts = {
     cli = {
       mux = {
-        -- enabled = true,
-        enabled = false,
+        enabled = true,
+        -- enabled = false,
         backend = "tmux",
       },
     },
@@ -34,7 +34,7 @@ return {
     {
       "<leader>aa",
       function()
-        require("sidekick.cli").toggle({ name = "codex", focus = true })
+        require("sidekick.cli").toggle({ name = "claude", focus = true })
       end,
       desc = "Sidekick Toggle CLI",
     },

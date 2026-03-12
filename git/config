@@ -2,6 +2,7 @@
   editor = nvim
   pager = delta
   ignorecase = false
+	autocrlf = input
 
 [user]
   name = Yanguk

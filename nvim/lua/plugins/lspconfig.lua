@@ -21,6 +21,7 @@ return {
       pyright = {},
       codebook = {},
       biome = {},
+      kotlin_lsp = {},
       eslint = {
         on_attach = function(client, bufnr)
           default_config.on_attach(client, bufnr)

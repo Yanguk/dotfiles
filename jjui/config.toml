@@ -1,5 +1,5 @@
-[custom_commands.open_file]
-key = ["O"]
+[[actions]]
+name = "open_file"
 lua = '''
 local file = context.file()
 if not file then
@@ -10,8 +10,8 @@ end
 exec_shell("$EDITOR $(realpath " .. file .. ")")
 '''
 
-[custom_commands.quick_revset]
-key = ["ctrl+r"]
+[[actions]]
+name = "quick_revset"
 lua = '''
 local selected = choose({
     options = {
@@ -28,3 +28,13 @@ if selected then
     flash("Revset: " .. selected)
 end
 '''
+
+[[bindings]]
+action = "quick_revset"
+key = "ctrl+r"
+scope = "revisions"
+
+[[bindings]]
+action = "open_file"
+key = "e"
+scope = "revisions.details"
