@@ -78,6 +78,7 @@
       "tree-sitter-cli"
       "anomalyco/tap/opencode"
       "gemini-cli"
+      "mas"
     ];
     casks = [
       "figma"
@@ -111,6 +112,10 @@
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
+  };
+  masApps = {
+    "kakaotalk" = 869223134;
+    "adguard-for-safari" = 1440147259;
   };
 
   programs.zsh = {
