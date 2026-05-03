@@ -46,6 +46,7 @@ return {
       zig = { "zigfmt" },
       nix = { "nixfmt" },
       terraform = { "terraform_fmt" },
+      kotlin = { "ktfmt" },
     },
     format_on_save = function(bufnr)
       -- Disable with a global or buffer-local variable

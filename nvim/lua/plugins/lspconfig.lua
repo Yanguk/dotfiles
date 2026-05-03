@@ -18,7 +18,17 @@ return {
       dockerls = {},
       nil_ls = {},
       terraformls = {},
-      pyright = {},
+      pyright = {
+        before_init = function(_, config)
+          local python_path = vim.fn.trim(vim.fn.system("uv python find 2>/dev/null"))
+
+          if python_path ~= "" and vim.fn.executable(python_path) == 1 then
+            config.settings = config.settings or {}
+            config.settings.python = config.settings.python or {}
+            config.settings.python.pythonPath = python_path
+          end
+        end,
+      },
       codebook = {},
       biome = {},
       kotlin_lsp = {},

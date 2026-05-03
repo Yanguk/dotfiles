@@ -34,6 +34,7 @@
     delta
     bat
     # direnv
+    nix-direnv
     fzf
     awscli2
     ripgrep
@@ -59,6 +60,8 @@
     postgresql
     boundary
     terraform
+
+    uv
   ];
 
   fonts.packages = with pkgs; [
@@ -78,7 +81,8 @@
       "tree-sitter-cli"
       "anomalyco/tap/opencode"
       "gemini-cli"
-      "mas"
+      "rtk"
+      # "mas"
     ];
     casks = [
       "figma"
@@ -95,7 +99,7 @@
 
       # "alacritty"
       # "zen"
-      # "zed"
+      "zed"
 
       "antigravity"
       "codex"
@@ -107,16 +111,16 @@
       "openvpn-connect" # office
 
       "bruno"
-      "intellij-idea"
+      # "intellij-idea"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
   };
-  masApps = {
-    "kakaotalk" = 869223134;
-    "adguard-for-safari" = 1440147259;
-  };
+  # masApps = {
+  #   "kakaotalk" = 869223134;
+  #   "adguard-for-safari" = 1440147259;
+  # };
 
   programs.zsh = {
     enable = true;

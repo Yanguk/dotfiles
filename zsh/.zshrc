@@ -49,8 +49,10 @@ alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
 alias awspf='export AWS_PROFILE=$(sed -n -E "s/\[(profile )?([^][]+)\]?\s*$/\2/p" ~/.aws/credentials ~/.aws/config | sort -rg | uniq | fzf)'
 alias nixUpdate="sudo nix flake update --flake ~/.config/nix"
 alias nixSwitch="sudo darwin-rebuild switch --flake ~/.config/nix#yanguk"
-alias nixUpgrade="sudo determinate-nixd upgrade"
+# alias nixUpgrade="sudo determinate-nixd upgrade"
 alias nixClean="nix-collect-garbage -d"
+
+alias python3="uv run python3"
 
 alias pss="pnpm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
@@ -90,4 +92,6 @@ function zvm_before_init() {
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+[[ ! -f ~/.config/zsh/.p10k.jujutsu.zsh ]] || source ~/.config/zsh/.p10k.jujutsu.zsh

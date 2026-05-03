@@ -34,6 +34,8 @@ return {
     end
   end,
   keys = {
+    { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next buffer" },
+    { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Move to previous buffer" },
     {
       "<leader>bs",
       function()
