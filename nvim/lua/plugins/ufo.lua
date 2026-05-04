@@ -14,20 +14,20 @@ return {
     vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
     vim.o.foldlevelstart = 99
     vim.o.foldenable = true
-    vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
   end,
   config = function(_, opts)
     require("ufo").setup(opts)
 
     vim.keymap.set("n", "zR", require("ufo").openAllFolds)
     vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-    vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
-    vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
-    vim.keymap.set("n", "K", function()
-      local winid = require("ufo").peekFoldedLinesUnderCursor()
-      if not winid then
-        vim.lsp.buf.hover()
-      end
-    end)
+
+    -- vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
+    -- vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+    -- vim.keymap.set("n", "K", function()
+    --   local winid = require("ufo").peekFoldedLinesUnderCursor()
+    --   if not winid then
+    --     vim.lsp.buf.hover()
+    --   end
+    -- end)
   end,
 }

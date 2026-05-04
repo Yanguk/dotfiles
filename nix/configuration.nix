@@ -25,7 +25,6 @@
     lazygit
     bottom
     yazi
-    neovim
     tmux
     # zellij
     # stu # aws s3 tui
@@ -82,11 +81,13 @@
       "anomalyco/tap/opencode"
       "gemini-cli"
       "rtk"
+      "neovim"
       # "mas"
     ];
     casks = [
       "figma"
       "google-chrome"
+      "duckduckgo"
       "slack"
 
       "obsidian"
@@ -103,6 +104,7 @@
 
       "antigravity"
       "codex"
+      "codex-app"
       "claude-code"
       "claude"
       "copilot-cli"
