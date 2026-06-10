@@ -37,9 +37,12 @@ return {
           default_config.on_attach(client, bufnr)
 
           if eslint_base_on_attach then
+            local group = vim.api.nvim_create_augroup("eslint_auto_fix", { clear = true })
+
             eslint_base_on_attach(client, bufnr)
 
             vim.api.nvim_create_autocmd("BufWritePre", {
+              group = group,
               buffer = bufnr,
               command = "LspEslintFixAll",
             })
@@ -65,6 +68,13 @@ return {
         },
       },
       sourcekit = {},
+      tinymist = {
+        settings = {
+          formatterMode = "typstyle",
+          exportPdf = "onType",
+          semanticTokens = "disable",
+        },
+      },
     }
 
     -- setup lsp

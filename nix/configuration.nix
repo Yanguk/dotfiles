@@ -46,7 +46,6 @@
 
     # deno
     bun
-    volta
     # rustup
     # git
     jujutsu
@@ -79,9 +78,10 @@
       "zig"
       "tree-sitter-cli"
       "anomalyco/tap/opencode"
-      "gemini-cli"
       "rtk"
       "neovim"
+      "typst"
+      "volta"
       # "mas"
     ];
     casks = [
@@ -103,6 +103,7 @@
       "zed"
 
       "antigravity"
+      "antigravity-cli"
       "codex"
       "codex-app"
       "claude-code"

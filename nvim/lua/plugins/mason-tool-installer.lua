@@ -36,6 +36,7 @@ return {
       "typescript-language-server",
       "yaml-language-server",
       "yamlfmt",
+      "tinymist"
     },
   },
 }
