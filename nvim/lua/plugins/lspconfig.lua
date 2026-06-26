@@ -8,7 +8,6 @@ return {
 
     -- set server config
     local server_configs = {
-      kulala_ls = {},
       lua_ls = {},
       zls = {},
       yamlls = {},

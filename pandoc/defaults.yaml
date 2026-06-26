@@ -1,0 +1,4 @@
+pdf-engine: typst
+
+variables:
+  mainfont: "Noto Sans CJK KR"

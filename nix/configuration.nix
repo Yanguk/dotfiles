@@ -61,6 +61,8 @@
     terraform
 
     uv
+
+    pandoc
   ];
 
   fonts.packages = with pkgs; [

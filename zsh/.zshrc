@@ -59,6 +59,8 @@ alias nss="npm run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias bss="bun run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
+alias pandoc='pandoc --defaults ~/.config/pandoc/defaults.yaml'
+
 function gccr() {
     local out="a_$(date +%s)"
     gcc -Wall -Wextra "$@" -o "$out" && ./"$out"

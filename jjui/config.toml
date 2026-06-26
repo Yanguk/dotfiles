@@ -38,3 +38,9 @@ scope = "revisions"
 action = "open_file"
 key = "e"
 scope = "revisions.details"
+
+[preview]
+position = "auto"      # auto | right | bottom
+show_at_start = true
+# width_percentage = 50.0
+# width_increment_percentage = 5.0
