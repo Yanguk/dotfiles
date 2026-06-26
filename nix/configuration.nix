@@ -50,6 +50,7 @@
     # git
     jujutsu
     jjui
+    # lazyjj
 
     codecrafters-cli
     # pipx

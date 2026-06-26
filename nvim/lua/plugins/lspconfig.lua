@@ -28,6 +28,9 @@ return {
             config.settings.python.pythonPath = python_path
           end
         end,
+        handlers = {
+          ["$/progress"] = function() end,
+        },
       },
       codebook = {},
       biome = {},
