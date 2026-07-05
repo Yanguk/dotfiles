@@ -42,7 +42,6 @@
     gh
     ddgr
     zoxide
-    antidote
 
     # deno
     bun
@@ -81,10 +80,11 @@
       "zig"
       "tree-sitter-cli"
       "anomalyco/tap/opencode"
-      "rtk"
+      # "rtk"
       "neovim"
       "typst"
       "volta"
+      "antidote"
       # "mas"
     ];
     casks = [
