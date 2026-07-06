@@ -24,4 +24,6 @@
 #--map-syntax "*.ino:C++"
 #--map-syntax ".ignore:Git Ignore"
 # --theme="kanagawa"
---theme="Catppuccin Mocha"
+--theme="auto:system"
+--theme-dark="Catppuccin Mocha"
+--theme-light="Catppuccin Latte"

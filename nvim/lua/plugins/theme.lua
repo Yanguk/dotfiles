@@ -3,7 +3,11 @@ return {
   name = "catppuccin",
   priority = 1100,
   opts = {
-    -- flavour = "mocha",
+    flavour = "auto",
+    background = { -- :h background
+      light = "latte",
+      dark = "mocha",
+    },
     transparent_background = true,
     auto_integrations = true,
     lsp_styles = {
