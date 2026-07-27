@@ -1,4 +1,3 @@
-# cSpell:disable
 { pkgs, username, ... }:
 {
   system.primaryUser = username;
