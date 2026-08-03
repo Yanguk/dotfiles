@@ -43,6 +43,7 @@ source <(jj util completion zsh)
 
 # 4. Aliases/functions (after essentials)
 alias lg="lazygit"
+alias ld="lazydocker"
 alias vi="nvim"
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
 alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"
@@ -60,6 +61,7 @@ alias yss="yarn run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 alias bss="bun run \$(cat package.json | jq -r '.scripts | keys[]' | fzf)"
 
 alias pandoc='pandoc --defaults ~/.config/pandoc/defaults.yaml'
+alias switchTheme='osascript -e '\''tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'\'''
 
 function gccr() {
     local out="a_$(date +%s)"
@@ -97,3 +99,4 @@ function zvm_before_init() {
 # [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 [[ ! -f ~/.config/zsh/.p10k.jujutsu.zsh ]] || source ~/.config/zsh/.p10k.jujutsu.zsh
+

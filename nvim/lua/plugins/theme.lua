@@ -8,7 +8,7 @@ return {
       light = "latte",
       dark = "mocha",
     },
-    transparent_background = true,
+    -- transparent_background = true,
     auto_integrations = true,
     lsp_styles = {
       underlines = {

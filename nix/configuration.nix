@@ -78,12 +78,13 @@
       "direnv"
       "zig"
       "tree-sitter-cli"
-      "anomalyco/tap/opencode"
+      # "anomalyco/tap/opencode"
       # "rtk"
       "neovim"
       "typst"
       "volta"
       "antidote"
+      "lazydocker"
       # "mas"
     ];
     casks = [
@@ -93,7 +94,7 @@
       "slack"
 
       "obsidian"
-      "orbStack"
+      # "orbStack"
       "rectangle"
       "hammerspoon"
       "visual-studio-code"
