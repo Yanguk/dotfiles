@@ -1,6 +1,5 @@
 { pkgs, username, ... }:
 {
-  system.primaryUser = username;
   nix = {
     enable = false;
     settings = {
@@ -118,6 +117,8 @@
 
       "bruno"
       # "intellij-idea"
+      "openusage"
+      "gcloud-cli"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
@@ -142,6 +143,7 @@
   };
 
   system = {
+    primaryUser = username;
     # $ darwin-rebuild changelog
     stateVersion = 6;
 

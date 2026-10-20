@@ -100,3 +100,6 @@ function zvm_before_init() {
 
 [[ ! -f ~/.config/zsh/.p10k.jujutsu.zsh ]] || source ~/.config/zsh/.p10k.jujutsu.zsh
 
+# office
+alias runMoffice="/Users/Shared/.JNESS/Apps/MacMOffice.app/Contents/MacOS/MacMOffice"
+export NODE_EXTRA_CA_CERTS="$HOME/.certs/daekyo-ca.pem"
