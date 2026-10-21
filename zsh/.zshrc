@@ -1,6 +1,4 @@
 # eval "$(zellij setup --generate-auto-start zsh)"
-alias zj="zellij"
-
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 
 # # 1. Fastest prompts and lightweight sources early

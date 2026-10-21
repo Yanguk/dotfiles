@@ -54,8 +54,8 @@
     # ollama
 
     postgresql
-    boundary
-    terraform
+    # boundary
+    # terraform
 
     uv
 
@@ -67,6 +67,64 @@
     noto-fonts-cjk-sans # for ghostty
     pretendard
   ];
+
+  homebrew = {
+    enable = true;
+    taps = [
+      # "hashicorp/tap" # office
+    ];
+    brews = [
+      "direnv"
+      "zig"
+      "tree-sitter-cli"
+      # "anomalyco/tap/opencode"
+      # "rtk"
+      "neovim"
+      "typst"
+      "volta"
+      "antidote"
+      "lazydocker"
+      # "mas"
+    ];
+    casks = [
+      "figma"
+      "google-chrome"
+      "duckduckgo"
+      "slack"
+
+      "obsidian"
+      # "orbStack"
+      "rectangle"
+      "hammerspoon"
+      # "visual-studio-code"
+      "ghostty"
+      "dbeaver-community"
+      "zed"
+
+      # "alacritty"
+      # "zen"
+
+      # "antigravity-cli"
+      "codex"
+      "claude"
+
+      # office
+      # "hashicorp-boundary-desktop"
+      "openvpn-connect"
+      "bruno"
+      "gcloud-cli"
+
+      # "intellij-idea"
+      "openusage"
+    ];
+    onActivation.cleanup = "zap";
+    onActivation.autoUpdate = true;
+    onActivation.upgrade = true;
+  };
+  # masApps = {
+  #   "kakaotalk" = 869223134;
+  #   "adguard-for-safari" = 1440147259;
+  # };
 
   programs.zsh = {
     enable = true;
