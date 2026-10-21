@@ -69,7 +69,7 @@
   ];
 
   homebrew = {
-    enable = true;
+    enable = false;
     taps = [
       "hashicorp/tap" # office
     ];

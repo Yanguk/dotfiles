@@ -103,3 +103,4 @@ function zvm_before_init() {
 # office
 alias runMoffice="/Users/Shared/.JNESS/Apps/MacMOffice.app/Contents/MacOS/MacMOffice"
 export NODE_EXTRA_CA_CERTS="$HOME/.certs/daekyo-ca.pem"
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"

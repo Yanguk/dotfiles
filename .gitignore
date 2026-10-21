@@ -30,7 +30,7 @@ configstore
 # zsh
 zsh/.zsh_plugins.zsh
 zsh/.zcompdump
-zsh/.zprofile
+# zsh/.zprofile
 .copilot/
 .android
 
@@ -38,3 +38,4 @@ jj/repos/
 
 swiftpm/
 opencode
+gcloud/

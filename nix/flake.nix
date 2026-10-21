@@ -30,9 +30,8 @@
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
-              enable = true;
-              autoMigrate = true;
-              enableRosetta = true;
+              enable = false;
+              # enable = true;
               # User owning the Homebrew prefix
               user = username;
             };

@@ -1,0 +1,49 @@
+# Brewfile
+
+# Taps
+tap "hashicorp/tap" # Office
+
+# CLI tools
+brew "direnv"
+brew "zig"
+brew "tree-sitter-cli"
+brew "neovim"
+brew "typst"
+brew "volta"
+brew "antidote"
+brew "lazydocker"
+# brew "anomalyco/tap/opencode"
+# brew "rtk"
+# brew "mas"
+
+# Applications
+cask "figma"
+cask "google-chrome"
+# cask "duckduckgo"
+cask "slack"
+cask "obsidian"
+# cask "orbstack"
+cask "rectangle"
+cask "hammerspoon"
+cask "visual-studio-code"
+cask "ghostty"
+cask "dbeaver-community"
+# cask "alacritty"
+# cask "zen"
+cask "zed"
+# cask "intellij-idea"
+
+# AI tools
+cask "antigravity"
+cask "antigravity-cli"
+cask "codex"
+cask "claude-code"
+
+# Office
+cask "hashicorp-boundary-desktop" # Office
+cask "openvpn-connect" # Office
+
+# Other tools
+cask "bruno"
+cask "openusage"
+cask "gcloud-cli"
