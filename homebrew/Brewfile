@@ -1,7 +1,7 @@
 # Brewfile
 
 # Taps
-tap "hashicorp/tap" # Office
+# tap "hashicorp/tap" # Office
 
 # CLI tools
 brew "direnv"
@@ -25,7 +25,7 @@ cask "obsidian"
 # cask "orbstack"
 cask "rectangle"
 cask "hammerspoon"
-cask "visual-studio-code"
+# cask "visual-studio-code"
 cask "ghostty"
 cask "dbeaver-community"
 # cask "alacritty"
@@ -40,10 +40,10 @@ cask "codex"
 cask "claude-code"
 
 # Office
-cask "hashicorp-boundary-desktop" # Office
+# cask "hashicorp-boundary-desktop" # Office
 cask "openvpn-connect" # Office
 
 # Other tools
-cask "bruno"
-cask "openusage"
-cask "gcloud-cli"
+# cask "bruno"
+# cask "openusage"
+# cask "gcloud-cli"

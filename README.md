@@ -30,3 +30,12 @@ sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 [tpm](https://github.com/tmux-plugins/tpm)
 
 [theme](https://github.com/catppuccin/tmux)
+
+# homebrew
+[brew](https://brew.sh/)
+
+```bash
+brew bundle check --file=~/.config/homebrew/Brewfile
+brew bundle install --file=~/.config/homebrew/Brewfile
+```
+

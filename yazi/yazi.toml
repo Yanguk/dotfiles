@@ -2,6 +2,6 @@
 
 [opener]
 edit = [
-  { run = 'nvim "$@"', block = true, for = "macos" },
-  { run = 'code "$@"', block = true, for = "macos" },
+  { run = 'nvim %s', block = true, for = "macos" },
+  { run = 'code %s', block = true, for = "macos" },
 ]

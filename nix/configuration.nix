@@ -49,7 +49,7 @@
     jjui
     # lazyjj
 
-    codecrafters-cli
+    # codecrafters-cli
     # pipx
     # ollama
 
@@ -67,67 +67,6 @@
     noto-fonts-cjk-sans # for ghostty
     pretendard
   ];
-
-  homebrew = {
-    enable = false;
-    taps = [
-      "hashicorp/tap" # office
-    ];
-    brews = [
-      "direnv"
-      "zig"
-      "tree-sitter-cli"
-      # "anomalyco/tap/opencode"
-      # "rtk"
-      "neovim"
-      "typst"
-      "volta"
-      "antidote"
-      "lazydocker"
-      # "mas"
-    ];
-    casks = [
-      "figma"
-      "google-chrome"
-      "duckduckgo"
-      "slack"
-
-      "obsidian"
-      # "orbStack"
-      "rectangle"
-      "hammerspoon"
-      "visual-studio-code"
-      "ghostty"
-      "dbeaver-community"
-
-      # "alacritty"
-      # "zen"
-      "zed"
-
-      "antigravity"
-      "antigravity-cli"
-      "codex"
-      "codex-app"
-      "claude-code"
-      "claude"
-      "copilot-cli"
-
-      "hashicorp-boundary-desktop" # office
-      "openvpn-connect" # office
-
-      "bruno"
-      # "intellij-idea"
-      "openusage"
-      "gcloud-cli"
-    ];
-    onActivation.cleanup = "zap";
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
-  };
-  # masApps = {
-  #   "kakaotalk" = 869223134;
-  #   "adguard-for-safari" = 1440147259;
-  # };
 
   programs.zsh = {
     enable = true;
