@@ -24,9 +24,10 @@
     bottom
     yazi
     tmux
-    # zellij
+    zellij
     # stu # aws s3 tui
 
+    antidote
     nixfmt
     delta
     bat
@@ -72,6 +73,7 @@
     enable = true;
     taps = [
       # "hashicorp/tap" # office
+      "open-tap/casks"
     ];
     brews = [
       "direnv"
@@ -82,7 +84,6 @@
       "neovim"
       "typst"
       "volta"
-      "antidote"
       "lazydocker"
       # "mas"
     ];
@@ -101,12 +102,12 @@
       "dbeaver-community"
       "zed"
 
-      # "alacritty"
+      "open-tap/casks/alacritty" # requires trust: ~/.config/homebrew/trust.json
       # "zen"
 
       # "antigravity-cli"
       "codex"
-      "claude"
+      "claude-code"
 
       # office
       # "hashicorp-boundary-desktop"

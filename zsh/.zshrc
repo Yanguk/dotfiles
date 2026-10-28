@@ -102,3 +102,14 @@ function zvm_before_init() {
 alias runMoffice="/Users/Shared/.JNESS/Apps/MacMOffice.app/Contents/MacOS/MacMOffice"
 export NODE_EXTRA_CA_CERTS="$HOME/.certs/daekyo-ca.pem"
 export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
+
+# alacritty
+if [[ "$ALACRITTY" == "true" ]]; then
+    ALA_HOME="$HOME/.config/alacritty/themes"
+
+    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+        ln -sf "$ALA_HOME/themes/catppuccin_mocha.toml" "$ALA_HOME/active.toml"
+    else
+        ln -sf "$ALA_HOME/themes/catppuccin_latte.toml" "$ALA_HOME/active.toml"
+    fi
+fi

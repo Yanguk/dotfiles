@@ -1,0 +1,8 @@
+{
+  "trustedcasks": [
+    "open-tap/casks/alacritty"
+  ],
+  "trustedtaps": [
+    "open-tap/casks"
+  ]
+}
