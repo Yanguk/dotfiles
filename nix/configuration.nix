@@ -1,5 +1,12 @@
 { pkgs, username, ... }:
 {
+  security.pki.installCACerts = true;
+
+  # 2. 인증서 파일 경로 추가
+  security.pki.certificateFiles = [
+    ./certs/daekyo-ca.pem # 대교 공개키
+  ];
+
   nix = {
     enable = false;
     settings = {
@@ -85,6 +92,7 @@
       "typst"
       "volta"
       "lazydocker"
+      "cloudflare-wrangler"
       # "mas"
     ];
     casks = [
@@ -108,6 +116,7 @@
       # "antigravity-cli"
       "codex"
       "claude-code"
+      "antigravity-cli"
 
       # office
       # "hashicorp-boundary-desktop"

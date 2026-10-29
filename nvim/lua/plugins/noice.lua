@@ -12,6 +12,7 @@ return {
           any = {
             { find = "No information available" },
             { find = "Content is not an image." },
+            { find = "Invalid buffer name!" },
           },
         },
         opts = {
