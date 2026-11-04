@@ -40,3 +40,6 @@ swiftpm/
 opencode
 gcloud/
 .wrangler
+
+# gh-dash theme symlink selected by macOS appearance
+gh-dash/theme.yml

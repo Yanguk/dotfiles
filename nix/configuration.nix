@@ -68,6 +68,8 @@
     uv
 
     pandoc
+
+    # neovim-remote
   ];
 
   fonts.packages = with pkgs; [
@@ -80,7 +82,6 @@
     enable = true;
     taps = [
       # "hashicorp/tap" # office
-      "open-tap/casks"
     ];
     brews = [
       "direnv"
@@ -94,6 +95,12 @@
       "lazydocker"
       "cloudflare-wrangler"
       # "mas"
+
+      "neurosnap/tap/zmx"
+      "flow-control"
+      "tuicr"
+      "pi-coding-agent"
+      "poppler"
     ];
     casks = [
       "figma"
@@ -110,13 +117,9 @@
       "dbeaver-community"
       "zed"
 
-      "open-tap/casks/alacritty" # requires trust: ~/.config/homebrew/trust.json
-      # "zen"
-
       # "antigravity-cli"
       "codex"
       "claude-code"
-      "antigravity-cli"
 
       # office
       # "hashicorp-boundary-desktop"
@@ -126,6 +129,7 @@
 
       # "intellij-idea"
       "openusage"
+      "ShayanAbbas1/dbdelve/dbdelve"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;

@@ -1,8 +1,12 @@
 {
   "trustedcasks": [
-    "open-tap/casks/alacritty"
+    "open-tap/casks/alacritty",
+    "shayanabbas1/dbdelve/dbdelve"
   ],
   "trustedtaps": [
     "open-tap/casks"
+  ],
+  "trustedformulae": [
+    "neurosnap/tap/zmx"
   ]
 }

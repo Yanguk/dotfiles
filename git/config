@@ -1,8 +1,10 @@
 [core]
   editor = nvim
-  pager = delta
   ignorecase = false
 	autocrlf = input
+
+[diff]
+    external = difft
 
 [user]
   name = Yanguk
@@ -19,16 +21,8 @@
   default = current
   autoSetupRemote = true
 
-[interactive]
-  diffFilter = delta --color-only
-
 [include]
 	path = ~/.config/delta/themes/catppuccin.gitconfig
-
-[delta]
-  side-by-side = true
-  navigate = true    # use n and N to move between diff sections
-  features = catppuccin-mocha
 
 [merge]
   conflictstyle = zdiff3
