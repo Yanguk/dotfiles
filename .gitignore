@@ -43,3 +43,4 @@ gcloud/
 
 # gh-dash theme symlink selected by macOS appearance
 gh-dash/theme.yml
+bat/themes

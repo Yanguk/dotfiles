@@ -1,5 +1,8 @@
+# git:
+#   diffRenderers:
+#     - name: difftastic
+#       type: extDiff
+#       command: difft
 git:
   diffRenderers:
-    - name: difftastic
-      type: extDiff
-      command: difft
+    - command: delta --{{colorScheme}} --paging=never

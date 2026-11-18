@@ -2,9 +2,16 @@
   editor = nvim
   ignorecase = false
 	autocrlf = input
+  pager = delta
 
-[diff]
-    external = difft
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  side-by-side = true        # 좌우 분할로 이전/이후 코드 비교
+  line-numbers = true        # 라인 번호 표시
+  features = catppuccin
 
 [user]
   name = Yanguk
