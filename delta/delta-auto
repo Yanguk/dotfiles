@@ -1,0 +1,8 @@
+#!/bin/sh
+# macOS 외관 모드에 따라 catppuccin 테마를 골라 delta 실행
+if defaults read -g AppleInterfaceStyle >/dev/null 2>&1; then
+  theme=catppuccin-mocha
+else
+  theme=catppuccin-latte
+fi
+exec delta --features "$theme" "$@"

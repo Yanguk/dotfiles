@@ -5,4 +5,4 @@
 #       command: difft
 git:
   diffRenderers:
-    - command: delta --{{colorScheme}} --paging=never
+    - command: ~/.config/delta/delta-auto --paging=never
