@@ -42,6 +42,7 @@ source <(jj util completion zsh)
 # 4. Aliases/functions (after essentials)
 alias lg="lazygit"
 alias ld="lazydocker"
+alias ju="jjui"
 alias vi="nvim"
 alias tzU="sudo ln -sf /usr/share/zoneinfo/UTC /etc/localtime"
 alias tzR="sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime"

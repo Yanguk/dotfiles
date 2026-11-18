@@ -27,11 +27,13 @@ sudo darwin-rebuild switch --flake ~/.config/nix#yanguk
 [canary](https://github.com/Apsu/Canary/blob/main/INSTALL.md)
 
 # tmux
+
 [tpm](https://github.com/tmux-plugins/tpm)
 
 [theme](https://github.com/catppuccin/tmux)
 
 # homebrew
+
 [brew](https://brew.sh/)
 
 ```bash
@@ -39,3 +41,9 @@ brew bundle check --file=~/.config/homebrew/Brewfile
 brew bundle install --file=~/.config/homebrew/Brewfile
 ```
 
+# Agent
+
+```bash
+ln -sf ~/.config/agents/AGENT.md ~/.codex/AGENTS.md
+ln -sf ~/.config/agents/AGENT.md ~/.claude/CLAUDE.md
+```

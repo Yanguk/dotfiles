@@ -6,3 +6,7 @@
 git:
   diffRenderers:
     - command: ~/.config/delta/delta-auto --paging=never
+
+# gui:
+#   sidePanelWidth: 0.3333
+#   sidePanelWidth: 0.2
