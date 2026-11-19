@@ -44,5 +44,5 @@ position = "auto"      # auto | right | bottom
 show_at_start = true
 revision_command = ["show", "--color", "always", "-r", "$change_id", "--tool", "delta-auto"]
 file_command = ["diff", "--color", "always", "-r", "$change_id", "--tool", "delta-auto", "$file"]
-# width_percentage = 50.0
+width_percentage = 70
 # width_increment_percentage = 5.0

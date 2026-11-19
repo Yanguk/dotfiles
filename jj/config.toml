@@ -1,6 +1,6 @@
 #:schema https://jj-vcs.github.io/jj/latest/config-schema.json
 [user]
-email = "yanguk@duck.com"
+email = "yanguk-heo@daekyo.co.kr"
 name = "Yanguk"
 
 [ui]
