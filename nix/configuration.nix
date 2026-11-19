@@ -103,6 +103,7 @@
       "poppler"
     ];
     casks = [
+      "homerow"
       "figma"
       "google-chrome"
       "duckduckgo"

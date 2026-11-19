@@ -21,3 +21,8 @@
 - Use Korean for all explanations and responses by default.
 - Keep code, identifiers, and technical terms in their original English.
 - Write code comments and documentation in Korean unless requested otherwise.
+
+## Git Conventions
+
+- Prefer following the Conventional Commits specification when writing commit messages.
+- Keep commit messages concise and focused.

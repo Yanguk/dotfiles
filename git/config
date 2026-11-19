@@ -14,8 +14,7 @@
 
 [user]
   name = Yanguk
-  email = yanguk-heo@daekyo.co.kr
-
+	email = yanguk@duck.com
   signingkey = 4393B4559800E556EC978C9C879056D45517B74F
 
 [commit]
