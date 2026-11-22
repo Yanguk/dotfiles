@@ -11,7 +11,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/vaults/yanguk",
+        path = "~/3_vaults/yanguk",
       },
     },
     daily_notes = {

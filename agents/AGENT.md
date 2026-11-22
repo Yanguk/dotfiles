@@ -5,6 +5,8 @@
 ## TypeScript
 
 - MUST read and follow the `ts-convention` skill before creating, modifying, or reviewing any `.ts` or `.tsx` files.
+- MUST use the `ts-fp` skill when modeling fallible operations or optional values with `Result` or `Option`
+- MUST follow `ts-convention` rule 4 (braces), regardless of the surrounding repository style.
 
 ## Version Control
 

@@ -41,9 +41,11 @@ brew bundle check --file=~/.config/homebrew/Brewfile
 brew bundle install --file=~/.config/homebrew/Brewfile
 ```
 
-# Agent
+# 에이전트 전역 지침
 
 ```bash
-ln -sf ~/.config/agents/AGENT.md ~/.codex/AGENTS.md
-ln -sf ~/.config/agents/AGENT.md ~/.claude/CLAUDE.md
+echo '@~/.config/agents/AGENT.md' > ~/.codex/AGENTS.md
+echo '@~/.config/agents/AGENT.md' > ~/.claude/CLAUDE.md
 ```
+
+Codex의 `AGENTS.md`는 `@office.md`를 포함하므로 두 파일을 모두 `~/.codex`에서 찾을 수 있어야 한다.

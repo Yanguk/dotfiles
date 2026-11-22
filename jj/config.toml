@@ -8,7 +8,7 @@ name = "Yanguk"
 editor = "nvim"
 default-command = "log"
 pager = ["sh", "-c", "~/.config/delta/delta-auto"]
-diff-formatter = ":git"
+diff-formatter = "delta-auto"
 # diff-formatter = ["difft", "--color=always", "$left", "$right"]
 diff-editor = ":builtin"
 
@@ -87,3 +87,4 @@ pre-commit = [
   "-c",
   "jj diff -r @ --name-only --no-pager | xargs pre-commit run --files",
 ]
+
