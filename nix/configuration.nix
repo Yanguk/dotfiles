@@ -103,6 +103,7 @@
       "poppler"
     ];
     casks = [
+      "tinycast"
       "homerow"
       "figma"
       "google-chrome"
