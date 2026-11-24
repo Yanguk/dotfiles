@@ -104,7 +104,11 @@
     ];
     casks = [
       "tinycast"
+      "hammerspoon"
       "homerow"
+
+      "ghostty"
+
       "figma"
       "google-chrome"
       "duckduckgo"
@@ -112,10 +116,7 @@
 
       "obsidian"
       # "orbStack"
-      "rectangle"
-      "hammerspoon"
       # "visual-studio-code"
-      "ghostty"
       "dbeaver-community"
       "zed"
 
