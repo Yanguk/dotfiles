@@ -22,7 +22,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    difftastic # diff
+    # difftastic # diff
 
     imagemagick # for nvim_snack.image
     pngpaste # for nvim_img-clip, nvim_obsidian
@@ -30,9 +30,6 @@
     lazygit
     bottom
     yazi
-    tmux
-    zellij
-    # stu # aws s3 tui
 
     antidote
     nixfmt
@@ -49,26 +46,23 @@
     ddgr
     zoxide
 
-    # deno
     bun
-    # rustup
-    # git
     jujutsu
     jjui
-    # lazyjj
+    uv
+    pandoc
+    ghgrab
+    # tmux
+    # zellij
+    # stu # aws s3 tui
+    # deno
+
+    # rustup
+    # git
 
     # codecrafters-cli
     # pipx
-    # ollama
-
-    postgresql
-    # boundary
     # terraform
-
-    uv
-
-    pandoc
-
     # neovim-remote
   ];
 
@@ -106,7 +100,6 @@
       "tinycast"
       "hammerspoon"
       "homerow"
-
       "ghostty"
 
       "figma"
