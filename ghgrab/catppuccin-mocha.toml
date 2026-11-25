@@ -1,0 +1,11 @@
+# Catppuccin Mocha
+bg_color = "#1e1e2e"
+fg_color = "#cdd6f4"
+accent_color = "#89b4fa"
+warning_color = "#f9e2af"
+error_color = "#f38ba8"
+success_color = "#a6e3a1"
+folder_color = "#74c7ec"
+selected_color = "#fab387"
+border_color = "#6c7086"
+highlight_bg = "#313244"

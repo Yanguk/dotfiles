@@ -1,0 +1,11 @@
+# Catppuccin Latte
+bg_color = "#eff1f5"
+fg_color = "#4c4f69"
+accent_color = "#1e66f5"
+warning_color = "#df8e1d"
+error_color = "#d20f39"
+success_color = "#40a02b"
+folder_color = "#209fb5"
+selected_color = "#fe640b"
+border_color = "#9ca0b0"
+highlight_bg = "#ccd0da"

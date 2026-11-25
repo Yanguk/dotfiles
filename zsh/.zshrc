@@ -114,3 +114,15 @@ if [[ "$ALACRITTY" == "true" ]]; then
         ln -sf "$ALA_HOME/themes/catppuccin_latte.toml" "$ALA_HOME/active.toml"
     fi
 fi
+
+# ghgrab: OS 다크/라이트 모드에 맞춰 catppuccin 테마 적용
+# macOS에서 ghgrab은 ~/Library/Application Support/ghgrab/theme.toml 을 읽는다
+ghgrab() {
+    local flavor=latte
+    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+        flavor=mocha
+    fi
+    ln -sf "$HOME/.config/ghgrab/catppuccin-$flavor.toml" \
+        "$HOME/Library/Application Support/ghgrab/theme.toml"
+    command ghgrab "$@"
+}
